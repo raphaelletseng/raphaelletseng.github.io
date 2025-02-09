@@ -13,7 +13,7 @@ I was inspired by [this map](https://www.nytimes.com/interactive/2014/05/06/dini
 
 <iframe src="https://raphaelletseng.github.io/mtlcafes/" width="800px" height="600px">
 
-### 
+### Notes to Recreate
 
 [Mapbox](https://www.mapbox.com) is a great tool for building maps. The fig above is a simple, basic `index.html` page hosted on github pages. To have access to the mapbox api, you need the following code in your `<head>` tag:
 
