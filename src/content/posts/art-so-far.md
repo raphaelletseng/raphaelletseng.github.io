@@ -2,7 +2,7 @@
 title: "Art So Far #1"
 published: 2025-02-09
 description: "Making more art! A quick tour of some things I've made so far this year."
-image: '/public/assets/images/art-so-far/shophouses.png'
+image: '/assets/images/art-so-far/shophouses.png'
 tags: [art, affinity, postcards]
 category: 'art so far'
 draft: false 
