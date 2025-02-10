@@ -76,7 +76,7 @@ Inspired by [this poster](https://ca.pinterest.com/pin/577375614761569288/), I e
 
 ## Hi-Bonjour d'Angrignon
 
-I saw the Sugar Sammy billboard this month with 'Hi-Bonjour' written in large and it made me laugh much harder than it should've. So I made another postcard title card using it:
+I saw the Sugar Sammy billboard this month with 'Hi-Bonjour' written in large and it made me laugh so hard I made another postcard title card using it:
 
 <img src="/assets/images/art-so-far/angrignon.png" alt="Angrignon Park" width="75%" style="display: grid; margin-left: auto; margin-right: auto;"/>
 
