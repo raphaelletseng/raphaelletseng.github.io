@@ -14,7 +14,7 @@ In an attempt to create more than I consume, one of my goals this year is to mak
 Here's a quick tour of some of the art I've made so far:
 
 ## Je Suis Riche 
-I started off by following [edgykatarina](https://www.youtube.com/@edgykatrina)'s tutorial: '[how to design and print a poster (using adobe illustrator) | make your own wall art tutorial](https://www.youtube.com/watch?v=M2mek13XIlM)'. I don't have adobe, and am not willing to subscribe to their incredibly expensive saas model, so for this tutorial, I turned to [Inkscape](https://inkscape.org/), a free vector graphics editor. After a couple rounds of [The Bezier Game](https://bezier.method.ac/) to better understand how to use the pen tool, I made a French version of Katarina's poster to send to my grandmother:
+I started off by following [edgykatarina](https://www.youtube.com/@edgykatrina)'s tutorial: '[how to design and print a poster (using adobe illustrator) | make your own wall art tutorial](https://www.youtube.com/watch?v=M2mek13XIlM)'. I don't have adobe, and I am not willing to subscribe to their (incredibly expensive) saas model just yet, so for this tutorial, I turned to [Inkscape](https://inkscape.org/), a free vector graphics editor. After a couple rounds of [The Bezier Game](https://bezier.method.ac/) to better understand how to use the pen tool, I made a French version of Katarina's poster to send to my grandmother:
 
 <img src="/assets/images/art-so-far/je_suis_riche.png" alt="Je Suis Riche Poster" width="50%" style="display: grid; margin-left: auto; margin-right: auto;"/>
 
@@ -28,9 +28,9 @@ For my mum's birthday, I made a bouquet of flowers in Inkscape. My mum's favouri
 
 <img src="/assets/images/art-so-far/bdaymaman.png" alt="Joyeux Anniversaire Maman" width="50%" style="display: grid; margin-left: auto; margin-right: auto;"/>
 
-My hack for fonts is screenshotting the text I want from Google Fonts, or Adobe, and then importing the image into Inkscape and tracing the bitmap to turn things into curves. It's not great if you want to do any manipulations to the text, but for the sake of a poster, it allowed me to bring in more interesting fonts. 
+My hack for fonts is screenshotting the text I want from Google Fonts, or Adobe, and then importing the image into Inkscape and tracing the bitmap to turn things into curves. It's not great if you want to do any manipulations to the text, but for the sake of a poster, it allows me to bring in more interesting fonts. 
 
-I then reused this asset for different cards and a phone wallpaper (with a quote from the book 'All I need to know I learned from my cat')
+I then reused this asset for different cards and a phone wallpaper (with a quote from the book 'All I need to know I learned from my cat').
 
 <img src="/assets/images/art-so-far/flowers.png" alt="Flower Asset" width="32%" style="display: inline-block"/>
 <img src="/assets/images/art-so-far/flowers1.png" alt="Flower poster" width="32%" style="display: inline-block"/>
@@ -48,13 +48,13 @@ I sent a thank you card to the friends I spent Christmas with - this was a water
 
 ## An Art Night Event Poster
 
-I made a glitchy art night poster inspired by the fact that I was reading The Ministry of Time - Naval paraphernalia crept into my brain. I made full use of Inkscape's trace bitmap functionality. Printing this design allowed me to experience what happens to RGB colours when printing and why you should use CMYK for print. 
+I made a glitchy art night poster inspired by the fact that I was reading [The Ministry of Time](https://app.thestorygraph.com/books/e66f3c2a-df07-46a6-b430-f42950666fd9) - Naval paraphernalia had seeped into my brain. I made full use of Inkscape's trace bitmap functionality. Printing this design allowed me to experience what happens to RGB colours when printing and why you should use CMYK for print. 
 
 <img src="/assets/images/art-so-far/shall_we_make_art.png" alt="Shall We Make Art Event Poster" width="50%" style="display: grid; margin-left: auto; margin-right: auto;"/>
 
 ## Our Friendly Neighbourhood Racoon
 
-I made a card for my friend inspired by the local neighbourhood racoon, first with pen and grey highlighter, and then traced in Affinity. 
+I made a card for my friend inspired by the local neighbourhood racoon, first with pen and grey highlighter, and then traced in [Affinity Designer](https://affinity.serif.com/en-gb/?srsltid=AfmBOoqNJlMEx_esXe0YPq0C31udMyISJJ9j3PxHcPHXBizVNpB9mxsv) (using their free 7 day tutorial! Either way, a more afforable alternative to Adobe).
 
 <img src="/assets/images/art-so-far/racoon-drawing.png" alt="Racoon Card Drawing" width="50%" style="display: inline-block"/>
 
@@ -68,7 +68,7 @@ Experimented with the filters you can add in Inkscape with this trace of a sketc
 
 ## Climbing Posters 
 
-Inspired by [this poster](https://ca.pinterest.com/pin/577375614761569288/), I edited some climbing pictures from the Fall using Inkscape and Affinity, converting images to curves to intersect them with text:
+Inspired by [this poster](https://ca.pinterest.com/pin/577375614761569288/), I edited some climbing pictures from the Fall using Inkscape and Affinity Designer, converting images to curves to intersect them with text:
 
 <img src="/assets/images/kamou2.png" alt="Kamouraska" width="50%" style="display: inline-block"/>
 
