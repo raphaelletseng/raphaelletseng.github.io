@@ -11,7 +11,7 @@ lang: ''
 
 In an attempt to create more than I consume, one of my goals this year is to make more tangible art. So far this has resulted in a lot of googling tutorials to learn Affinity and Inkscape, a series of new pinterest boards, and more doodling and drawing in the margins of my notebooks. 'Tangible' has meant treks through the snow to various printing shops around town in order to print postcards to send and deliver to friends and loved ones. There's something pretty great about holding something you've made in your hands. 
 
-Here's a quick roundabout view of some of the art I've made so far:
+Here's a quick tour of some of the art I've made so far:
 
 ## Je Suis Riche 
 I started off by following [edgykatarina](https://www.youtube.com/@edgykatrina)'s tutorial: '[how to design and print a poster (using adobe illustrator) | make your own wall art tutorial](https://www.youtube.com/watch?v=M2mek13XIlM)'. I don't have adobe, and am not willing to subscribe to their incredibly expensive saas model, so for this tutorial, I turned to [Inkscape](https://inkscape.org/), a free vector graphics editor. After a couple rounds of [The Bezier Game](https://bezier.method.ac/) to better understand how to use the pen tool, I made a French version of Katarina's poster to send to my grandmother:
