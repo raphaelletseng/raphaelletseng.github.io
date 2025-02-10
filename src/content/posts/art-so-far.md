@@ -5,7 +5,7 @@ description: "Making more art! A quick tour of some things I've made so far this
 image: '/public/assets/images/art-so-far/shophouses.png'
 tags: [art, affinity, postcards]
 category: 'art so far'
-draft: true 
+draft: false 
 lang: ''
 ---
 
