@@ -62,7 +62,7 @@ I made a card for my friend inspired by the local neighbourhood racoon, first wi
 
 ## Vue de Bellechasse et Saint-Vallier
 
-Experimented with the filters you can add in Inkscape with this trace of a sketch I made at the Cafe les Oubliettes to create this postcar:
+Experimented with the filters you can add in Inkscape with this trace of a sketch I made at the Cafe les Oubliettes to create this postcard:
 
 <img src="/assets/images/art-so-far/bellechasse.png" alt="Bellechasse" width="75%" style="display: grid; margin-left: auto; margin-right: auto;"/>
 
