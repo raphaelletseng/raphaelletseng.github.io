@@ -1,5 +1,5 @@
 ---
-title: An Experiment with Sentiment Analysis on Film Reviews
+title: 🎞️ An Experiment with Sentiment Analysis on Film Reviews
 published: 2025-01-23
 description: "An exploration of sentiment analysis on film and movie review data."
 image: ""

@@ -1,5 +1,5 @@
 ---
-title: "The Importance of Privacy and Fairness in Machine Learning"
+title: "⚖️ The Importance of Privacy and Fairness in Machine Learning"
 published: 2025-01-26
 description: "Investigating the impact of unfairness mitigation techniques on privacy preserving Machine Learning."
 image: ""

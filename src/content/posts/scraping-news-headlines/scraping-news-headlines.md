@@ -14,12 +14,12 @@ lang: ''
 <iframe src="https://raphaelletseng.github.io/news_autoscraper/" frameBorder="0" style="width: 100%; height: 450px; background-color: white"></iframe>
 
 ## Motivation
-I built this news scraper to compare what different news organisations are writing about, and what each deems worthy of being in their daily headlines. The goal for this project is to eventually add more diverse news sources, to get a better view of what's newswohrthy around the world. 
+I built this news scraper to compare what different news organisations are writing about, and what each deems worthy of being in their daily headlines. The goal for this project is to eventually add more diverse news sources, to get a better view of what's newsworthy around the world. 
 
 The repository for this project can be found [here](https://github.com/raphaelletseng/news_autoscraper/tree/main).
 
 ## Scraping a Website with Beautiful Soup
-Using beautiful soup to scrape a website just involves a little digging into a website's DOM to find relevant tags and, to build a dataset, writing a couple of loops. However, not all websites are built the same, so although the general format of my script remained similar, it had to be tweaked across news organisations. While The Economist had a straightforward section id called 'new-relic-top-stories', the BBC div I was looking for had a data-testid called 'vermont-section'. For the BBC, I had to skip a couple headlines that shared the same attributes but did not contain relevant information, Al Jazeera had things in duplicates that required some cleaning, and for Le Monde, it was easier to hard code the tag attributes rather than write any kind of loop. Reuters identified my script as a bot after an initial pass (and so may require a more sophisticated touch to scrape), and the South China Morning Post had nothing but random strings as class names making it rather difficult to find what I was looking for. 
+Using beautiful soup to scrape a website just involves a little digging into a website's DOM to find relevant tags and, to build a dataset, writing a couple of loops. However, not all websites are built the same, so although the general format of my script remained similar, it had to be tweaked across news organisations. While The Economist had a straightforward section `id` called `'new-relic-top-stories`', the BBC div I was looking for had a `data-testid` called `'vermont-section'`. For the BBC, I had to skip a couple headlines that shared the same attributes but did not contain relevant information, Al Jazeera had things in duplicates that required some cleaning, and for Le Monde, it was easier to hard code the tag attributes rather than write any kind of loop. Reuters identified my script as a bot after an initial pass (and so may require a more sophisticated touch to scrape), and the South China Morning Post had nothing but random strings as class names making it rather difficult to find what I was looking for. 
 
 My code takes the headline as well as the url for the article, and appends them to an existing csv:
 
@@ -35,16 +35,16 @@ combined = pd.concat([df, existing_df], ignore_index=True)
 combined.to_csv("updated_headlines.csv", index=False)
 ```
 
-ignore_index: bool, defult=False  - If True, do not use the index values along the concatenation axis. The resulting axis will be labeled 0, …, n - 1. This is useful if you are concatenating objects where the concatenation axis does not have meaningful indexing information. Note the index values on the other axes are still respected in the join.
-
-Running the different scripts for each news organisation creates the csv 'updated_headlines.csv'. 
+> `ignore_index: bool, defult=False`  - If True, do not use the index values along the concatenation axis. The resulting axis will be labeled 0, …, n - 1. This is useful if you are concatenating objects where the concatenation axis does not have meaningful indexing information. Note the index values on the other axes are still respected in the join.
+`
+Running the different scripts for each news organisation creates the csv `'updated_headlines.csv'`. 
 
 I was able to write this code thanks to Jonathan Soma's page on [scraping](https://www.jonathansoma.com/everything/scraping/convert-web-pages-to-csv/#__tabbed_1_1), where he goes into more depth on more advanced techniques. 
 
 ## Creating an Automation with Github Workflows
 
 I wasn't really looking to have to run a script everytime I wanted to check the news, so the next step was to automate the updates to this csv. Luckily, [github workflows exists](https://github.com/jsoma/lede-2023-auto-scraper/blob/main/.github/workflows/main.yml
-), so I added a .github/workflows/main.yml to do this step for me. 
+), so I added a `.github/workflows/main.yml` to do this step for me. 
 
 ```
 on:
@@ -52,23 +52,23 @@ on:
         cron: '30 5 * * *'
 ```
 
-`schedule` allows you to run a workflow at a specified UTC time according to [POSIX cron syntax](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07). In my case, I run these workflows daily at 5:30am UTC. The * means 'all valid values'. 
+> `schedule` allows you to run a workflow at a specified UTC time according to [POSIX cron syntax](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07). In my case, I run these workflows daily at 5:30am UTC. The * means 'all valid values'. 
 
-In the future, I could seperate each of the scripts into seperate steps, so that the entire workflow doesn't fail if only a single part fails. 
+In the future, I could seperate each of the scripts into steps, so that the entire workflow doesn't fail if only a single part fails. 
 
 ## Displaying Data
 
-This table is available in a simple iframe in the repo's index.html thanks to datawrapper. To get this step to work, you first have to host your csv with github pages to make it publically accessible. And then you can have the datawrapper consistenly update. 
+This table is available in a simple iframe in the repo's index.html thanks to [datawrapper](https://www.datawrapper.de/). To get this step to work, you first have to host your csv with github pages to make it publically accessible. And then you can have the datawrapper consistenly update. 
 
 ## Transforming Data with Pandas
 
-Once I'd let this autoscraper run for a couple of weeks, I had enough data to start analysing. I experimented in a jupyter notebook using a subset of the full dataset. In order to parse any of the data, my dataframe first required some cleaning. I first split the urls from the titles: 
+Once I'd let this autoscraper run for a couple of weeks, I had enough data to start analysing. I experimented in a jupyter notebook using a subset of the full dataset. In order to parse any of the data, my dataframe first required some cleaning. I split the urls from the titles: 
 ```
 df[['headline_1_title', 'headline_1_url']] = df['headline_1'].str.split('https://', n=1, expand=True)
 df.drop(['headline_1'], axis=1, inplace=True)
 ```
 
-Then I melted the dataframe so that every headline had its own row. I wanted to idenitfy counts and keywords in these headlines to get an idea of what topics news organisations had been reporting on the most between cetain dates. I used nltk's corpus of stopwords and punctuation and stripped the headlines down to key words:
+Then I melted the dataframe so that every headline had its own row. I wanted to idenitfy counts and keywords in these headlines to get an idea of what topics news organisations had been reporting on the most between cetain dates. I used [nltk's](https://www.nltk.org/search.html?q=stopwords) corpus of stopwords and punctuation and stripped the headlines down to key words:
 
 ```
 rom nltk.corpus import stopwords
@@ -87,7 +87,7 @@ def remove_stopwords(text):
     return without_stopwords
 ```
 
-This caused a headline like `Elon Musk’s xAI goes after OpenAI` to become `Elon Musk ’ xAI goes OpenAI` and `Trump wastes no time in reigniting trade wars` to become `Trump wastes time reigniting trade wars`. 
+This caused a headline like `Elon Musk’s xAI goes after OpenAI` to become `Elon Musk ’ xAI goes OpenAI` and `Trump wastes no time in reigniting trade wars` to become `Trump wastes time reigniting trade wars` (which, I recognise, does change the meaning of the sentence).
 
 Then I used a Counter to build a new data frame with word counts across the stripped headlines:
 

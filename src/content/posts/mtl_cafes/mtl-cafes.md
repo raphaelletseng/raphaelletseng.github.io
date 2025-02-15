@@ -1,5 +1,5 @@
 ---
-title: "27 Places to Find Great Warm Drinks in Montreal"
+title: "☕ 27 Places to Find Great Warm Drinks in Montreal"
 published: 2025-01-27
 description: 'A map of some of my favourite cafes in Montreal, inspired by Oliver Strand, Larry Buchanan, and Nilkanth Patel'
 image: './coffee2.png'
