@@ -152,3 +152,5 @@ If we drill down to look at trends across 2024 for specific news organisations, 
 ## Future Directions
 
 This was a fun exercise in learning how to scrape websites, and tinker with dataframes. Ideally, I'd want to track what different news organisations are reporting on across time, rather than aggregating them all. It'd also be fun to improve the UI of this data, so that you can click directly on a headline to see the article. There's also something to be said about the meaning of ranking headlines as 1, 2, 3 as many news organisations tend to cycle through a series of headlines throughout the day. 
+
+![cafe-doodle-footer](./cafe.png)
