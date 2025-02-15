@@ -1,5 +1,5 @@
 ---
-title: "🎨 Art So Far #1"
+title: "🎨 Making Art and Postcards"
 published: 2025-02-09
 description: "Making more art! A quick tour of some things I've made so far this year."
 image: '/assets/images/art-so-far/shophouses.png'
