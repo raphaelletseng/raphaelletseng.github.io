@@ -139,6 +139,16 @@ def draw_pie(full_df, common_words_df):
 draw_pie(filtered_june, most_common_words_df)
 ```
 
+## Some Findings
+
+These [pie charts](https://github.com/raphaelletseng/news_autoscraper/blob/main/pie_charts.ipynb) demonstrate that across these four news organisations, 2025 news headlines have been dominated by Trump and Gaza. There's been an increase in talk about tariffs since Trump came to power in January 2025. And Musk is also regularly appearing. In 2024, it was war, Gaza, Ukraine, Isreal, Trump, the US. Unsurprisingly, news organisations report alot about what someone 'says'.
+
+If we drill down to look at trends across 2024 for specific news organisations, we see that the BBC's most occuring word was 'Trump' at 20.71% of the top 10 words. Al Jazeera's was 'Gaza' (28.01%) with 'Israel' and 'Israeli' making up a further 26.73% and 'killed' and 'kills' accounting for 14.19%. Le Monde did a lot of reporting on what was being said with 'says' coming out on top at 15.61%, and 'Trump' at 12.42%. 'France' and 'French' followed with an aggregate of 21.84%. The Economist had 'Donald' and 'Trump' making up 26.11% of their top 10 words, and 'America' making up another 14.16%. 'Economy' (6.19%), was fittingly also present. 
+
+<img src="https://raw.githubusercontent.com/raphaelletseng/news_autoscraper/refs/heads/main/2024_graphs.png" alt="pie charts of top 10 most occuring words in headlines across four organisations"/>
+<em>Pie Charts displaying the Top 10 Most Common Words in 2024 Headlines for The BBC, Al Jazeera, The Economist, and Le Monde</em>
+
+
 ## Future Directions
 
 This was a fun exercise in learning how to scrape websites, and tinker with dataframes. Ideally, I'd want to track what different news organisations are reporting on across time, rather than aggregating them all. It'd also be fun to improve the UI of this data, so that you can click directly on a headline to see the article. There's also something to be said about the meaning of ranking headlines as 1, 2, 3 as many news organisations tend to cycle through a series of headlines throughout the day. 
