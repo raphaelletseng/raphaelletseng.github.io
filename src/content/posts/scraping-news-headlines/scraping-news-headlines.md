@@ -68,13 +68,15 @@ df[['headline_1_title', 'headline_1_url']] = df['headline_1'].str.split('https:/
 df.drop(['headline_1'], axis=1, inplace=True)
 ```
 
-Then I melted the dataframe so that every headline had its own row. I wanted to idenitfy counts and keywords in these headlines to get an idea of what topics news organisations had been reporting on the most between cetain dates. I used [nltk's](https://www.nltk.org/search.html?q=stopwords) corpus of stopwords and punctuation and stripped the headlines down to key words:
+Then I melted the dataframe so that every headline had its own row. I wanted to idenitfy counts and keywords in these headlines to get an idea of what topics news organisations had been reporting on the most between cetain dates. I used [nltk's](https://www.nltk.org/search.html?q=stopwords) corpus of stopwords and stripped the headlines of punctuation down to key words:
 
 ```
 rom nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 nltk.download('stopwords')
 nltk.download('punkt')
+nltk.download('punkt_tab')
+
 import re
 
 def remove_punct(text):
