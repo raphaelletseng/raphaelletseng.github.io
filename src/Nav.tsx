@@ -2,7 +2,7 @@ import { Stack, AppBar, Typography, Toolbar } from "@mui/material"
 
 const Nav = () => {
     return (
-        <AppBar color="transparent">
+        <AppBar sx={{backgroundColor: 'white', boxShadow: 'none'}}>
             <Toolbar sx={{
                 display: 'flex',
                 justifyContent: 'center',}}>
@@ -16,21 +16,21 @@ const Nav = () => {
                 }}
             >Home</Typography>
              <Typography
-                href="/about/" 
+                href="/illustrations/" 
                 component="a"
                 sx={{
                 color: 'black',
                 fontWeight: 'bold',
                 }}
-            >About</Typography>
-             <Typography
+            >Illustrations</Typography>
+             {/* <Typography
                 href="/blog/" 
                 component="a"
                 sx={{
                 color: 'black',
                 fontWeight: 'bold',
                 }}
-            >Blog</Typography>
+            >Blog</Typography> */}
             </Stack>
             </Toolbar>
         </AppBar>
