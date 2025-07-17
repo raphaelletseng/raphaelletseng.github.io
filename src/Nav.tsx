@@ -1,4 +1,6 @@
-import { Stack, AppBar, Typography, Toolbar } from "@mui/material"
+import { Stack, AppBar, Typography, Toolbar, Box } from "@mui/material"
+import about from './assets/text/about.svg'
+import illus from './assets/text/illus.svg'
 
 const Nav = () => {
     return (
@@ -14,7 +16,37 @@ const Nav = () => {
                 color: 'black',
                 fontWeight: 'bold',
                 }}
-            >Home</Typography>
+            >曾</Typography>
+            {/* <Box component="a" href="/"> 
+             <Box
+                key={1}
+                component="img"
+                src={about}
+            alt={`Illustration ${1}`}
+            sx={{
+                height: '3rem',
+                padding: 2,
+          width: 'auto',
+          objectFit: 'cover',
+          
+        }}
+      />
+      </Box> */}
+      {/* <Box component="a" href="/illustrations"> 
+             <Box
+                key={1}
+                component="img"
+                src={illus}
+            alt={`Illustration ${1}`}
+            sx={{
+                height: '3rem',
+                padding: 2,
+          width: 'auto',
+          objectFit: 'cover',
+          
+        }}
+      />
+      </Box> */}
              <Typography
                 href="/illustrations/" 
                 component="a"
@@ -22,7 +54,7 @@ const Nav = () => {
                 color: 'black',
                 fontWeight: 'bold',
                 }}
-            >Illustrations</Typography>
+            >work</Typography>
              {/* <Typography
                 href="/blog/" 
                 component="a"
