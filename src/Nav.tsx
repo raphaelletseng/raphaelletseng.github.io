@@ -53,14 +53,14 @@ const Nav = () => {
       />
       </Box> */}
           <Typography
-            href="/illustrations/"
+            href="/illustration/"
             component="a"
             sx={{
               color: 'black',
               fontWeight: 'bold',
             }}
           >
-            work
+            illustration
           </Typography>
           <Typography
             href="/blog/"
