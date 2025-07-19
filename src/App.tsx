@@ -9,7 +9,7 @@ import BlogHome from './pages/BlogHome';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
