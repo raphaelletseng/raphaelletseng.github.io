@@ -67,7 +67,7 @@ const content = (
 export default {
   slug: 'the-importance-of-privacy-and-fairness-in-machine-learning',
   title: 'The Importance of Privacy and Fairness in Machine Learning',
-  date: '2025-07-18',
+  date: '2021-05-01',
   description:
     'As our reliance on data and machine learning decision systems continues to increase, we have a responsibility to ensure that the models we train guarantee individual privacy and do not exacerbate existing social disparities and unfair judgements.',
   tags: ['cs'],
