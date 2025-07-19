@@ -257,7 +257,7 @@ export default {
   slug: 'an-experiment-with-sentiment-analysis',
   title: 'An Experiment with Sentiment Analysis on Film Reviews',
   date: '2025-07-18',
-  description: 'An experiment with nltk on movie data',
+  description: 'Classifying movie review snippets as positive or negative with ML',
   tags: ['cs'],
   content,
 };

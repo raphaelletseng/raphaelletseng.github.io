@@ -6,7 +6,7 @@ import { Box, Typography, Divider } from '@mui/material';
 
 const BlogHome = () => {
   return (
-    <Box>
+    <Box sx={{ paddingTop: 4, display: 'block' }}>
       <Typography variant="h4" sx={{ textAlign: 'left', margin: 2 }}>
         writings
       </Typography>
