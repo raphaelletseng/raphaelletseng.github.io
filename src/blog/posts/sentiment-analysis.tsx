@@ -256,7 +256,7 @@ const content = (
 export default {
   slug: 'an-experiment-with-sentiment-analysis',
   title: 'An Experiment with Sentiment Analysis on Film Reviews',
-  date: '2025-07-18',
+  date: '2025-07-10',
   description: 'Classifying movie review snippets as positive or negative with ML',
   tags: ['cs'],
   content,
