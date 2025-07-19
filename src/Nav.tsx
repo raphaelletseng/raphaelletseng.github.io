@@ -1,6 +1,4 @@
-import { Stack, AppBar, Typography, Toolbar, Box } from '@mui/material';
-import about from './assets/text/about.svg';
-import illus from './assets/text/illus.svg';
+import { Stack, AppBar, Typography, Toolbar } from '@mui/material';
 
 const Nav = () => {
   return (

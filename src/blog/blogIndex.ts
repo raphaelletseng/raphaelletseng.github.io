@@ -1,6 +1,6 @@
 import type { Blog } from '../types';
-import post from './posts/test-post';
+import sentimentAnalysis from './posts/sentiment-analysis';
 
-const blogPosts: Blog[] = [post];
+const blogPosts: Blog[] = [sentimentAnalysis];
 
 export default blogPosts;

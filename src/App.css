@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+pre {
+  white-space: pre-wrap; /* allows lines to wrap */
+  word-break: break-word; /* breaks long words if needed */
+  overflow-wrap: anywhere; /* handles stubborn edge cases */
+  background-color: #d1d1d1;
+  padding: 1em;
+  border-radius: 5px;
+}

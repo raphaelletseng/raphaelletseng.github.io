@@ -1,4 +1,3 @@
-import gif from '../assets/images/el-gif.gif';
 import raph from '../assets/images/raph.png';
 import { Box, Typography } from '@mui/material';
 
