@@ -22,9 +22,9 @@ const content = (
     have time to do that in the next year and a half. I am taking history and philosophy of
     mathematics this semester to lighten my course load. It's taught by a very loud, mildly
     problematic, opinionated 70 year old man. It's been nice to have a course that doesn't have me
-    staring at equations and formulas completely lost; instead I get to hear Thomas Fox animate the
-    death of Hypatia, the genius of Archimedes and canonise various other mathematicians as members
-    of the Church of Mathematics.
+    staring at equations and formulas completely lost; instead I get to hear T.Fox animate the death
+    of Hypatia, the genius of Archimedes and canonise various other mathematicians as members of the
+    Church of Mathematics.
     <br />
     <br />
     Montreal and McGill are actually a lot of fun though. I realise I might've painted a grey
