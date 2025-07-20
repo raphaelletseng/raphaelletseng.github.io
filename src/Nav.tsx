@@ -11,7 +11,7 @@ const Nav = () => {
       >
         <Stack direction="row" spacing={12} sx={{ flexGrow: 1, justifyContent: 'center' }}>
           <Typography
-            href="/"
+            href="#"
             component="a"
             sx={{
               color: 'black',
@@ -20,38 +20,8 @@ const Nav = () => {
           >
             曾
           </Typography>
-          {/* <Box component="a" href="/"> 
-             <Box
-                key={1}
-                component="img"
-                src={about}
-            alt={`Illustration ${1}`}
-            sx={{
-                height: '3rem',
-                padding: 2,
-          width: 'auto',
-          objectFit: 'cover',
-          
-        }}
-      />
-      </Box> */}
-          {/* <Box component="a" href="/illustrations"> 
-             <Box
-                key={1}
-                component="img"
-                src={illus}
-            alt={`Illustration ${1}`}
-            sx={{
-                height: '3rem',
-                padding: 2,
-          width: 'auto',
-          objectFit: 'cover',
-          
-        }}
-      />
-      </Box> */}
           <Typography
-            href="/illustration/"
+            href="/#/illustration/"
             component="a"
             sx={{
               color: 'black',
@@ -61,7 +31,7 @@ const Nav = () => {
             illustration
           </Typography>
           <Typography
-            href="/blog/"
+            href="/#/blog/"
             component="a"
             sx={{
               color: 'black',
