@@ -27,7 +27,7 @@ const BlogHome = () => {
 
       {years.map((year) => (
         <Box key={year} sx={{ mb: 2 }}>
-          <Divider textAlign="right" sx={{ width: '15%', align: 'right', marginLeft: 'auto' }}>
+          <Divider textAlign="right" sx={{ align: 'right', marginLeft: 'auto' }}>
             <Typography variant="h6" sx={{ fontSize: '1rem' }}>
               {year}
             </Typography>
