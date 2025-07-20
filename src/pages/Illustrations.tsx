@@ -1,44 +1,37 @@
-import { Box, Modal } from '@mui/material';
-//import img1 from '../assets/images/img1.png';
-import img2 from '../assets/images/img2.jpeg';
-import img3 from '../assets/images/img3.png';
-import img10 from '../assets/images/img10.png';
-import gif1 from '../assets/images/el-gif.gif';
-import img4 from '../assets/images/img4.png';
-import blue4 from '../assets/images/blue4.png';
-import img6 from '../assets/images/img6.png';
-import img7 from '../assets/images/img7.png';
-import img9 from '../assets/images/img9.png';
-import img11 from '../assets/images/img11.png';
-import parc from '../assets/images/parc.jpeg';
-import house2 from '../assets/images/house2.jpeg';
-import house3 from '../assets/images/house3.jpeg';
-import house4 from '../assets/images/house4.jpeg';
-import { useState } from 'react';
-
-const images = [
-  gif1,
-  img2,
-  img4,
-  img6,
-  img7,
-  blue4,
-  img9,
-  house3,
-  img11,
-  house2,
-  img3,
-  parc,
-  house4,
-  img10,
-];
+import { Box, IconButton, Modal } from '@mui/material';
+import { useState, useEffect } from 'react';
+import { illustrationIndex } from '../assets/images/illustrationIndex';
+import { KeyboardArrowLeft, KeyboardArrowRight, Close } from '@mui/icons-material';
 
 const Illustrations = () => {
-  const [imageModal, setImageModal] = useState<number>(-1);
+  const [currImageIndex, setCurrImageIndex] = useState<number | undefined>(undefined);
 
-  const handleImageClick = (index: number) => {
-    console.log('getting called');
-    setImageModal(index);
+  useEffect(() => {
+    if (currImageIndex === undefined) return;
+
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setCurrImageIndex(undefined);
+      } else if (e.key === 'ArrowLeft') {
+        handleArrowClick('left');
+      } else if (e.key === 'ArrowRight') {
+        handleArrowClick('right');
+      }
+    };
+
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [currImageIndex]);
+
+  const handleArrowClick = (arrowType: 'left' | 'right') => {
+    setCurrImageIndex((prev) => {
+      const current = prev ?? 0;
+      if (arrowType === 'left') {
+        return current === 0 ? illustrationIndex.length - 1 : current - 1;
+      } else {
+        return current === illustrationIndex.length - 1 ? 0 : current + 1;
+      }
+    });
   };
 
   return (
@@ -52,35 +45,91 @@ const Illustrations = () => {
           gap: 3,
         }}
       >
-        {images.map((src, index) => (
-          <>
-            <Box
-              key={index}
-              component="img"
-              src={src}
-              alt={`Illustration ${index + 1}`}
-              onClick={() => handleImageClick(index)}
-              sx={{
-                width: '100%',
-                height: 'auto',
-                objectFit: 'cover',
-                marginTop: 3,
-              }}
-            />
-          </>
+        {illustrationIndex.map((src, index) => (
+          <Box
+            key={index}
+            component="img"
+            src={src}
+            alt={`Illustration ${index + 1}`}
+            onClick={() => setCurrImageIndex(index)}
+            sx={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'cover',
+              marginTop: 3,
+              cursor: 'pointer',
+              transition: 'transform 0.2s',
+            }}
+          />
         ))}
       </Box>
-      {imageModal !== -1 && (
+      {currImageIndex !== undefined && (
         <Modal
-          open={imageModal !== -1}
-          onClose={() => setImageModal(-1)}
-          sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          open={currImageIndex !== undefined}
+          onClose={() => setCurrImageIndex(undefined)}
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '100vh',
+            border: 'none',
+            backgroundColor: 'rgba(0, 0, 0, 0.2)',
+          }}
         >
-          <Box
-            component="img"
-            src={images[imageModal]}
-            sx={{ width: { xs: '75%', sm: '60%' }, height: 'auto', objectFit: 'contain' }}
-          />
+          <>
+            <IconButton
+              onClick={() => setCurrImageIndex(undefined)}
+              sx={{ position: 'absolute', top: 80, right: 16, zIndex: 10 }}
+            >
+              <Close />
+            </IconButton>
+            <Box
+              sx={{
+                position: 'relative',
+                width: '100%',
+                height: '80vh',
+                justifyContent: 'center',
+                alignContent: 'center',
+              }}
+            >
+              <IconButton
+                aria-label="delete"
+                onClick={() => handleArrowClick('left')}
+                sx={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: 0,
+                  zIndex: 10,
+                }}
+              >
+                <KeyboardArrowLeft />
+              </IconButton>
+              <Box
+                component="img"
+                src={illustrationIndex[currImageIndex]}
+                sx={{
+                  maxWidth: '80vw',
+                  maxHeight: '100%',
+                  objectFit: 'contain',
+                  margin: '0 auto',
+                  display: 'block',
+                }}
+                alt={`Illustration${illustrationIndex[currImageIndex]}`}
+              ></Box>
+              <IconButton
+                aria-label="delete"
+                onClick={() => handleArrowClick('right')}
+                sx={{
+                  position: 'absolute',
+                  top: '50%',
+                  right: 0,
+                  zIndex: 10,
+                }}
+              >
+                <KeyboardArrowRight />
+              </IconButton>
+            </Box>
+          </>
         </Modal>
       )}
     </Box>
