@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Modal } from '@mui/material';
 //import img1 from '../assets/images/img1.png';
 import img2 from '../assets/images/img2.jpeg';
 import img3 from '../assets/images/img3.png';
@@ -14,6 +14,7 @@ import parc from '../assets/images/parc.jpeg';
 import house2 from '../assets/images/house2.jpeg';
 import house3 from '../assets/images/house3.jpeg';
 import house4 from '../assets/images/house4.jpeg';
+import { useState } from 'react';
 
 const images = [
   gif1,
@@ -33,6 +34,13 @@ const images = [
 ];
 
 const Illustrations = () => {
+  const [imageModal, setImageModal] = useState<number>(-1);
+
+  const handleImageClick = (index: number) => {
+    console.log('getting called');
+    setImageModal(index);
+  };
+
   return (
     <Box sx={{ padding: 1 }}>
       <Box
@@ -51,6 +59,7 @@ const Illustrations = () => {
               component="img"
               src={src}
               alt={`Illustration ${index + 1}`}
+              onClick={() => handleImageClick(index)}
               sx={{
                 width: '100%',
                 height: 'auto',
@@ -61,6 +70,19 @@ const Illustrations = () => {
           </>
         ))}
       </Box>
+      {imageModal !== -1 && (
+        <Modal
+          open={imageModal !== -1}
+          onClose={() => setImageModal(-1)}
+          sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        >
+          <Box
+            component="img"
+            src={images[imageModal]}
+            sx={{ width: { xs: '75%', sm: '60%' }, height: 'auto', objectFit: 'contain' }}
+          />
+        </Modal>
+      )}
     </Box>
   );
 };
