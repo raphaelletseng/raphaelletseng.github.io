@@ -1,5 +1,5 @@
 import raph from '../assets/images/raph.png';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Link } from '@mui/material';
 
 const Home = () => {
   return (
@@ -56,10 +56,53 @@ const Home = () => {
             projects that support social impact and the mitigation of climate change. <br /> I can
             also be found running around outside and climbing rocks.
             <br /> <br /> I studied mathematics and computer science at McGill University. Since
-            then, I&apos;ve worked in methane mitigation, business and technology consulting, and
-            been part of the AI4Good Lab. I have also volunteered for organisations like Future
-            Earth, Sustainability in the Digital Age, and Earth Hero. <br /> <br />
-            Contact me at raphaelletseng@gmail.com.
+            then, I&apos;ve worked in{' '}
+            <Link href="https://www.ghgsat.com/en/" target="_blank" rel="noopener">
+              methane mitigation
+            </Link>
+            ,{' '}
+            <Link href="https://www.slalom.com/ca/en" target="_blank" rel="noopener">
+              business and technology consulting
+            </Link>
+            , and been part of the{' '}
+            <Link
+              href="https://www.ai4goodlab.com/project/datallite/"
+              target="_blank"
+              rel="noopener"
+            >
+              AI4Good Lab
+            </Link>
+            . I have also volunteered for organisations like{' '}
+            <Link
+              href="https://www.eventscribe.net/2022/ESA/fsPopup.asp?Mode=posterinfo&PosterID=501783"
+              target="_blank"
+              rel="noopener"
+            >
+              Future Earth
+            </Link>
+            ,
+            <Link
+              href="https://sustainabilitydigitalage.org/digital-climate-projects/"
+              target="_blank"
+              rel="noopener"
+            >
+              {' '}
+              Sustainability in the Digital Age
+            </Link>
+            , and{' '}
+            <Link
+              href="https://www.ai4goodlab.com/project/datallite/"
+              target="_blank"
+              rel="noopener"
+            >
+              Earth Hero
+            </Link>
+            . <br /> <br />
+            Contact me at{' '}
+            <Link href="mailto:raphaelletseng@gmail.com" target="_blank" rel="noopener">
+              raphaelletseng@gmail.com
+            </Link>
+            .
           </Typography>
         </Box>
       </Box>
