@@ -160,12 +160,12 @@ const content = (
             Images from the night of the event:{' '}
           </Typography>
           Late afternoon light through the front windows casting blue shadows and golden glows
-          across the silverware and chalkboard wine list.
-          <br /> Sunlight slowly getting replaced with tea lights and candles. <br />
-          The clink of glassware, and wine being poured and passed around. <br />A perfectly curated
+          across the silverware and chalkboard wine list. Sunlight slowly getting replaced with tea
+          lights and candles. <br />
+          The clink of glassware, and wine being poured and passed around. A perfectly curated
           pastel rainbow of food, each plate more beautiful and delicious than the last. <br />
-          Warm laughter and chatter contained by the soft wood panelling of the room. <br />
-          Getting up and switching chairs, new tables, meeting new friends.
+          Warm laughter and chatter contained by the soft wood panelling of the room. Getting up and
+          switching chairs, new tables, meeting new friends.
           <br /> Lingering by the door at the end of the night, before biking home in the dark,
           bellies full and content.
         </Typography>
