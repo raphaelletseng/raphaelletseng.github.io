@@ -69,6 +69,7 @@ const content = (
           />
         </Box>
       </Box>
+      <Divider sx={{ marginBottom: 2, marginTop: 2 }} />
       <Typography variant="h5" sx={{ marginBottom: 2, marginTop: 2 }}>
         The process.{' '}
       </Typography>
@@ -141,7 +142,7 @@ const content = (
         </Box>
       </Box>
     </Box>
-    <Divider sx={{ marginBottom: 2 }} />
+    <Divider sx={{ marginBottom: 2, marginTop: 2 }} />
     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, marginBottom: 1 }}>
       <Box sx={{ flex: 1, paddingRight: 1, justifyContent: 'center', alignContent: 'center' }}>
         <Typography
@@ -213,6 +214,7 @@ const content = (
         />
       </Box>
     </Box>
+    <Divider sx={{ marginBottom: 2, marginTop: 2 }} />
   </Box>
 );
 

@@ -1,4 +1,4 @@
-import { Box, Typography, Link, Paper } from '@mui/material';
+import { Box, Typography, Link, Paper, Divider } from '@mui/material';
 
 const content = (
   <Box sx={{ maxWidth: 800, mx: 'auto', p: 2 }}>
@@ -399,6 +399,7 @@ draw_pie(filtered_june, most_common_words_df)`}
       aggregating everything. Improving the UI with clickable headlines and timestamped cycles would
       also be a great next step.
     </Typography>
+    <Divider sx={{ marginBottom: 2, marginTop: 2 }} />
   </Box>
 );
 
