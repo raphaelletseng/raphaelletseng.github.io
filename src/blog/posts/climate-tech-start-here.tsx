@@ -90,7 +90,7 @@ const content = (
 
 export default {
   slug: 'climate-tech-starter-pack',
-  title: 'Climate Tech Starter Pack',
+  title: '🌏 Climate Tech Starter Pack ',
   date: '2021-07-21',
   description: 'A compilation of resources to begin navigating a career in climate! ',
   tags: ['resources', 'climate-tech', 'careers'],

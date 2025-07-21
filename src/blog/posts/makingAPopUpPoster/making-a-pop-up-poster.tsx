@@ -218,7 +218,7 @@ const content = (
 
 export default {
   slug: 'url',
-  title: "Sunday's Souper: Making a Pop-Up Poster",
+  title: " 🍷 Sunday's Souper: Making a Pop-Up Poster",
   date: '2025-04-20',
   description: "Creating art for Sunday's by MA & Eddie",
   tags: ['art', 'life'],
