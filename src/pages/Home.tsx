@@ -4,15 +4,14 @@ import { Box, Typography, Link } from '@mui/material';
 const Home = () => {
   return (
     <>
-      {/* <Typography variant="h1"> Raphaëlle 曾 </Typography> */}
       <Box
         display="flex"
         justifyContent="center"
         alignItems="top"
         sx={{
           flexDirection: {
-            xs: 'column', // stack on extra-small screens (phones)
-            sm: 'row', // side by side on small screens and up
+            xs: 'column',
+            sm: 'row',
           },
         }}
       >
@@ -22,7 +21,7 @@ const Home = () => {
           src={raph}
           alt={`Raphaelle Tseng`}
           sx={{
-            width: { xs: '100%', sm: '80%', md: '25%' },
+            width: { xs: '100%', sm: '50%', md: '25%' },
             order: { xs: 2, sm: 1 },
             height: 'auto',
             objectFit: 'contain',

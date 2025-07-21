@@ -16,6 +16,7 @@ const BlogCard = ({ post }: BlogCardProps) => {
           </Typography>
           <Typography sx={{ fontSize: '1rem', textAlign: 'left' }}>{post.description}</Typography>
           <Typography sx={{ fontSize: '1rem', textAlign: 'left' }}>{post.date}</Typography>
+          {/* <Typography sx={{ fontSize: '1rem', textAlign: 'left' }}>{post.tags}</Typography> */}
         </CardContent>
       </CardActionArea>
     </Card>
