@@ -6,6 +6,7 @@ import climateTechStartHere from './posts/climate-tech-start-here';
 import makingAPopUpPoster from './posts/makingAPopUpPoster/making-a-pop-up-poster';
 import scrapingNewsHeadlines from './posts/scraping-news-headlines';
 import theMalayanTigerOnTheBrinkOfExtinction from './posts/the-malayan-tiger-on-the-brink-of-extinction';
+import placesToFindWarmDrinksInMontreal from './posts/27-places-to-find-warm-drinks-in-montreal';
 
 const blogPosts: Blog[] = [
   sentimentAnalysis,
@@ -15,6 +16,7 @@ const blogPosts: Blog[] = [
   makingAPopUpPoster,
   scrapingNewsHeadlines,
   theMalayanTigerOnTheBrinkOfExtinction,
+  placesToFindWarmDrinksInMontreal,
 ];
 
 export default blogPosts;

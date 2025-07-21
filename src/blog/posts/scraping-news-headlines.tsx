@@ -16,7 +16,7 @@ const content = (
     <Box sx={{ my: 3 }}>
       <iframe
         src="https://raphaelletseng.github.io/news_autoscraper/"
-        style={{ width: '100%', height: 450, backgroundColor: 'white' }}
+        style={{ width: '100%', height: 450, backgroundColor: 'white', border: 'none' }}
         title="Daily News Scraper"
       />
     </Box>
