@@ -1,4 +1,4 @@
-import { Box, Typography, Link, Paper, Divider } from '@mui/material';
+import { Box, Typography, Link, Paper } from '@mui/material';
 
 const content = (
   <Box sx={{ mx: 'auto' }}>
