@@ -1,4 +1,4 @@
-import raph from '../assets/images/raph.png';
+import raph from '../assets/images/raph.avif';
 import { Box, Typography, Link } from '@mui/material';
 
 const Home = () => {
