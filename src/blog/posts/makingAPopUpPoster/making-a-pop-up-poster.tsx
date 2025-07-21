@@ -87,8 +87,7 @@ const content = (
           </ImageListItem>
         ))}
       </ImageList>
-      And then I mocked some posters. I wanted to give MA and Eddie options to choose from, ranging
-      from more clean cut to pastel hand drawn.
+      And then I mocked some posters.
       <ImageList sx={{ width: '100%', height: 'auto' }} cols={3}>
         {posters.map((item, index) => (
           <ImageListItem key={index}>
