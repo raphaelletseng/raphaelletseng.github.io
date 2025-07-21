@@ -160,7 +160,7 @@ combined.to_csv("updated_headlines.csv", index=False)`}
       doesn't fail if only a single part fails.
     </Typography>
 
-    <Typography variant="h5" gutterBottom gutterTop sx={{ marginTop: 3, marginBottom: 2 }}>
+    <Typography variant="h5" gutterBottom sx={{ marginTop: 3, marginBottom: 2 }}>
       Displaying Data
     </Typography>
 
