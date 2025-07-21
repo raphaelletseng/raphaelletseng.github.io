@@ -1,7 +1,7 @@
 import { Box, Typography, Link, Paper, Divider } from '@mui/material';
 
 const content = (
-  <Box sx={{ maxWidth: 800, mx: 'auto', p: 2 }}>
+  <Box sx={{ mx: 'auto' }}>
     <Typography variant="h5" gutterBottom>
       <Link
         href="https://raphaelletseng.github.io/news_autoscraper/"
@@ -290,11 +290,11 @@ e.g:
       pie chart of the result:
     </Typography>
 
-    <Box sx={{ my: 3 }}>
+    <Box sx={{ my: 1 }}>
       <img
         src="https://raw.githubusercontent.com/raphaelletseng/news_autoscraper/refs/heads/main/top_10_words_2024-11-01%2005%3A37%3A41.760206.png"
         alt="Top 10 Word Pie Chart"
-        style={{ width: '100%', maxWidth: '100%', display: 'block', borderRadius: 4 }}
+        style={{ width: '50%', maxWidth: '100%', display: 'block', borderRadius: 4 }}
       />
     </Box>
 
