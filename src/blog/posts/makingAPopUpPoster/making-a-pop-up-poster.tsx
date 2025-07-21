@@ -1,26 +1,26 @@
 import { Typography, Box, ImageList, ImageListItem, Link, Divider } from '@mui/material';
-import eggs from './makingAPopUpPoster/eggs.jpeg';
-import isma from './makingAPopUpPoster/isma.jpeg';
-import ismaMenu from './makingAPopUpPoster/menus-ig.jpeg';
-import bw from './makingAPopUpPoster/bw.png';
-import closeup from './makingAPopUpPoster/closeup.png';
-import green from './makingAPopUpPoster/green.png';
-import pink from './makingAPopUpPoster/pink.png';
-import text1 from './makingAPopUpPoster/text.jpeg';
-import text2 from './makingAPopUpPoster/text2.jpeg';
-import food2 from './makingAPopUpPoster/food2.jpeg';
+import eggs from './eggs.jpeg';
+import isma from './isma.jpeg';
+import ismaMenu from './menus-ig.jpeg';
+import bw from './bw.png';
+import closeup from './closeup.png';
+import green from './green.png';
+import pink from './pink.png';
+import text1 from './text.jpeg';
+import text2 from './text2.jpeg';
+import food2 from './food2.jpeg';
 
-import blue3 from './makingAPopUpPoster/v2/blue3.png';
-import bw33 from './makingAPopUpPoster/v2/bw33.png';
-import orange from './makingAPopUpPoster/v2/orange.png';
-import pinkposter from './makingAPopUpPoster/v2/pink.png';
-import slice1 from './makingAPopUpPoster/v2/slice1.png';
-import v1Sundays from './makingAPopUpPoster/v2/v1_sundays.2.png';
-import xyz from './makingAPopUpPoster/v2/xyz.png';
+import blue3 from './v2/blue3.png';
+import bw33 from './v2/bw33.png';
+import orange from './v2/orange.png';
+import pinkposter from './v2/pink.png';
+import slice1 from './v2/slice1.png';
+import v1Sundays from './v2/v1_sundays.2.png';
+import xyz from './v2/xyz.png';
 
-import menu1 from './makingAPopUpPoster/menu/menu_bw_v2.png';
-import menu2 from './makingAPopUpPoster/menu/menu_colv4.png';
-import menu_final from './makingAPopUpPoster/menu/menus2.jpeg';
+import menu1 from './menu/menu_bw_v2.png';
+import menu2 from './menu/menu_colv4.png';
+import menu_final from './menu/menus2.jpeg';
 
 const assets = [bw, closeup, green, pink, text1, text2];
 const posters = [blue3, bw33, pinkposter, slice1, v1Sundays, xyz];
