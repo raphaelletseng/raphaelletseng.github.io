@@ -23,7 +23,7 @@ const content = (
     </Typography>
     <Divider orientation="horizontal" sx={{ marginBottom: 2 }} />
     <Typography variant="body1">
-      In the 1950's, more than 3000 tigers lived and ranged across the jungles of Peninsula
+      In the 1950&apos;s, more than 3000 tigers lived and ranged across the jungles of Peninsula
       Malaysia. As of 2019, less than 150 can be found in the wild. The Malayan tiger has been
       listed as critically endangered by the{' '}
       <Link
@@ -33,8 +33,8 @@ const content = (
       >
         IUCN Red List
       </Link>
-      , the world’s most comprehensive inventory of the conservation status of species. It faces
-      challenges on two major fronts: <br />
+      , the world&apos;s most comprehensive inventory of the conservation status of species. It
+      faces challenges on two major fronts: <br />
       <br /> 1. Loss of habitat through deforestation and logging
       <br /> 2. Poaching for wildlife trade <br /> <br />
       Why is the Malayan tiger on the brink of extinction? And what must be done if we hope to save
@@ -77,10 +77,10 @@ const content = (
       with the mouse-deer. It is a symbol of strength and courage in this country and forms an
       intrinsically unique part of the fabric of Malaysia.
       <br /> <br />
-      Already we have lost tiger species; the Javan tiger was last sighted in the 1970's and the
-      Bali tiger in the 1930's. The former disappeared due to loss of habitat, and the latter was
-      hunted to extinction. The Malayan tiger’s importance in both the forest and in Malaysian
-      culture means the unique subspecies cannot and should not be next.
+      Already we have lost tiger species; the Javan tiger was last sighted in the 1970&apos;s and
+      the Bali tiger in the 1930&apos;s. The former disappeared due to loss of habitat, and the
+      latter was hunted to extinction. The Malayan tiger’s importance in both the forest and in
+      Malaysian culture means the unique subspecies cannot and should not be next.
     </Typography>
     <Typography>
       <Typography variant="h6" sx={{ marginTop: 4, marginBottom: 2, fontWeight: 'bold' }}>

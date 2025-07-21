@@ -49,7 +49,7 @@ const content = (
         <Link href="https://urban.us/jobs" target="_blank" rel="noopener">
           Urban Us Job Board
         </Link>
-        : Listings for startups funded by Urban Us working on climate‑resilient cities.
+        : Listings for startups funded by Urban Us working on climate‑resilient cities.
       </Typography>
       <Typography component="li">
         <Link href="#" target="_blank" rel="noopener">

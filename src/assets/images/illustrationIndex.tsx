@@ -12,6 +12,7 @@ import parc from './parc.jpeg';
 import house2 from './house2.jpeg';
 import house3 from './house3.jpeg';
 import house4 from './house4.jpeg';
+import flowers from './flowers.png';
 
 export const illustrationIndex = [
   gif1,
@@ -28,4 +29,5 @@ export const illustrationIndex = [
   parc,
   house4,
   img10,
+  flowers,
 ];

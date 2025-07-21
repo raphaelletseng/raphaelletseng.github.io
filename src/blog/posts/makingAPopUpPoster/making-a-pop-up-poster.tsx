@@ -33,7 +33,7 @@ const content = (
           <Typography variant="body1">
             In April, I designed some posters and menus for a restaurant popup by Eddie and MA at
             Bona Fide. <br /> <br />
-            I’ve have had dinner at MA’s in the past. Whether it’s in the backyard summer sunshine
+            I&apos;ve had dinner at MA’s in the past. Whether it’s in the backyard summer sunshine
             or the cosy candle lit warmth of his dining room in the winter, it’s always a guaranteed
             wonderful time. Every piece of furniture is suddenly transformed into a chair in an
             attempt to squish as many humans as possible around a table teeming with plates of
