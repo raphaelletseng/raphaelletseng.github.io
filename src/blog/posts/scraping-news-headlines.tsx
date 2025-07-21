@@ -399,7 +399,6 @@ draw_pie(filtered_june, most_common_words_df)`}
       aggregating everything. Improving the UI with clickable headlines and timestamped cycles would
       also be a great next step.
     </Typography>
-    <Divider sx={{ marginBottom: 2, marginTop: 2 }} />
   </Box>
 );
 

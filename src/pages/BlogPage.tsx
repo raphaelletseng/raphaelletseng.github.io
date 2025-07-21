@@ -8,7 +8,7 @@ const BlogPage = () => {
 
   if (!post) return <p>Post not found</p>;
   return (
-    <Container maxWidth="md" sx={{ px: { xs: 2, sm: 3, md: 4 }, py: { xs: 3, sm: 4 } }}>
+    <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3, md: 4 }, py: { xs: 3, sm: 4 } }}>
       <Box
         sx={{
           padding: { xs: 0, sm: 2 },
@@ -41,6 +41,7 @@ const BlogPage = () => {
           }}
         >
           {post.content}
+          <Divider orientation="horizontal" sx={{ marginTop: 4 }} flexItem />
         </Box>
       </Box>
     </Container>

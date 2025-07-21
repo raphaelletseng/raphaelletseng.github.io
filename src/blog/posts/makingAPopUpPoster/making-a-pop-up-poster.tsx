@@ -230,7 +230,6 @@ const content = (
         />
       </Box>
     </Box>
-    <Divider sx={{ marginBottom: 2, marginTop: 2 }} />
   </Box>
 );
 
