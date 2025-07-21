@@ -32,12 +32,9 @@ const BlogHome = () => {
             sx={{
               my: 2,
               borderColor: 'divider',
-              '& .MuiDivider-wrapper': {
-                px: 1,
-              },
             }}
           >
-            <Typography variant="h6" sx={{ fontSize: '1rem' }}>
+            <Typography variant="h6" sx={{ fontSize: '1rem', color: 'text.secondary' }}>
               {year}
             </Typography>
           </Divider>
