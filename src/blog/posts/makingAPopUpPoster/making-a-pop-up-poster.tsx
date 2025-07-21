@@ -103,7 +103,14 @@ const content = (
       </ImageList>
       I also made some menu options, drawing alpine crocuses because Eddie and MA met in the
       mountains out west, and in the spring time, these flowers grow out of the late snow.
-      <Box sx={{ display: 'flex', padding: 0, height: '500px' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          padding: 0,
+          height: { sm: 'auto', md: '500px' },
+          flexDirection: { xs: 'column', md: 'row' },
+        }}
+      >
         <Box sx={{ flex: 1 }}>
           <img
             src={menu1}
@@ -176,7 +183,15 @@ const content = (
         />
       </Box>
     </Box>
-    <Box sx={{ display: 'flex', padding: 0, height: '500px' }}>
+    <Box
+      sx={{
+        display: 'flex',
+        padding: 0,
+        height: { sm: 'auto', md: '500px' },
+        flexDirection: { xs: 'column', md: 'row' },
+        marginBottom: 1,
+      }}
+    >
       <Box sx={{ flex: 1 }}>
         <img
           src={isma}
@@ -186,6 +201,7 @@ const content = (
             height: '100%',
             objectFit: 'cover',
             display: 'block',
+            marginBottom: 1,
           }}
         />
       </Box>

@@ -8,7 +8,7 @@ interface BlogCardProps {
 
 const BlogCard = ({ post }: BlogCardProps) => {
   return (
-    <Card sx={{ minWidth: 400, margin: 1, boxShadow: 'none' }}>
+    <Card sx={{ margin: 1, boxShadow: 'none' }}>
       <CardActionArea component={Link} to={`/blog/${post.slug}`}>
         <CardContent>
           <Typography sx={{ fontWeight: 400, fontSize: '1.2rem', textAlign: 'left' }}>
