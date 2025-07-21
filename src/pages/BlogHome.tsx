@@ -20,14 +20,23 @@ const BlogHome = () => {
   const years = Object.keys(postsByYear).sort((a, b) => +b - +a);
 
   return (
-    <Box sx={{ p: 4 }}>
+    <Box sx={{ px: { xs: 2, sm: 3, md: 4 }, py: { xs: 2, sm: 3 } }}>
       <Typography variant="h4" textAlign="left" mb={2}>
         writings
       </Typography>
 
       {years.map((year) => (
         <Box key={year} sx={{ mb: 2 }}>
-          <Divider textAlign="right" sx={{ align: 'right', marginLeft: 'auto' }}>
+          <Divider
+            textAlign="right"
+            sx={{
+              my: 2,
+              borderColor: 'divider',
+              '& .MuiDivider-wrapper': {
+                px: 1,
+              },
+            }}
+          >
             <Typography variant="h6" sx={{ fontSize: '1rem' }}>
               {year}
             </Typography>
