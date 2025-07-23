@@ -11,7 +11,7 @@ const Nav = () => {
       >
         <Stack direction="row" spacing={12} sx={{ flexGrow: 1, justifyContent: 'center' }}>
           <Typography
-            href="#"
+            href="/"
             component="a"
             sx={{
               color: 'black',

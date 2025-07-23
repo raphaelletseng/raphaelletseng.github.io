@@ -89,11 +89,7 @@ const Home = () => {
               Sustainability in the Digital Age
             </Link>
             , and{' '}
-            <Link
-              href="https://www.ai4goodlab.com/project/datallite/"
-              target="_blank"
-              rel="noopener"
-            >
+            <Link href="https://github.com/EarthHeroOrg" target="_blank" rel="noopener">
               Earth Hero
             </Link>
             . <br /> <br />
