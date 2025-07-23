@@ -8,3 +8,10 @@ export interface Blog {
   description: string;
   content: ReactNode;
 }
+
+export interface Illustration {
+  src: string;
+  alt: string;
+  description?: ReactNode;
+  tags: string[];
+}

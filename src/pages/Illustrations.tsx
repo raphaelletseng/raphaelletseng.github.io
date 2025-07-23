@@ -45,12 +45,12 @@ const Illustrations = () => {
           gap: 1,
         }}
       >
-        {illustrationIndex.map((src, index) => (
+        {illustrationIndex.map((illustration, index) => (
           <Box
             key={index}
             component="img"
-            src={src}
-            alt={`Illustration ${index + 1}`}
+            src={illustration.src}
+            alt={illustration.alt}
             onClick={() => setCurrImageIndex(index)}
             sx={{
               width: '100%',
@@ -106,7 +106,7 @@ const Illustrations = () => {
               </IconButton>
               <Box
                 component="img"
-                src={illustrationIndex[currImageIndex]}
+                src={illustrationIndex[currImageIndex].src}
                 sx={{
                   maxWidth: '80vw',
                   maxHeight: '100%',
@@ -114,8 +114,8 @@ const Illustrations = () => {
                   margin: '0 auto',
                   display: 'block',
                 }}
-                alt={`Illustration${illustrationIndex[currImageIndex]}`}
-              ></Box>
+                alt={illustrationIndex[currImageIndex].alt}
+              />
               <IconButton
                 aria-label="delete"
                 onClick={() => handleArrowClick('right')}

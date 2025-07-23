@@ -14,22 +14,23 @@ import house3 from './house3.jpeg';
 import house4 from './house4.jpeg';
 import flowers from './flowers.png';
 import amster from './amster.png';
+import type { Illustration } from '../../types';
 
-export const illustrationIndex = [
-  gif1,
-  img2,
-  img4,
-  img6,
-  img7,
-  amster,
-  blue4,
-  img9,
-  house3,
-  img11,
-  house2,
-  img3,
-  parc,
-  house4,
-  img10,
-  flowers,
+export const illustrationIndex: Illustration[] = [
+  { src: gif1, alt: 'Assemblee pour la rage climatique gif', tags: ['gif', 'ink'] },
+  { src: img2, alt: 'Watercolour house in Quebec', tags: ['watercolour', 'houses'] },
+  { src: img4, alt: 'Intersection of Bellechasse and St-Viateur', tags: ['ink'] },
+  { src: img6, alt: 'Les Oubliettes Cafe Assets', tags: ['cafe', 'ink'] },
+  { src: img7, alt: '6am Run Assets', tags: ['cafe', 'ink', 'activity'] },
+  { src: amster, alt: 'Amsterdam houses', tags: ['houses', 'ink', 'travel'] },
+  { src: blue4, alt: "Sunday's Souper Poster", tags: ['poster'] },
+  { src: img9, alt: 'Dried flowers', tags: ['ink'] },
+  { src: house3, alt: 'Yellow Penang Shophouse', tags: ['houses', 'watercolor'] },
+  { src: img11, alt: 'PSA Winston Posters', tags: ['poster', 'digital'] },
+  { src: house2, alt: 'Blue Penang Shophouse', tags: ['houses', 'watercolor'] },
+  { src: img3, alt: 'Le Club Cafe Assets', tags: ['cafe', 'ink'] },
+  { src: parc, alt: 'Parc St Louis', tags: ['watercolor', 'travel'] },
+  { src: house4, alt: 'White Penang Shophouse', tags: ['houses', 'watercolor'] },
+  { src: img10, alt: 'Handle with Care Postcard', tags: ['postcard', 'digital'] },
+  { src: flowers, alt: 'Digital Flower Bouquet Asset', tags: ['digital'] },
 ];
