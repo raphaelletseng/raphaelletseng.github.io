@@ -77,7 +77,8 @@ const Home = () => {
           >
             Hi, I&apos;m Raph Tseng. I spend my time writing code, illustrating, and working on
             projects that support social impact and the mitigation of climate change. <br /> I can
-            also be found running around outside and climbing rocks.
+            also be found running around outside and{' '}
+            <Link href="/#/why-i-climb/">climbing rocks</Link>.
             <br /> <br /> I studied mathematics and computer science at McGill University. Since
             then, I&apos;ve worked in{' '}
             <Link href="https://www.ghgsat.com/en/" target="_blank" rel="noopener">
