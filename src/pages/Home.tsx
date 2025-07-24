@@ -1,13 +1,32 @@
 import raph from '../assets/images/raph.avif';
-import { Box, Typography, Link } from '@mui/material';
+import { Box, Typography, Link, styled } from '@mui/material';
+import { motion, useReducedMotion } from 'motion/react';
+
+const MotionTypography = motion(Typography);
+
+const MotionImg = styled(motion.img)(({ theme }) => ({
+  width: '100%',
+  height: 'auto',
+  objectFit: 'contain',
+  marginTop: theme.spacing(3),
+  [theme.breakpoints.up('sm')]: {
+    width: '50%',
+    order: 2,
+  },
+  [theme.breakpoints.up('md')]: {
+    width: '25%',
+    order: 1,
+  },
+}));
 
 const Home = () => {
+  const shouldReduceMotion = useReducedMotion();
   return (
     <>
       <Box
         display="flex"
         justifyContent="center"
-        alignItems="top"
+        alignItems="flex-start"
         sx={{
           flexDirection: {
             xs: 'column',
@@ -15,18 +34,13 @@ const Home = () => {
           },
         }}
       >
-        <Box
-          key={1}
-          component="img"
+        <MotionImg
           src={raph}
           alt={`Raphaelle Tseng`}
-          sx={{
-            width: { xs: '100%', sm: '50%', md: '25%' },
-            order: { xs: 2, sm: 1 },
-            height: 'auto',
-            objectFit: 'contain',
-            marginTop: 3,
-          }}
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          sx={{ order: { xs: 2, sm: 1 } }}
         />
         <Box
           key={2}
@@ -39,7 +53,10 @@ const Home = () => {
             justifyContent: 'center',
           }}
         >
-          <Typography
+          <MotionTypography
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 60 }}
+            animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
             sx={{
               fontSize: {
                 xs: '2rem', // small screens
@@ -49,8 +66,14 @@ const Home = () => {
             }}
           >
             Raphaëlle 曾
-          </Typography>
-          <Typography variant="body1" sx={{ margin: { sm: 1, md: 5 }, padding: 3 }}>
+          </MotionTypography>
+          <MotionTypography
+            variant="body1"
+            sx={{ margin: { sm: 1, md: 5 }, padding: 3 }}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+            animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.4, ease: 'easeOut' }}
+          >
             Hi, I&apos;m Raph Tseng. I spend my time writing code, illustrating, and working on
             projects that support social impact and the mitigation of climate change. <br /> I can
             also be found running around outside and climbing rocks.
@@ -98,7 +121,7 @@ const Home = () => {
               raphaelletseng@gmail.com
             </Link>
             .
-          </Typography>
+          </MotionTypography>
         </Box>
       </Box>
     </>
