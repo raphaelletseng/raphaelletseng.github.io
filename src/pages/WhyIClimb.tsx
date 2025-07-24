@@ -27,10 +27,10 @@ const WhyIClimb = () => {
     <Box
       sx={{
         display: 'grid',
-        gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
-        gap: 3,
-        alignItems: 'center',
-        marginTop: 4,
+        gridTemplateColumns: { xs: '1fr', md: 'repeat(6, 1fr)' },
+        gap: 4,
+        marginTop: 6,
+        position: 'relative',
       }}
     >
       <MotionTypography
@@ -41,9 +41,10 @@ const WhyIClimb = () => {
           fontSize: { xs: '2.5rem', md: '5rem' },
           lineHeight: 1.1,
           letterSpacing: '-0.03em',
-          marginBottom: 4,
           textTransform: 'uppercase',
-          gridColumn: { md: '1 / -1' }, // span both columns on md and up
+          gridColumn: { xs: '1 / -1', md: '1 / 5' },
+          marginBottom: { xs: 2, md: 0 },
+          zIndex: 2,
         }}
         initial={shouldReduceMotion ? false : { opacity: 0, y: 60 }}
         animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -51,112 +52,68 @@ const WhyIClimb = () => {
       >
         Why I Climb
       </MotionTypography>
+
       <MotionBox
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          flex: 1,
+          gridColumn: { xs: '1 / -1', md: '4 / 7' },
+          marginTop: { xs: 0, md: '-60px' },
+          zIndex: 1,
         }}
         initial={shouldReduceMotion ? false : { opacity: 0, y: 60 }}
         animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease: 'easeOut' }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
       >
-        <MotionImg
-          src={rimou}
-          alt="Rimou"
+        <MotionImg src={rimou} alt="Rimou" />
+        <Typography
+          variant="caption"
+          sx={{
+            fontSize: '0.75rem',
+            letterSpacing: '0.05em',
+            textTransform: 'uppercase',
+            marginTop: 1,
+            fontFamily: 'Inter, sans-serif',
+            textAlign: 'right',
+          }}
+        >
+          {' '}
+          Le Bas-St-Laurent, Été 2025
+        </Typography>
+      </MotionBox>
+
+      {[
+        { src: chek, caption: 'North Cheakamus, Été 2023', col: '1 / 4' },
+        { src: kamou, caption: 'Kamouraska, Automne 2024', col: '4 / 7' },
+        { src: dacks, caption: 'The Adirondacks, Automne 2024', col: '2 / 5' },
+      ].map(({ src, caption, col }, index) => (
+        <MotionBox
+          key={caption}
+          sx={{
+            gridColumn: { xs: '1 / -1', md: col },
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            position: 'relative',
+          }}
           initial={shouldReduceMotion ? false : { opacity: 0, y: 60 }}
           animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: 'easeOut' }}
-        />
-        <Typography
-          variant="caption"
-          sx={{
-            fontSize: '0.75rem',
-            letterSpacing: '0.05em',
-            textTransform: 'uppercase',
-            marginTop: 1,
-            fontFamily: 'Inter, sans-serif',
-          }}
+          transition={{ duration: 0.5 + index * 0.1, ease: 'easeOut' }}
         >
-          Une plage du Bas St-Laurent, Été 2025
-        </Typography>
-      </MotionBox>
-      <MotionBox
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          flex: 1,
-        }}
-        initial={shouldReduceMotion ? false : { opacity: 0, y: 60 }}
-        animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease: 'easeOut' }}
-      >
-        <MotionImg src={chek} alt="Cheakamus" />
-        <Typography
-          variant="caption"
-          sx={{
-            fontSize: '0.75rem',
-            letterSpacing: '0.05em',
-            textTransform: 'uppercase',
-            marginTop: 1,
-            fontFamily: 'Inter, sans-serif',
-          }}
-        >
-          North Cheakamus, Été 2023
-        </Typography>
-      </MotionBox>
-      <MotionBox
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          flex: 1,
-        }}
-        initial={shouldReduceMotion ? false : { opacity: 0, y: 60 }}
-        animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease: 'easeOut' }}
-      >
-        <MotionImg src={kamou} alt="Kamou" />
-        <Typography
-          variant="caption"
-          sx={{
-            fontSize: '0.75rem',
-            letterSpacing: '0.05em',
-            textTransform: 'uppercase',
-            marginTop: 1,
-            fontFamily: 'Inter, sans-serif',
-          }}
-        >
-          Kamouraska, Automne 2024
-        </Typography>
-      </MotionBox>
-      <MotionBox
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          flex: 1,
-        }}
-        initial={shouldReduceMotion ? false : { opacity: 0, y: 60 }}
-        animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease: 'easeOut' }}
-      >
-        <MotionImg src={dacks} alt="Adirondacks" />
-        <Typography
-          variant="caption"
-          sx={{
-            fontSize: '0.75rem',
-            letterSpacing: '0.05em',
-            textTransform: 'uppercase',
-            marginTop: 1,
-            fontFamily: 'Inter, sans-serif',
-          }}
-        >
-          The Adirondacks, Automne 2024
-        </Typography>
-      </MotionBox>
+          <MotionImg src={src} alt={caption} />
+          <Typography
+            variant="caption"
+            sx={{
+              fontSize: '0.75rem',
+              letterSpacing: '0.05em',
+              textTransform: 'uppercase',
+              marginTop: 1,
+              fontFamily: 'Inter, sans-serif',
+              color: 'text.secondary',
+            }}
+          >
+            {caption}
+          </Typography>
+        </MotionBox>
+      ))}
     </Box>
   );
 };
