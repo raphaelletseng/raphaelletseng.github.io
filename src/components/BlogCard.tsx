@@ -11,7 +11,7 @@ const BlogCard = ({ post }: BlogCardProps) => {
     <Card sx={{ margin: 1, boxShadow: 'none' }}>
       <CardActionArea component={Link} to={`/blog/${post.slug}`}>
         <CardContent>
-          <Typography sx={{ fontWeight: 400, fontSize: '1.2rem', textAlign: 'left' }}>
+          <Typography variant="h4" sx={{ fontWeight: 400, fontSize: '1.2rem', textAlign: 'left' }}>
             {post.title}
           </Typography>
           <Typography sx={{ fontSize: '1rem', textAlign: 'left' }}>{post.description}</Typography>

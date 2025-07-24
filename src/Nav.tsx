@@ -11,31 +11,31 @@ const Nav = () => {
       >
         <Stack direction="row" spacing={12} sx={{ flexGrow: 1, justifyContent: 'center' }}>
           <Typography
+            variant="h6"
             href="/"
             component="a"
             sx={{
               color: 'black',
-              fontWeight: 'bold',
             }}
           >
             曾
           </Typography>
           <Typography
             href="/#/illustration/"
+            variant="h6"
             component="a"
             sx={{
               color: 'black',
-              fontWeight: 'bold',
             }}
           >
             illustration
           </Typography>
           <Typography
             href="/#/blog/"
+            variant="h6"
             component="a"
             sx={{
               color: 'black',
-              fontWeight: 'bold',
             }}
           >
             blog

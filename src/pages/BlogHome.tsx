@@ -2,8 +2,12 @@ import BlogCard from '../components/BlogCard';
 import type { Blog } from '../types';
 import blogIndex from '../blog/blogIndex';
 import { Box, Typography, Divider } from '@mui/material';
+import { motion, useReducedMotion } from 'motion/react';
+
+const MotionTypography = motion(Typography);
 
 const BlogHome = () => {
+  const shouldReduceMotion = useReducedMotion();
   const sorted = [...blogIndex].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
@@ -21,9 +25,16 @@ const BlogHome = () => {
 
   return (
     <Box sx={{ px: { xs: 2, sm: 3, md: 4 }, py: { xs: 2, sm: 3 } }}>
-      <Typography variant="h4" textAlign="left" mb={2}>
+      <MotionTypography
+        variant="h4"
+        textAlign="left"
+        mb={2}
+        initial={shouldReduceMotion ? false : { opacity: 0, x: -60 }}
+        animate={shouldReduceMotion ? {} : { opacity: 1, x: 0 }}
+        transition={{ duration: 0.4, ease: 'easeOut' }}
+      >
         writings
-      </Typography>
+      </MotionTypography>
 
       {years.map((year) => (
         <Box key={year} sx={{ mb: 2 }}>

@@ -57,6 +57,7 @@ const Home = () => {
             initial={shouldReduceMotion ? false : { opacity: 0, y: 60 }}
             animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
+            variant="h1"
             sx={{
               fontSize: {
                 xs: '2rem', // small screens

@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import blogPosts from '../blog/blogIndex';
-import { Box, Divider, Container } from '@mui/material';
+import { Box, Divider, Container, Typography } from '@mui/material';
 
 const BlogPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -18,8 +18,13 @@ const BlogPage = () => {
           maxWidth: '100%',
         }}
       >
-        <h2>{post.title}</h2>
-        <p> {post.date}</p>
+        <Typography variant="h4" sx={{ marginBottom: 2 }}>
+          {post.title}
+        </Typography>
+        <Typography variant="body1" sx={{ marginBottom: 1 }}>
+          {' '}
+          {post.date}
+        </Typography>
         <Divider orientation="horizontal" sx={{ marginBottom: 2 }} flexItem />
         <Box
           sx={{
