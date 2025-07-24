@@ -4,6 +4,8 @@ Check build by running `pnpm run build` and then `pnpm preview`.
 
 Then run `pnpm run deploy`. This should push the new build /dist to gh-pages.
 
+This project uses [MUI](https://mui.com/material-ui/) and fonts from [The League of Moveable Type](https://www.theleagueofmoveabletype.com/)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
