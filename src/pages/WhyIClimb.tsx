@@ -1,6 +1,7 @@
 import { Box, Typography, styled } from '@mui/material';
 import rimou from '../assets/climbing/rimou.jpeg';
-import kamou from '../assets/climbing/kamou.jpg';
+//import kamou from '../assets/climbing/kamou.jpg';
+import kamou_grain from '../assets/climbing/kamou_grain.jpg';
 import { motion, useReducedMotion } from 'motion/react';
 import chek from '../assets/climbing/chek.jpeg';
 import dacks from '../assets/climbing/dacks.jpeg';
@@ -33,6 +34,7 @@ const WhyIClimb = () => {
         position: 'relative',
       }}
     >
+      {/* Headline */}
       <MotionTypography
         variant="h2"
         sx={{
@@ -53,6 +55,7 @@ const WhyIClimb = () => {
         Why I Climb
       </MotionTypography>
 
+      {/* Hero Image */}
       <MotionBox
         sx={{
           gridColumn: { xs: '1 / -1', md: '4 / 7' },
@@ -80,10 +83,31 @@ const WhyIClimb = () => {
         </Typography>
       </MotionBox>
 
+      <Box
+        sx={{
+          gridColumn: { xs: '1 / -1', md: '2 / 6' },
+          marginTop: 2,
+        }}
+      >
+        <Typography
+          variant="body1"
+          sx={{
+            fontSize: '1rem',
+            lineHeight: 1.7,
+            fontFamily: 'Inter, sans-serif',
+            color: 'text.primary',
+          }}
+        >
+          For the beautiful places I get to explore. For the community. For the shenanigans. For the
+          physical and mental challenge. For the adventure. For the giggles. For the learning
+          opporunities. For the way it makes me feel strong. For the way it makes nature feel big.
+        </Typography>
+      </Box>
+
+      {/* Image Grid */}
       {[
         { src: chek, caption: 'North Cheakamus, Été 2023', col: '1 / 4' },
-        { src: kamou, caption: 'Kamouraska, Automne 2024', col: '4 / 7' },
-        { src: dacks, caption: 'The Adirondacks, Automne 2024', col: '2 / 5' },
+        { src: kamou_grain, caption: 'Kamouraska, Automne 2024', col: '4 / 7' },
       ].map(({ src, caption, col }, index) => (
         <MotionBox
           key={caption}
@@ -114,6 +138,76 @@ const WhyIClimb = () => {
           </Typography>
         </MotionBox>
       ))}
+
+      <Box
+        sx={{
+          gridColumn: { xs: '1 / -1', md: '2 / 6' },
+          marginY: 4,
+        }}
+      >
+        <Typography
+          variant="h4"
+          sx={{
+            fontFamily: 'Junction, serif',
+            fontWeight: 400,
+            fontStyle: 'italic',
+            lineHeight: 1.4,
+            fontSize: { xs: '1.5rem', md: '2rem' },
+          }}
+        >
+          For the sense of being up high. For the views. For the quiet and stillness. For the crag
+          kittens and pups.
+        </Typography>
+      </Box>
+
+      <MotionBox
+        sx={{
+          gridColumn: { xs: '1 / -1', md: '2 / 6' },
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+        initial={shouldReduceMotion ? false : { opacity: 0, y: 60 }}
+        animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
+      >
+        <MotionImg src={dacks} alt="The Adirondacks" />
+        <Typography
+          variant="caption"
+          sx={{
+            fontSize: '0.75rem',
+            letterSpacing: '0.05em',
+            textTransform: 'uppercase',
+            marginTop: 1,
+            fontFamily: 'Inter, sans-serif',
+            color: 'text.secondary',
+          }}
+        >
+          The Adirondacks, Automne 2024
+        </Typography>
+      </MotionBox>
+      <Box
+        sx={{
+          gridColumn: { xs: '1 / -1', md: '2 / 6' },
+          marginTop: 2,
+        }}
+      >
+        <Typography
+          variant="body1"
+          sx={{
+            fontSize: '1rem',
+            lineHeight: 1.7,
+            fontFamily: 'Inter, sans-serif',
+            color: 'text.primary',
+          }}
+        >
+          For the blue sky sunny days. For the sunsets, and the rappels in the dark. For the sense
+          of competency that comes with managing gear. For the chance to support others. For the
+          opportunity to mentor and teach. For the crew of gals. For the sore toes and sore fingers.
+          For the days projecting and fixating on micro details. For the ice creams in the
+          summertime after a day out.
+        </Typography>
+      </Box>
     </Box>
   );
 };
