@@ -5,6 +5,8 @@ import kamou_grain from '../assets/climbing/kamou_grain.jpg';
 import { motion, useReducedMotion } from 'motion/react';
 import chek from '../assets/climbing/chek.jpeg';
 import dacks from '../assets/climbing/dacks.jpeg';
+import grosbonnet from '../assets/climbing/grosbonnet_grain.jpeg';
+import nyamuk from '../assets/climbing/nyamuk_grain.jpeg';
 
 const MotionTypography = motion(Typography);
 const MotionBox = motion(Box);
@@ -106,8 +108,8 @@ const WhyIClimb = () => {
 
       {/* Image Grid */}
       {[
-        { src: chek, caption: 'North Cheakamus, Été 2023', col: '1 / 4' },
-        { src: kamou_grain, caption: 'Kamouraska, Automne 2024', col: '4 / 7' },
+        { src: chek, caption: 'The Outpust à Cheakamus, Été 2023', col: '1 / 4' },
+        { src: kamou_grain, caption: 'As de Pique de Kamouraska, Automne 2024', col: '4 / 7' },
       ].map(({ src, caption, col }, index) => (
         <MotionBox
           key={caption}
@@ -208,6 +210,45 @@ const WhyIClimb = () => {
           summertime after a day out.
         </Typography>
       </Box>
+      {[
+        { src: nyamuk, caption: 'Nyamuk Batu Caves, Été 2024', col: '1 / 5' },
+        {
+          src: grosbonnet,
+          caption: 'La Toute Beauté, Printemps 2024',
+          col: '5 / 7',
+          marginTop: 10,
+        },
+      ].map(({ src, caption, col, marginTop }, index) => (
+        <MotionBox
+          key={caption}
+          sx={{
+            gridColumn: { xs: '1 / -1', md: col },
+            marginTop: marginTop ? { md: marginTop } : undefined,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            position: 'relative',
+          }}
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 60 }}
+          animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 + index * 0.1, ease: 'easeOut' }}
+        >
+          <MotionImg src={src} alt={caption} />
+          <Typography
+            variant="caption"
+            sx={{
+              fontSize: '0.75rem',
+              letterSpacing: '0.05em',
+              textTransform: 'uppercase',
+              marginTop: 1,
+              fontFamily: 'Inter, sans-serif',
+              color: 'text.secondary',
+            }}
+          >
+            {caption}
+          </Typography>
+        </MotionBox>
+      ))}
     </Box>
   );
 };
