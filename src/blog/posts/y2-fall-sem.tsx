@@ -51,8 +51,7 @@ export default {
   slug: 'y2-fall-sem',
   title: '🍂 Y2 Fall Semester',
   date: '2018-10-03',
-  description:
-    'Y2 Fall Sem: I find myself typing this from a seat in the library overlooking campus',
+  description: "A picture from McGill's Midterm Season",
   tags: ['life'],
   content,
 };
