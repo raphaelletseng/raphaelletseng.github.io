@@ -6,6 +6,7 @@ import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import BlogPage from './pages/BlogPage';
 import BlogHome from './pages/BlogHome';
 import WhyIClimb from './pages/WhyIClimb';
+import Gaspesie from './pages/Gaspesie';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="blog" element={<BlogHome />} />
         <Route path="blog/:slug" element={<BlogPage />} />
         <Route path="why-i-climb" element={<WhyIClimb />} />
+        <Route path="gaspesie" element={<Gaspesie />} />
       </Routes>
     </Router>
   );

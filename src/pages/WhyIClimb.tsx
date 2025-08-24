@@ -36,7 +36,6 @@ const WhyIClimb = () => {
         position: 'relative',
       }}
     >
-      {/* Headline */}
       <MotionTypography
         variant="h2"
         sx={{
@@ -100,15 +99,14 @@ const WhyIClimb = () => {
             color: 'text.primary',
           }}
         >
-          For the beautiful places I get to explore. For the community. For the shenanigans. For the
-          physical and mental challenge. For the adventure. For the giggles. For the learning
-          opporunities. For the way it makes me feel strong. For the way it makes nature feel big.
+          Community. Beautiful places. Shenanigans. The physical and mental challenge. Adventure.
+          Giggles. Learning opportunities. For the way it makes nature feel big.
         </Typography>
       </Box>
 
       {/* Image Grid */}
       {[
-        { src: chek, caption: 'The Outpust à Cheakamus, Été 2023', col: '1 / 4' },
+        { src: chek, caption: 'The Outpost à Cheakamus, Été 2023', col: '1 / 4' },
         { src: kamou_grain, caption: 'As de Pique de Kamouraska, Automne 2024', col: '4 / 7' },
       ].map(({ src, caption, col }, index) => (
         <MotionBox
@@ -157,8 +155,8 @@ const WhyIClimb = () => {
             fontSize: { xs: '1.5rem', md: '2rem' },
           }}
         >
-          For the sense of being up high. For the views. For the quiet and stillness. For the crag
-          kittens and pups.
+          For the sense of being up high. For the blue sky sunny days. Sunsets, and the rappels in
+          the dark. Crag kittens and pups.
         </Typography>
       </Box>
 
@@ -203,10 +201,9 @@ const WhyIClimb = () => {
             color: 'text.primary',
           }}
         >
-          For the blue sky sunny days. For the sunsets, and the rappels in the dark. For the sense
-          of competency that comes with managing gear. For the chance to support others. For the
-          opportunity to mentor and teach. For the crew of gals. For the sore toes and sore fingers.
-          For the days projecting and fixating on micro details. For the ice creams in the
+          Great views. Quiet and stillness. The sense of competency that comes with managing gear.
+          To support others. The opportunity to mentor and teach. The crew of gals. Sore toes and
+          sore fingers. Days of projecting and fixating on micro details. For the ice creams in the
           summertime after a day out.
         </Typography>
       </Box>

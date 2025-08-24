@@ -28,12 +28,13 @@ const BlogHome = () => {
       <MotionTypography
         variant="h4"
         textAlign="left"
+        sx={{ textTransform: 'uppercase' }}
         mb={2}
         initial={shouldReduceMotion ? false : { opacity: 0, x: -60 }}
         animate={shouldReduceMotion ? {} : { opacity: 1, x: 0 }}
         transition={{ duration: 0.4, ease: 'easeOut' }}
       >
-        writings
+        Writings
       </MotionTypography>
 
       {years.map((year) => (
