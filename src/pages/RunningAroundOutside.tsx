@@ -7,6 +7,8 @@ import cabo from '../assets/running/cabodaroca.jpg';
 import gaspe from '../assets/running/gaspesie.jpg';
 import mud from '../assets/running/mud.jpg';
 import lacblanc from '../assets/running/lacblanc.png';
+import padi from '../assets/running/padi.jpg';
+import bonaventure from '../assets/running/bonaventure.jpg';
 
 //const MotionTypography = motion(Typography);
 const MotionBox = motion(Box);
@@ -24,7 +26,7 @@ const MotionImg = styled(motion.img)(({ theme }) => ({
   },
 }));
 
-const Running = () => {
+const RunningAroundOutside = () => {
   const shouldReduceMotion = useReducedMotion();
 
   return (
@@ -32,7 +34,7 @@ const Running = () => {
       sx={{
         display: 'grid',
         gridTemplateColumns: { xs: '1fr', md: 'repeat(6, 1fr)' },
-        gap: 1,
+        gap: 2,
         marginTop: 1,
         position: 'relative',
         gridAutoFlow: 'row dense',
@@ -40,8 +42,7 @@ const Running = () => {
     >
       {/* Image Grid */}
       {[
-        { src: cham_1, caption: 'Tête de Balme Chamonix, Été 2025', col: '1 / 5', row: '1 / 3' },
-        { src: cham_2, caption: '', col: '5 / 7', row: '1 / 2' },
+        { src: cham_1, caption: 'Tête de Balme Chamonix', col: '1 / 5', row: '1 / 3' },
         // { src: cham_3, caption: '', col: '5 / 7', row: '2 / 3 ' },
       ].map(({ src, caption, col, row }, index) => (
         <MotionBox
@@ -80,17 +81,19 @@ const Running = () => {
         </MotionBox>
       ))}
       {[
-        { src: cabo, caption: 'Cabo da Roca Colares, Hiver 2024', col: '1 / 3', row: '3 / 4' },
-        { src: lacblanc, caption: 'Lac Blanc Chamonix, Été 2025', col: '5 / 7', row: '3 / 4' },
+        { src: cabo, caption: 'Cabo da Roca Colares', col: '1 / 3', row: '3 / 4' },
+        { src: cham_2, caption: '', col: '4 / 6', row: '1 / 2', marginTop: 1 },
+        { src: lacblanc, caption: 'Lac Blanc Chamonix', col: '5 / 7', row: '3 / 4' },
         {
           src: gaspe,
-          caption: 'La Camarine Parc de la Gaspesie, Été 2025',
+          caption: 'La Camarine Parc de la Gaspesie',
           col: '3 / 5',
           row: '3 / 4',
         },
-        { src: mud, caption: '', col: '6 / 7', row: '2 / 4' },
-        // { src: cham_3, caption: '', col: '5 / 7', row: '2 / 3 ' },
-      ].map(({ src, caption, col, row }, index) => (
+        { src: mud, caption: 'Muddy Normandy', col: '6 / 7', row: '2 / 4' },
+        { src: padi, caption: 'Perhentian Islands', col: '1 / 3', row: '4 / 5' },
+        { src: bonaventure, caption: "L'île Bonaventure", col: '4 / 7', row: '4 / 5 ' },
+      ].map(({ src, caption, col, row, marginTop }, index) => (
         <MotionBox
           key={caption}
           sx={{
@@ -101,13 +104,14 @@ const Running = () => {
             alignItems: 'flex-start',
             position: 'relative',
             width: '100%',
+            marginTop: 2,
           }}
           initial={shouldReduceMotion ? false : { opacity: 0, y: 60 }}
           animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
           transition={{ duration: 0.5 + index * 0.1, ease: 'easeOut' }}
         >
           <MotionImg
-            style={{ width: '100%', height: 'auto', display: 'block' }}
+            style={{ width: '100%', height: 'auto', display: 'block', marginTop: marginTop || 0 }}
             src={src}
             alt={caption}
           />
@@ -130,4 +134,4 @@ const Running = () => {
   );
 };
 
-export default Running;
+export default RunningAroundOutside;

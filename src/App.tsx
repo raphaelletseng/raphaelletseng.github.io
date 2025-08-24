@@ -7,7 +7,7 @@ import BlogPage from './pages/BlogPage';
 import BlogHome from './pages/BlogHome';
 import WhyIClimb from './pages/WhyIClimb';
 import Gaspesie from './pages/Gaspesie';
-import Running from './pages/Running';
+import RunningAroundOutside from './pages/RunningAroundOutside';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path="blog/:slug" element={<BlogPage />} />
         <Route path="why-i-climb" element={<WhyIClimb />} />
         <Route path="gaspesie" element={<Gaspesie />} />
-        <Route path="running" element={<Running />} />
+        <Route path="running" element={<RunningAroundOutside />} />
       </Routes>
     </Router>
   );
