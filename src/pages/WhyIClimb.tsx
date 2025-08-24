@@ -36,7 +36,7 @@ const WhyIClimb = () => {
         position: 'relative',
       }}
     >
-      <MotionTypography
+      {/* <MotionTypography
         variant="h2"
         sx={{
           fontFamily: 'Junction, serif',
@@ -54,12 +54,12 @@ const WhyIClimb = () => {
         transition={{ duration: 0.4, ease: 'easeOut' }}
       >
         Why I Climb
-      </MotionTypography>
+      </MotionTypography> */}
 
       {/* Hero Image */}
       <MotionBox
         sx={{
-          gridColumn: { xs: '1 / -1', md: '4 / 7' },
+          gridColumn: { xs: '1 / -1', md: '3 / 7' },
           marginTop: { xs: 0, md: '-60px' },
           zIndex: 1,
         }}
@@ -90,7 +90,15 @@ const WhyIClimb = () => {
           marginTop: 2,
         }}
       >
-        <Typography
+        <MotionTypography
+          sx={{ fontSize: '1.2rem', textAlign: 'left' }}
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 120 }}
+          animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+        >
+          Why I Climb______
+        </MotionTypography>
+        <MotionTypography
           variant="body1"
           sx={{
             fontSize: '1rem',
@@ -98,10 +106,13 @@ const WhyIClimb = () => {
             fontFamily: 'Inter, sans-serif',
             color: 'text.primary',
           }}
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 120 }}
+          animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
         >
           Community. Beautiful places. Shenanigans. The physical and mental challenge. Adventure.
           Giggles. Learning opportunities. For the way it makes nature feel big.
-        </Typography>
+        </MotionTypography>
       </Box>
 
       {/* Image Grid */}
@@ -155,8 +166,8 @@ const WhyIClimb = () => {
             fontSize: { xs: '1.5rem', md: '2rem' },
           }}
         >
-          For the sense of being up high. For the blue sky sunny days. Sunsets, and the rappels in
-          the dark. Crag kittens and pups.
+          The sense of being up high. Blue sky sunny days. Sunsets, and the rappels in the dark.
+          Crag kittens and pups.
         </Typography>
       </Box>
 

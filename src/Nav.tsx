@@ -21,16 +21,6 @@ const Nav = () => {
             曾
           </Typography>
           <Typography
-            href="/#/illustration/"
-            variant="h6"
-            component="a"
-            sx={{
-              color: 'black',
-            }}
-          >
-            illustration
-          </Typography>
-          <Typography
             href="/#/blog/"
             variant="h6"
             component="a"

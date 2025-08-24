@@ -74,9 +74,10 @@ const Home = () => {
           animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.4, ease: 'easeOut' }}
         >
-          Hi, I&apos;m Raph Tseng. I spend my time writing code, illustrating, and working on
-          projects that support social impact and the mitigation of climate change. <br /> I can
-          also be found running around outside and{' '}
+          Hi, I&apos;m Raph Tseng. I spend my time writing code,{' '}
+          <Link href="/#/illustration/">illustrating</Link>, and working on projects that support
+          social impact and the mitigation of climate change. <br /> I can also be found{' '}
+          <Link href="/#/running/">running around outside</Link> and{' '}
           <Link href="/#/why-i-climb/">climbing rocks</Link>.
           <br /> <br /> I studied mathematics and computer science at McGill University. Since then,
           I&apos;ve worked in{' '}
