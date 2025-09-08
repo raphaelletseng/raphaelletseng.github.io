@@ -4,11 +4,18 @@ import './index.css';
 import App from './App.tsx';
 import { ThemeProvider } from '@emotion/react';
 import theme from './theme.ts';
+import { PostHogProvider } from 'posthog-js/react';
+
+const options = {
+  api_host: import.meta.env.VITE_PUBLIC_POSTHOG_HOST,
+};
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
+    <PostHogProvider apiKey={import.meta.env.VITE_PUBLIC_POSTHOG_KEY} options={options}>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </PostHogProvider>
   </StrictMode>,
 );
