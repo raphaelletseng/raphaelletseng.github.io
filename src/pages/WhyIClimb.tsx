@@ -8,7 +8,7 @@ import dacks from '../assets/climbing/dacks.jpeg';
 import grosbonnet from '../assets/climbing/grosbonnet_grain.jpeg';
 import nyamuk from '../assets/climbing/nyamuk_grain.jpeg';
 
-const MotionTypography = motion(Typography);
+//const MotionTypography = motion(Typography);
 const MotionBox = motion(Box);
 
 const MotionImg = styled(motion.img)(({ theme }) => ({
