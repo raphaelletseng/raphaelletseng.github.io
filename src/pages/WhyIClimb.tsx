@@ -90,7 +90,7 @@ const WhyIClimb = () => {
           marginTop: 2,
         }}
       >
-        <MotionTypography
+        {/* <MotionTypography
           sx={{ fontSize: '1.2rem', textAlign: 'left' }}
           initial={shouldReduceMotion ? false : { opacity: 0, y: 120 }}
           animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
@@ -112,7 +112,7 @@ const WhyIClimb = () => {
         >
           Community. Beautiful places. Shenanigans. The physical and mental challenge. Adventure.
           Giggles. Learning opportunities. For the way it makes nature feel big.
-        </MotionTypography>
+        </MotionTypography> */}
       </Box>
 
       {/* Image Grid */}
@@ -156,7 +156,7 @@ const WhyIClimb = () => {
           marginY: 4,
         }}
       >
-        <Typography
+        {/* <Typography
           variant="h4"
           sx={{
             fontFamily: 'Junction, serif',
@@ -166,9 +166,9 @@ const WhyIClimb = () => {
             fontSize: { xs: '1.5rem', md: '2rem' },
           }}
         >
-          The sense of being up high. Blue sky sunny days. Sunsets, and the rappels in the dark.
-          Crag kittens and pups.
-        </Typography>
+          The sense of being up high. For the blue sky sunny days. Sunsets, and the rappels in
+          the dark. Crag kittens and pups.
+        </Typography> */}
       </Box>
 
       <MotionBox
@@ -203,7 +203,7 @@ const WhyIClimb = () => {
           marginTop: 2,
         }}
       >
-        <Typography
+        {/* <Typography
           variant="body1"
           sx={{
             fontSize: '1rem',
@@ -216,7 +216,7 @@ const WhyIClimb = () => {
           To support others. The opportunity to mentor and teach. The crew of gals. Sore toes and
           sore fingers. Days of projecting and fixating on micro details. For the ice creams in the
           summertime after a day out.
-        </Typography>
+        </Typography> */}
       </Box>
       {[
         { src: nyamuk, caption: 'Nyamuk Batu Caves, Été 2024', col: '1 / 5' },
