@@ -34,7 +34,7 @@ const entries = [
   ['14 Aug', 'Chamonix hike Lac Blanc – Elevation is hard. The mountains are beautiful.'],
   [
     '16 Aug',
-    'Col de Montet – nutrition is key. Hike the uphills. Running downhill shreds your quads. A raclette is a good way to refill calories.',
+    'Col de Montet – Nutrition is key. Hike the uphills. Running downhill shreds your quads. A raclette is a good way to refill calories.',
   ],
   [
     '27 Aug',
