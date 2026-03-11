@@ -78,7 +78,7 @@ const Home = () => {
           <Link href="/#/illustration/">illustrating</Link>, and working on projects that support
           social impact and the mitigation of climate change. <br /> I can also be found{' '}
           <Link href="/#/running/">running around outside</Link> and{' '}
-          <Link href="/#/why-i-climb/">climbing rocks</Link>.
+          <Link href="/#/why-i-climb/">climbing things</Link>.
           <br /> <br /> I studied mathematics and computer science at McGill University. Since then,
           I&apos;ve worked in{' '}
           <Link href="https://www.ghgsat.com/en/" target="_blank" rel="noopener">
