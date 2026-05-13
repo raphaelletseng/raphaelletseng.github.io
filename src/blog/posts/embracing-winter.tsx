@@ -1,10 +1,10 @@
 import { Box, Chip, Stack, Typography } from '@mui/material';
 
 const ACTIVITY_COLORS: Record<string, { bg: string; color: string }> = {
-  Skiing: { bg: '#E6F1FB', color: '#0C447C' },
-  IceClimbing: { bg: '#EEEDFE', color: '#3C3489' },
-  Camping: { bg: '#E1F5EE', color: '#085041' },
-  Hiking: { bg: '#EAF3DE', color: '#27500A' },
+  Skiing: { bg: '#DBEAFE', color: '#1D4ED8' },
+  IceClimbing: { bg: '#EDE9FE', color: '#6D28D9' },
+  Camping: { bg: '#D1FAE5', color: '#065F46' },
+  Hiking: { bg: '#FEF3C7', color: '#B45309' },
 };
 
 const DEFAULT_COLOR = { bg: '#F1EFE8', color: '#444441' };
@@ -88,9 +88,9 @@ const entries: MonthGroup[] = [
         day: 4,
         month: 'Jan',
         activity: ['IceClimbing'],
-        title: 'Shawbridge in -25',
+        title: 'Shawbridge in -25°C',
         description:
-          "Just Marcus yelling 'Higher!' and 'Hips IN!' as I wriggled my way up Devil's Tooth. Freezing on the belay in -25C weather. With Am, Hamed, and Marcus",
+          "Just Marcus yelling 'Higher!' and 'Hips IN!' as I wriggled my way up Devil's Tooth. Freezing on the belay in -25°C weather. With Am, Hamed, and Marcus",
         photos: ['/photos/embracingWinter/shawbridge.jpeg'],
       },
       {
@@ -117,9 +117,9 @@ const entries: MonthGroup[] = [
         endDay: 25,
         month: 'Jan',
         activity: ['Camping'],
-        title: 'Backpacking Cap360 in -30C',
+        title: 'Backpacking Cap360 in -32°C',
         description:
-          "The weather forecast said -35C and Am said 'Aren't we lucky that we get to experience these temperatures? We MUST make the most of it!'. Hamed says suffering is character building. It literally snowed inside our tent. Putting frozen boots on in the morning is a special special feeling for your toes.",
+          "The weather forecast said -32°C and Am said 'Aren't we lucky that we get to experience these temperatures? We MUST make the most of it!'. Hamed says suffering is character building. It literally snowed inside our tent. Putting frozen boots on in the morning is a special special feeling for your toes.",
         photos: [
           '/photos/embracingWinter/cap360_view.jpeg',
           '/photos/embracingWinter/cap360.jpg',
@@ -226,8 +226,8 @@ const PhotoThumb = ({ src }: { src: string }) => {
       component="img"
       src={src}
       sx={{
-        width: '50%',
-        height: '50%',
+        width: { xs: '100%', sm: '50%' },
+        height: { xs: '100%', sm: '50%' },
         objectFit: 'cover',
         borderRadius: 1,
         border: '0.5px solid',
@@ -286,7 +286,7 @@ const Entry = ({
         {description}
       </Typography>
       {photos && photos?.length > 0 && (
-        <Stack direction="row" spacing={0.75}>
+        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={0.75}>
           {photos.map((src, i) => (
             <PhotoThumb key={i} src={src} />
           ))}
@@ -297,8 +297,33 @@ const Entry = ({
 );
 
 const content = (
-  <Box sx={{ maxWidth: 750, mx: 'auto', py: 2 }}>
-    <Typography>A digital picture diary of the winter fun I got up to this year.</Typography>
+  <Box sx={{ mx: 'auto', py: 2 }}>
+    <Typography>
+      Finally learning how to lean into winter. A digital diary of my season of snow.
+    </Typography>
+    <Box
+      sx={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
+        gap: 1.25,
+        mb: 3,
+      }}
+    >
+      {[
+        { label: 'Days outside', value: 26 },
+        { label: 'Activities', value: 4 },
+        { label: "Min 'Feels Like' Temp", value: '-38°C' },
+      ].map(({ label, value }) => (
+        <Box key={label} sx={{ bgcolor: 'action.hover', borderRadius: 2, p: 1.5 }}>
+          <Typography
+            sx={{ fontSize: 12, color: 'text.secondary', letterSpacing: '0.04em', mb: 0.75 }}
+          >
+            {label}
+          </Typography>
+          <Typography sx={{ fontSize: 26, fontWeight: 500, lineHeight: 1 }}>{value}</Typography>
+        </Box>
+      ))}
+    </Box>
     {entries.map(({ month, items }) => (
       <Box key={month}>
         <Typography
@@ -327,9 +352,9 @@ const content = (
 
 export default {
   slug: 'embracing-winter',
-  title: '❄️ Embracing Winter',
+  title: '❄️ Embracing Winter in Québec',
   date: '2026-05-13',
-  description: 'Finally learning how to lean into winter',
+  description: 'Finally learning how to lean into winter. A digital diary of my season of snow.',
   tags: ['outside'],
   content,
 };
