@@ -36,8 +36,9 @@ const entries: MonthGroup[] = [
         endDay: 7,
         month: 'Dec',
         activity: ['IceClimbing'],
-        title: 'Crawford Notch & Huntington Pass on Mount Washington',
-        description: 'First time ice climbing - immediately got the barfies.',
+        title: 'Crawford Notch & Huntington Ravine',
+        description:
+          "First time ice climbing - immediately got the barfies. We didn't do Pinnacle but we took the tools to the base and got to experience the beauty of Mount Washington! A lot of laughs eating ramen in the motel and watching Paddington 2 with Nicho and Am. Will have to return!",
         photos: [
           '/photos/embracingWinter/crawford.jpeg',
           '/photos/embracingWinter/pinnacle_am.png',
@@ -49,7 +50,8 @@ const entries: MonthGroup[] = [
         month: 'Dec',
         activity: ['IceClimbing'],
         title: "Am's birthday at Lac Sylvere",
-        description: 'Some wet wet ice, followed by Paddington',
+        description:
+          "Some wet, wet ice at Lac Sylvere followed by a romp through the deep fluffy snow for Am's birthday. With Amandine and Nicholas.",
         photos: ['/photos/embracingWinter/sylvere.jpeg'],
       },
       {
@@ -57,8 +59,9 @@ const entries: MonthGroup[] = [
         endDay: 28,
         month: 'Dec',
         activity: ['IceClimbing', 'Hiking'],
-        title: 'St Alexis Des Monts Christmas Cabin',
-        description: 'Winter walks & Mastigouche ice with Hao, Corey, Am, and Hamed',
+        title: 'Noel at St-Alexis-Des-Monts',
+        description:
+          "Christmas spent at a rustic chalet near St-Alexis-Des-Monts with Hao, Hamed, Corey, and Am. Days of winter walks, snow angels, and snowball fights. Warming toes by the fire and puzzling over hot chocolate. Managed a gloriously sunny day at Mastigouche, where Hamed's pointers massively helped my technique.",
         photos: [
           '/photos/embracingWinter/st_alexis.jpeg',
           '/photos/embracingWinter/hao.jpeg',
@@ -73,7 +76,7 @@ const entries: MonthGroup[] = [
         activity: ['Camping', 'Hiking'],
         title: 'Mauricie Winter Camping and NYE Hotpot',
         description:
-          "Moonlit snow and sleeping in -25 with NYE Hotpot celebration. Nicho's birthday. With Am, Hamed, Hao, Marcus, and Carly",
+          "Who needs clubbing and staying up til midnight when you can have hotpot with your friends over a campfire, and sleep under piles and piles of down with hot water bottles, toe warmers, and wool base layers. Moonlit snow meant we didn't need headlamps in the dark, and there's nothing like climbing out of a tent in -20C to go pee. Celebrated Nicho's birthday, and enjoyed a gorgeous New Year's Day Walk with Am, Hamed, Hao, Marcus, and Carly",
         photos: ['/photos/embracingWinter/mauricie.jpeg', '/photos/embracingWinter/hot_pot.jpeg'],
       },
     ],
@@ -86,7 +89,8 @@ const entries: MonthGroup[] = [
         month: 'Jan',
         activity: ['IceClimbing'],
         title: 'Shawbridge in -25',
-        description: 'With Am, Hamed, and Marcus',
+        description:
+          "Just Marcus yelling 'Higher!' and 'Hips IN!' as I wriggled my way up Devil's Tooth. Freezing on the belay in -25C weather. With Am, Hamed, and Marcus",
         photos: ['/photos/embracingWinter/shawbridge.jpeg'],
       },
       {
@@ -94,8 +98,9 @@ const entries: MonthGroup[] = [
         endDay: 11,
         month: 'Jan',
         activity: ['IceClimbing'],
-        title: 'Malbaie Attempt',
-        description: 'With Am, Hamed, Nicho, and Marcus',
+        title: 'Malbaie Triolet Attempt',
+        description:
+          'Dreams of doing Triolet dashed by an icy drive into the Hautes Gorges. Crosstrek in the ditch at 6am, but unexpected twists always make for a memorable epic (even if not the sort we were anticipating). Lots of walks and chats With Am, Hamed, Nicho, and Marcus as we waited for the tow truck. Crepes in Quebec to make up for it all. Will have to come back for this one too. ',
         photos: ['/photos/embracingWinter/malbaie.jpeg', '/photos/embracingWinter/crosstrek.jpeg'],
       },
       {
@@ -103,7 +108,8 @@ const entries: MonthGroup[] = [
         month: 'Jan',
         activity: ['Skiing'],
         title: 'Cross Country Ski on Mont Royal',
-        description: 'First time on xcountry skiis with Jyler, El, Tim, Laurie, and Harry',
+        description:
+          'First time on cross-country skiis with Jyler, El, Tim, Laurie, and Harry. Rentals from Beaver Lake. Going up is easier than going down.',
         photos: ['/photos/embracingWinter/mont_royal_xc.jpeg'],
       },
       {
@@ -112,7 +118,8 @@ const entries: MonthGroup[] = [
         month: 'Jan',
         activity: ['Camping'],
         title: 'Backpacking Cap360 in -30C',
-        description: 'Character building, according to Hamed',
+        description:
+          "The weather forecast said -35C and Am said 'Aren't we lucky that we get to experience these temperatures? We MUST make the most of it!'. Hamed says suffering is character building. It literally snowed inside our tent. Putting frozen boots on in the morning is a special special feeling for your toes.",
         photos: [
           '/photos/embracingWinter/cap360_view.jpeg',
           '/photos/embracingWinter/cap360.jpg',
@@ -128,8 +135,9 @@ const entries: MonthGroup[] = [
         day: 1,
         month: 'Feb',
         activity: ['IceClimbing'],
-        title: 'First Ice Multi at Mt Barriere with Hamed',
-        description: 'Sunny day out with Michael, Jay, Hamed, and Nicho',
+        title: 'First Ice Multipitch at Mt Barriere with Hamed',
+        description:
+          'Sunny day out with Michael, Jay, Hamed, and Nicho. Nicho forget his harness so soloed Voyage Imaginarie with us. Champ de Choufleur also a lot of fun.',
         photos: [
           '/photos/embracingWinter/voyage_imaginaire.jpeg',
           '/photos/embracingWinter/champ_de_choufleur.jpeg',
@@ -139,8 +147,9 @@ const entries: MonthGroup[] = [
         day: 9,
         month: 'Feb',
         activity: ['Skiing'],
-        title: 'Baby Ski at Mont St Bruno with Nicho',
-        description: 'Celeste loans, and learning to pizza and french fry',
+        title: 'Baby Night Ski at Mont St Bruno',
+        description:
+          'Grateful for friends who lend you gear (Celeste), and for patient teachers (Nicho). Learnt to pizza and french fry, and ended the night on blues and greens.',
         photos: ['/photos/embracingWinter/bruno.jpeg'],
       },
       {
@@ -148,7 +157,8 @@ const entries: MonthGroup[] = [
         month: 'Feb',
         activity: ['Hiking'],
         title: 'Val D walk with Maman',
-        description: 'Microspikes and sunshine at Val David',
+        description:
+          'Microspikes and sunshine at Val David - getting to show Maman the beauty of Winter with a walk through the park.',
         photos: ['/photos/embracingWinter/vald.jpeg'],
       },
       {
@@ -156,7 +166,8 @@ const entries: MonthGroup[] = [
         month: 'Feb',
         activity: ['IceClimbing'],
         title: 'Opale with Nicho!',
-        description: '3 pitches of ice! First time putting snowshoes on. Hard and beautiful!',
+        description:
+          '3 pitches of ice! Absolutely COOKED at the top. First time putting snowshoes on. Opale is beautiful, will have to return for Topaze! Grateful for climbing partners who lead and drive :)',
         photos: ['/photos/embracingWinter/opale.jpeg', '/photos/embracingWinter/opale2.jpeg'],
       },
     ],
@@ -169,7 +180,8 @@ const entries: MonthGroup[] = [
         month: 'Mar',
         activity: ['Skiing'],
         title: 'Bromont Night Ski with Friends',
-        description: 'Blues and Blacks',
+        description:
+          'Nothing like some good friends to bamboozle you into skiing down a black diamond by mistake. The skiing progress appears exponential.',
         photos: ['/photos/embracingWinter/bromont.jpeg', '/photos/embracingWinter/bromont2.jpeg'],
       },
       {
@@ -177,7 +189,7 @@ const entries: MonthGroup[] = [
         month: 'Mar',
         activity: ['Skiing'],
         title: 'Cross Country Ski at Gai-Luron',
-        description: 'With Trevor and Celeste',
+        description: 'Winter snowglobe wonderland With Trevor and Celeste!',
         photos: ['/photos/embracingWinter/gailuron.jpeg', '/photos/embracingWinter/gailuron2.jpeg'],
       },
     ],
@@ -191,7 +203,8 @@ const entries: MonthGroup[] = [
         month: 'Apr',
         activity: ['Camping', 'Hiking'],
         title: 'Gals in Gosford',
-        description: '33k and sleeping in a lean-to with Am and Celeste',
+        description:
+          '33k and sleeping in a lean-to with Am and Celeste. Spring camping yummieness.',
         photos: ['/photos/embracingWinter/gosford.jpeg', '/photos/embracingWinter/gosford2.jpeg'],
       },
       {
@@ -200,7 +213,7 @@ const entries: MonthGroup[] = [
         month: 'Apr',
         activity: ['Camping'],
         title: 'Mont Tranchant Sleepover',
-        description: 'Breakfast in St Come and sleeping in snow',
+        description: 'Breakfast in St Come and sleeping in snow. Catching the end of winter. ',
         photos: ['/photos/embracingWinter/tranchant.jpeg'],
       },
     ],
