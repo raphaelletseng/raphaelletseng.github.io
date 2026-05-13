@@ -285,7 +285,7 @@ const Entry = ({
 
 const content = (
   <Box sx={{ maxWidth: 680, mx: 'auto', py: 2 }}>
-    <Typography>A digital diary of the winter fun I got up to this year.</Typography>
+    <Typography>A digital picture diary of the winter fun I got up to this year.</Typography>
     {entries.map(({ month, items }) => (
       <Box key={month}>
         <Typography
