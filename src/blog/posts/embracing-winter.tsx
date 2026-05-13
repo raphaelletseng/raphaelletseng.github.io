@@ -41,7 +41,7 @@ const entries: MonthGroup[] = [
         photos: [
           '/photos/embracingWinter/crawford.jpeg',
           '/photos/embracingWinter/pinnacle_am.png',
-          '/photos/embracingWinter/huntington.jpeg',
+          //'/photos/embracingWinter/huntington.jpeg',
         ],
       },
       {
@@ -62,7 +62,7 @@ const entries: MonthGroup[] = [
         photos: [
           '/photos/embracingWinter/st_alexis.jpeg',
           '/photos/embracingWinter/hao.jpeg',
-          '/photos/embracingWinter/st_alexis_2.jpeg',
+          // '/photos/embracingWinter/st_alexis_2.jpeg',
         ],
       },
       {
@@ -116,7 +116,7 @@ const entries: MonthGroup[] = [
         photos: [
           '/photos/embracingWinter/cap360_view.jpeg',
           '/photos/embracingWinter/cap360.jpg',
-          '/photos/embracingWinter/cap360_2.jpg',
+          // '/photos/embracingWinter/cap360_2.jpg',
         ],
       },
     ],
@@ -284,7 +284,7 @@ const Entry = ({
 );
 
 const content = (
-  <Box sx={{ maxWidth: 680, mx: 'auto', py: 2 }}>
+  <Box sx={{ maxWidth: 750, mx: 'auto', py: 2 }}>
     <Typography>A digital picture diary of the winter fun I got up to this year.</Typography>
     {entries.map(({ month, items }) => (
       <Box key={month}>
