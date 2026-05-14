@@ -42,17 +42,17 @@ const entries: MonthGroup[] = [
         photos: [
           '/photos/embracingWinter/crawford.jpeg',
           '/photos/embracingWinter/pinnacle_am.png',
-          //'/photos/embracingWinter/huntington.jpeg',
+          '/photos/embracingWinter/huntington.jpeg',
         ],
       },
       {
         day: 13,
         month: 'Dec',
         activity: ['IceClimbing'],
-        title: "Am's birthday at Lac Sylvere",
+        title: "Am's birthday at Lac Sylvère",
         description:
-          "Some wet, wet ice at Lac Sylvere followed by a romp through the deep fluffy snow for Am's birthday. With Amandine and Nicholas.",
-        photos: ['/photos/embracingWinter/sylvere.jpeg'],
+          "Some wet, wet ice at Lac Sylvère followed by a romp through the deep, fluffy snow for Am's birthday. With Amandine and Nicholas.",
+        photos: ['/photos/embracingWinter/sylvere.jpeg', '/photos/embracingWinter/sylvere2.jpeg'],
       },
       {
         day: 24,
@@ -65,7 +65,8 @@ const entries: MonthGroup[] = [
         photos: [
           '/photos/embracingWinter/st_alexis.jpeg',
           '/photos/embracingWinter/hao.jpeg',
-          // '/photos/embracingWinter/st_alexis_2.jpeg',
+          '/photos/embracingWinter/mastigouche.jpeg',
+          '/photos/embracingWinter/mastigouche_cold.jpeg',
         ],
       },
       {
@@ -77,7 +78,12 @@ const entries: MonthGroup[] = [
         title: 'Mauricie Winter Camping and NYE Hotpot',
         description:
           "Who needs clubbing and staying up til midnight when you can have hotpot with your friends over a campfire, and sleep under piles and piles of down with hot water bottles, toe warmers, and wool base layers. Moonlit snow meant we didn't need headlamps in the dark, and there's nothing like climbing out of a tent in -20C to go pee. Celebrated Nicho's birthday, and enjoyed a gorgeous New Year's Day Walk with Am, Hamed, Hao, Marcus, and Carly",
-        photos: ['/photos/embracingWinter/mauricie.jpeg', '/photos/embracingWinter/hot_pot.jpeg'],
+        photos: [
+          '/photos/embracingWinter/mauricie.jpeg',
+          '/photos/embracingWinter/hot_pot.jpeg',
+          '/photos/embracingWinter/nye_camping.jpeg',
+          '/photos/embracingWinter/mauricie2.jpeg',
+        ],
       },
     ],
   },
@@ -91,7 +97,10 @@ const entries: MonthGroup[] = [
         title: 'Shawbridge in -25°C',
         description:
           "Just Marcus yelling 'Higher!' and 'Hips IN!' as I wriggled my way up Devil's Tooth. Freezing on the belay in -25°C weather. With Am, Hamed, and Marcus",
-        photos: ['/photos/embracingWinter/shawbridge.jpeg'],
+        photos: [
+          '/photos/embracingWinter/shawbridge.jpeg',
+          '/photos/embracingWinter/cold_shawbridge.jpeg',
+        ],
       },
       {
         day: 10,
@@ -101,7 +110,11 @@ const entries: MonthGroup[] = [
         title: 'Malbaie Triolet Attempt',
         description:
           'Dreams of doing Triolet dashed by an icy drive into the Hautes Gorges. Crosstrek in the ditch at 6am, but unexpected twists always make for a memorable epic (even if not the sort we were anticipating). Lots of walks and chats With Am, Hamed, Nicho, and Marcus as we waited for the tow truck. Crepes in Quebec to make up for it all. Will have to come back for this one too. ',
-        photos: ['/photos/embracingWinter/malbaie.jpeg', '/photos/embracingWinter/crosstrek.jpeg'],
+        photos: [
+          '/photos/embracingWinter/malbaie.jpeg',
+          '/photos/embracingWinter/crosstrek.jpeg',
+          '/photos/embracingWinter/hautes_gorges.jpeg',
+        ],
       },
       {
         day: 17,
@@ -123,7 +136,7 @@ const entries: MonthGroup[] = [
         photos: [
           '/photos/embracingWinter/cap360_view.jpeg',
           '/photos/embracingWinter/cap360.jpg',
-          // '/photos/embracingWinter/cap360_2.jpg',
+          '/photos/embracingWinter/cap360_2.jpg',
         ],
       },
     ],
@@ -159,7 +172,7 @@ const entries: MonthGroup[] = [
         title: 'Val D walk with Maman',
         description:
           'Microspikes and sunshine at Val David - getting to show Maman the beauty of Winter with a walk through the park.',
-        photos: ['/photos/embracingWinter/vald.jpeg'],
+        photos: ['/photos/embracingWinter/vald.jpeg', '/photos/embracingWinter/vald2.jpeg'],
       },
       {
         day: 28,
@@ -168,7 +181,11 @@ const entries: MonthGroup[] = [
         title: 'Opale with Nicho!',
         description:
           '3 pitches of ice! Absolutely COOKED at the top. First time putting snowshoes on. Opale is beautiful, will have to return for Topaze! Grateful for climbing partners who lead and drive :)',
-        photos: ['/photos/embracingWinter/opale.jpeg', '/photos/embracingWinter/opale2.jpeg'],
+        photos: [
+          '/photos/embracingWinter/opale.jpeg',
+          '/photos/embracingWinter/opale2.jpeg',
+          '/photos/embracingWinter/opale_approach.jpeg',
+        ],
       },
     ],
   },
@@ -182,7 +199,11 @@ const entries: MonthGroup[] = [
         title: 'Bromont Night Ski with Friends',
         description:
           'Nothing like some good friends to bamboozle you into skiing down a black diamond by mistake. The skiing progress appears exponential.',
-        photos: ['/photos/embracingWinter/bromont.jpeg', '/photos/embracingWinter/bromont2.jpeg'],
+        photos: [
+          '/photos/embracingWinter/bromont.jpeg',
+          '/photos/embracingWinter/bromont2.jpeg',
+          '/photos/embracingWinter/bromont_nuit.jpeg',
+        ],
       },
       {
         day: 22,
@@ -214,19 +235,23 @@ const entries: MonthGroup[] = [
         activity: ['Camping'],
         title: 'Mont Tranchant Sleepover',
         description: 'Breakfast in St Come and sleeping in snow. Catching the end of winter. ',
-        photos: ['/photos/embracingWinter/tranchant.jpeg'],
+        photos: [
+          '/photos/embracingWinter/tranchant.jpeg',
+          '/photos/embracingWinter/tranchant2.jpeg',
+          '/photos/embracingWinter/tranchant3.jpeg',
+        ],
       },
     ],
   },
 ];
 
-const PhotoThumb = ({ src }: { src: string }) => {
+const PhotoThumb = ({ src, count }: { src: string; count: number }) => {
   return (
     <Box
       component="img"
       src={src}
       sx={{
-        width: { xs: '100%', sm: '50%' },
+        width: { xs: '100%', sm: count > 2 ? `${100 / count}%` : '30%' },
         height: { xs: '100%', sm: '50%' },
         objectFit: 'cover',
         borderRadius: 1,
@@ -251,15 +276,15 @@ const Entry = ({
 }: ActivityEntry) => (
   <Box sx={{ display: 'grid', gridTemplateColumns: '72px 1fr', gap: 2, mb: 2.5 }}>
     <Box sx={{ textAlign: 'right', pt: '2px' }}>
-      <Typography sx={{ fontSize: 22, fontWeight: 500, lineHeight: 1 }}>
+      <Typography sx={{ fontSize: 20, fontWeight: 500, lineHeight: 1.5 }}>
         {endDay ? `${day}–${endDay}` : day}
       </Typography>
-      <Typography sx={{ fontSize: 12, color: 'text.secondary', mt: '2px' }}>
+      <Typography sx={{ fontSize: 14, color: 'text.secondary', mt: '2px' }}>
         {endMonth ? `${month}–${endMonth}` : month}
       </Typography>
     </Box>
 
-    <Box sx={{ borderLeft: '0.5px solid', borderColor: 'divider', pl: 2 }}>
+    <Box sx={{ borderLeft: '1px solid', borderColor: 'divider', pl: 2 }}>
       <Box sx={{ mb: 0.75 }}>
         {activity.map((act) => {
           const { bg, color } = ACTIVITY_COLORS[act] ?? DEFAULT_COLOR;
@@ -271,7 +296,7 @@ const Entry = ({
               sx={{
                 mr: 0.5,
                 height: 20,
-                fontSize: 11,
+                fontSize: 14,
                 fontWeight: 500,
                 bgcolor: bg,
                 color,
@@ -281,14 +306,14 @@ const Entry = ({
           );
         })}
       </Box>
-      <Typography sx={{ fontSize: 15, fontWeight: 500, mb: 0.5 }}>{title}</Typography>
+      <Typography sx={{ fontSize: 18, fontWeight: 500, mb: 0.5 }}>{title}</Typography>
       <Typography sx={{ fontSize: 14, color: 'text.secondary', lineHeight: 1.6 }}>
         {description}
       </Typography>
       {photos && photos?.length > 0 && (
-        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={0.75}>
+        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={0.75} sx={{ width: '100%' }}>
           {photos.map((src, i) => (
-            <PhotoThumb key={i} src={src} />
+            <PhotoThumb key={i} src={src} count={photos.length} />
           ))}
         </Stack>
       )}
@@ -328,11 +353,11 @@ const content = (
       <Box key={month}>
         <Typography
           sx={{
-            fontSize: 11,
+            fontSize: 14,
             fontWeight: 500,
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
-            color: 'text.disabled',
+            color: 'black',
             mt: 3,
             mb: 1.5,
             pb: 0.75,
