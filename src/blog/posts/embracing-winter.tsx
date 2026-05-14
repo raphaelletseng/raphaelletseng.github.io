@@ -246,6 +246,79 @@ const entries: MonthGroup[] = [
   },
 ];
 
+const PhotoThumb = ({ src, count }: { src: string; count: number }) => {
+  return (
+    <Box
+      component="img"
+      src={src}
+      sx={{
+        width: { xs: '100%', sm: count > 2 ? `${100 / count}%` : '30%' },
+        height: { xs: '100%', sm: '50%' },
+        objectFit: 'cover',
+        borderRadius: 1,
+        flexShrink: 0,
+      }}
+    />
+  );
+};
+
+const Entry = ({
+  day,
+  endDay,
+  month,
+  endMonth,
+  activity,
+  title,
+  description,
+  photos,
+}: ActivityEntry) => (
+  <Box sx={{ display: 'grid', gridTemplateColumns: '72px 1fr', gap: 2, mb: 2.5 }}>
+    <Box sx={{ textAlign: 'right', pt: '2px' }}>
+      <Typography sx={{ fontSize: 20, fontWeight: 500, lineHeight: 1.5 }}>
+        {endDay ? `${day}–${endDay}` : day}
+      </Typography>
+      <Typography sx={{ fontSize: 14, color: 'text.secondary', mt: '2px' }}>
+        {endMonth ? `${month}–${endMonth}` : month}
+      </Typography>
+    </Box>
+
+    <Box sx={{ borderLeft: '1px solid', borderColor: 'divider', pl: 2 }}>
+      <Box sx={{ mb: 0.75 }}>
+        {activity.map((act) => {
+          const { bg, color } = ACTIVITY_COLORS[act] ?? DEFAULT_COLOR;
+          return (
+            <Chip
+              key={act}
+              label={act}
+              size="small"
+              sx={{
+                mr: 0.5,
+                height: 20,
+                fontSize: 14,
+                fontWeight: 500,
+                bgcolor: bg,
+                color,
+                '& .MuiChip-label': { px: 1 },
+              }}
+            />
+          );
+        })}
+      </Box>
+      <Typography sx={{ fontSize: 18, fontWeight: 500, mb: 0.5 }}>{title}</Typography>
+      <Typography sx={{ fontSize: 14, color: 'text.secondary', lineHeight: 1.6 }}>
+        {description}
+      </Typography>
+      {photos && photos?.length > 0 && (
+        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={0.75} sx={{ width: '100%' }}>
+          {photos.map((src, i) => (
+            <PhotoThumb key={i} src={src} count={photos.length} />
+          ))}
+        </Stack>
+      )}
+    </Box>
+  </Box>
+);
+
 const EmbracingWinter = () => {
   const allActivities = Object.keys(ACTIVITY_COLORS);
   const [activeFilters, setActiveFilters] = useState<string[]>(allActivities);
@@ -265,79 +338,6 @@ const EmbracingWinter = () => {
       ),
     }))
     .filter(({ items }) => items.length > 0);
-
-  const PhotoThumb = ({ src, count }: { src: string; count: number }) => {
-    return (
-      <Box
-        component="img"
-        src={src}
-        sx={{
-          width: { xs: '100%', sm: count > 2 ? `${100 / count}%` : '30%' },
-          height: { xs: '100%', sm: '50%' },
-          objectFit: 'cover',
-          borderRadius: 1,
-          flexShrink: 0,
-        }}
-      />
-    );
-  };
-
-  const Entry = ({
-    day,
-    endDay,
-    month,
-    endMonth,
-    activity,
-    title,
-    description,
-    photos,
-  }: ActivityEntry) => (
-    <Box sx={{ display: 'grid', gridTemplateColumns: '72px 1fr', gap: 2, mb: 2.5 }}>
-      <Box sx={{ textAlign: 'right', pt: '2px' }}>
-        <Typography sx={{ fontSize: 20, fontWeight: 500, lineHeight: 1.5 }}>
-          {endDay ? `${day}–${endDay}` : day}
-        </Typography>
-        <Typography sx={{ fontSize: 14, color: 'text.secondary', mt: '2px' }}>
-          {endMonth ? `${month}–${endMonth}` : month}
-        </Typography>
-      </Box>
-
-      <Box sx={{ borderLeft: '1px solid', borderColor: 'divider', pl: 2 }}>
-        <Box sx={{ mb: 0.75 }}>
-          {activity.map((act) => {
-            const { bg, color } = ACTIVITY_COLORS[act] ?? DEFAULT_COLOR;
-            return (
-              <Chip
-                key={act}
-                label={act}
-                size="small"
-                sx={{
-                  mr: 0.5,
-                  height: 20,
-                  fontSize: 14,
-                  fontWeight: 500,
-                  bgcolor: bg,
-                  color,
-                  '& .MuiChip-label': { px: 1 },
-                }}
-              />
-            );
-          })}
-        </Box>
-        <Typography sx={{ fontSize: 18, fontWeight: 500, mb: 0.5 }}>{title}</Typography>
-        <Typography sx={{ fontSize: 14, color: 'text.secondary', lineHeight: 1.6 }}>
-          {description}
-        </Typography>
-        {photos && photos?.length > 0 && (
-          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={0.75} sx={{ width: '100%' }}>
-            {photos.map((src, i) => (
-              <PhotoThumb key={i} src={src} count={photos.length} />
-            ))}
-          </Stack>
-        )}
-      </Box>
-    </Box>
-  );
 
   return (
     <Box sx={{ mx: 'auto', py: 2 }}>
@@ -400,11 +400,11 @@ const EmbracingWinter = () => {
               fontWeight: 500,
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
-              color: 'black',
+              color: '#000',
               mt: 3,
               mb: 1.5,
               pb: 0.75,
-              borderBottom: '0.5px solid',
+              borderBottom: '1px solid',
               borderColor: 'divider',
             }}
           >
