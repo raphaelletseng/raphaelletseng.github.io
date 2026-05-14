@@ -255,10 +255,7 @@ const PhotoThumb = ({ src, count }: { src: string; count: number }) => {
         height: { xs: '100%', sm: '50%' },
         objectFit: 'cover',
         borderRadius: 1,
-        border: '0.5px solid',
-        borderColor: 'divider',
         flexShrink: 0,
-        bgcolor: 'grey.100',
       }}
     />
   );
@@ -335,7 +332,7 @@ const content = (
       }}
     >
       {[
-        { label: 'Days outside', value: 26 },
+        { label: 'Days Outside', value: 26 },
         { label: 'Activities', value: 4 },
         { label: "Min 'Feels Like' Temp", value: '-38°C' },
       ].map(({ label, value }) => (
