@@ -109,7 +109,7 @@ const entries: MonthGroup[] = [
         activity: ['IceClimbing'],
         title: 'Malbaie Triolet Attempt',
         description:
-          'Dreams of doing Triolet dashed by an icy drive into the Hautes Gorges. Crosstrek in the ditch at 6am, but unexpected twists always make for a memorable epic (even if not the sort we were anticipating). Lots of walks and chats With Am, Hamed, Nicho, and Marcus as we waited for the tow truck. Crepes in Quebec to make up for it all. Will have to come back for this one too. ',
+          'Dreams of doing Triolet dashed by an icy drive into the Hautes Gorges. Crosstrek in the ditch at 6am, but unexpected twists always make for a memorable epic (even if not the sort we were anticipating). Lots of walks and chats with Am, Hamed, Nicho, and Marcus as we waited for the tow truck. Crêpes in Québec to make up for it all. Will have to come back for this one too. ',
         photos: [
           '/photos/embracingWinter/malbaie.jpeg',
           '/photos/embracingWinter/crosstrek.jpeg',
@@ -132,7 +132,7 @@ const entries: MonthGroup[] = [
         activity: ['Camping'],
         title: 'Backpacking Cap360 in -32°C',
         description:
-          "The weather forecast said -32°C and Am said 'Aren't we lucky that we get to experience these temperatures? We MUST make the most of it!'. Hamed says suffering is character building. It literally snowed inside our tent. Putting frozen boots on in the morning is a special special feeling for your toes.",
+          "The weather forecast said -32°C and Am said 'Aren't we lucky that we get to experience these temperatures? We MUST make the most of it!'. Hamed says suffering is character building. It literally snowed inside our tent. Putting frozen boots on in the morning is a special, special feeling for your toes.",
         photos: [
           '/photos/embracingWinter/cap360_view.jpeg',
           '/photos/embracingWinter/cap360.jpg',
@@ -198,7 +198,7 @@ const entries: MonthGroup[] = [
         activity: ['Skiing'],
         title: 'Bromont Night Ski with Friends',
         description:
-          'Nothing like some good friends to bamboozle you into skiing down a black diamond by mistake. The skiing progress appears exponential.',
+          'Nothing like some good friends to bamboozle you into skiing down a black diamond by mistake. The skiing progress appears exponential. With Trevor, Joe, Celeste, Ben, Sam, and Michelle.',
         photos: [
           '/photos/embracingWinter/bromont.jpeg',
           '/photos/embracingWinter/bromont2.jpeg',
