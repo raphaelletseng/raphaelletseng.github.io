@@ -1,4 +1,5 @@
 import { Box, Chip, Stack, Typography } from '@mui/material';
+import { useState } from 'react';
 
 const ACTIVITY_COLORS: Record<string, { bg: string; color: string }> = {
   Skiing: { bg: '#DBEAFE', color: '#1D4ED8' },
@@ -245,132 +246,178 @@ const entries: MonthGroup[] = [
   },
 ];
 
-const PhotoThumb = ({ src, count }: { src: string; count: number }) => {
-  return (
-    <Box
-      component="img"
-      src={src}
-      sx={{
-        width: { xs: '100%', sm: count > 2 ? `${100 / count}%` : '30%' },
-        height: { xs: '100%', sm: '50%' },
-        objectFit: 'cover',
-        borderRadius: 1,
-        flexShrink: 0,
-      }}
-    />
-  );
-};
+const EmbracingWinter = () => {
+  const allActivities = Object.keys(ACTIVITY_COLORS);
+  const [activeFilters, setActiveFilters] = useState<string[]>(allActivities);
 
-const Entry = ({
-  day,
-  endDay,
-  month,
-  endMonth,
-  activity,
-  title,
-  description,
-  photos,
-}: ActivityEntry) => (
-  <Box sx={{ display: 'grid', gridTemplateColumns: '72px 1fr', gap: 2, mb: 2.5 }}>
-    <Box sx={{ textAlign: 'right', pt: '2px' }}>
-      <Typography sx={{ fontSize: 20, fontWeight: 500, lineHeight: 1.5 }}>
-        {endDay ? `${day}–${endDay}` : day}
-      </Typography>
-      <Typography sx={{ fontSize: 14, color: 'text.secondary', mt: '2px' }}>
-        {endMonth ? `${month}–${endMonth}` : month}
-      </Typography>
+  const toggleFilter = (act: string) => {
+    setActiveFilters((prev) =>
+      prev.includes(act) ? prev.filter((a) => a !== act) : [...prev, act],
+    );
+  };
+
+  const filteredEntries = entries
+    .map(({ month, items }) => ({
+      month,
+      items: items.filter(
+        (item) =>
+          activeFilters.length === 0 || item.activity.some((a) => activeFilters.includes(a)),
+      ),
+    }))
+    .filter(({ items }) => items.length > 0);
+
+  const PhotoThumb = ({ src, count }: { src: string; count: number }) => {
+    return (
+      <Box
+        component="img"
+        src={src}
+        sx={{
+          width: { xs: '100%', sm: count > 2 ? `${100 / count}%` : '30%' },
+          height: { xs: '100%', sm: '50%' },
+          objectFit: 'cover',
+          borderRadius: 1,
+          flexShrink: 0,
+        }}
+      />
+    );
+  };
+
+  const Entry = ({
+    day,
+    endDay,
+    month,
+    endMonth,
+    activity,
+    title,
+    description,
+    photos,
+  }: ActivityEntry) => (
+    <Box sx={{ display: 'grid', gridTemplateColumns: '72px 1fr', gap: 2, mb: 2.5 }}>
+      <Box sx={{ textAlign: 'right', pt: '2px' }}>
+        <Typography sx={{ fontSize: 20, fontWeight: 500, lineHeight: 1.5 }}>
+          {endDay ? `${day}–${endDay}` : day}
+        </Typography>
+        <Typography sx={{ fontSize: 14, color: 'text.secondary', mt: '2px' }}>
+          {endMonth ? `${month}–${endMonth}` : month}
+        </Typography>
+      </Box>
+
+      <Box sx={{ borderLeft: '1px solid', borderColor: 'divider', pl: 2 }}>
+        <Box sx={{ mb: 0.75 }}>
+          {activity.map((act) => {
+            const { bg, color } = ACTIVITY_COLORS[act] ?? DEFAULT_COLOR;
+            return (
+              <Chip
+                key={act}
+                label={act}
+                size="small"
+                sx={{
+                  mr: 0.5,
+                  height: 20,
+                  fontSize: 14,
+                  fontWeight: 500,
+                  bgcolor: bg,
+                  color,
+                  '& .MuiChip-label': { px: 1 },
+                }}
+              />
+            );
+          })}
+        </Box>
+        <Typography sx={{ fontSize: 18, fontWeight: 500, mb: 0.5 }}>{title}</Typography>
+        <Typography sx={{ fontSize: 14, color: 'text.secondary', lineHeight: 1.6 }}>
+          {description}
+        </Typography>
+        {photos && photos?.length > 0 && (
+          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={0.75} sx={{ width: '100%' }}>
+            {photos.map((src, i) => (
+              <PhotoThumb key={i} src={src} count={photos.length} />
+            ))}
+          </Stack>
+        )}
+      </Box>
     </Box>
+  );
 
-    <Box sx={{ borderLeft: '1px solid', borderColor: 'divider', pl: 2 }}>
-      <Box sx={{ mb: 0.75 }}>
-        {activity.map((act) => {
-          const { bg, color } = ACTIVITY_COLORS[act] ?? DEFAULT_COLOR;
+  return (
+    <Box sx={{ mx: 'auto', py: 2 }}>
+      <Typography>
+        Finally learning how to lean into winter. A digital diary of my season of snow.
+      </Typography>
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
+          gap: 1.25,
+          mb: 3,
+        }}
+      >
+        {[
+          { label: 'Days Outside', value: 26 },
+          { label: 'Activities', value: 4 },
+          { label: "Min 'Feels Like' Temp", value: '-38°C' },
+        ].map(({ label, value }) => (
+          <Box key={label} sx={{ bgcolor: 'action.hover', borderRadius: 2, p: 1.5 }}>
+            <Typography
+              sx={{ fontSize: 12, color: 'text.secondary', letterSpacing: '0.04em', mb: 0.75 }}
+            >
+              {label}
+            </Typography>
+            <Typography sx={{ fontSize: 26, fontWeight: 500, lineHeight: 1 }}>{value}</Typography>
+          </Box>
+        ))}
+      </Box>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.75, mb: 2.5 }}>
+        {allActivities.map((act) => {
+          const { bg, color } = ACTIVITY_COLORS[act];
+          const active = activeFilters.includes(act);
           return (
             <Chip
               key={act}
               label={act}
               size="small"
+              onClick={() => toggleFilter(act)}
               sx={{
-                mr: 0.5,
-                height: 20,
-                fontSize: 14,
+                height: 24,
+                fontSize: 13,
                 fontWeight: 500,
-                bgcolor: bg,
-                color,
-                '& .MuiChip-label': { px: 1 },
+                cursor: 'pointer',
+                bgcolor: active ? bg : 'transparent',
+                color: active ? color : 'text.secondary',
+                border: '1px solid',
+                borderColor: active ? color : 'divider',
+                '& .MuiChip-label': { px: 1.25 },
               }}
             />
           );
         })}
       </Box>
-      <Typography sx={{ fontSize: 18, fontWeight: 500, mb: 0.5 }}>{title}</Typography>
-      <Typography sx={{ fontSize: 14, color: 'text.secondary', lineHeight: 1.6 }}>
-        {description}
-      </Typography>
-      {photos && photos?.length > 0 && (
-        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={0.75} sx={{ width: '100%' }}>
-          {photos.map((src, i) => (
-            <PhotoThumb key={i} src={src} count={photos.length} />
-          ))}
-        </Stack>
-      )}
-    </Box>
-  </Box>
-);
-
-const content = (
-  <Box sx={{ mx: 'auto', py: 2 }}>
-    <Typography>
-      Finally learning how to lean into winter. A digital diary of my season of snow.
-    </Typography>
-    <Box
-      sx={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
-        gap: 1.25,
-        mb: 3,
-      }}
-    >
-      {[
-        { label: 'Days Outside', value: 26 },
-        { label: 'Activities', value: 4 },
-        { label: "Min 'Feels Like' Temp", value: '-38°C' },
-      ].map(({ label, value }) => (
-        <Box key={label} sx={{ bgcolor: 'action.hover', borderRadius: 2, p: 1.5 }}>
+      {filteredEntries.map(({ month, items }) => (
+        <Box key={month}>
           <Typography
-            sx={{ fontSize: 12, color: 'text.secondary', letterSpacing: '0.04em', mb: 0.75 }}
+            sx={{
+              fontSize: 14,
+              fontWeight: 500,
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              color: 'black',
+              mt: 3,
+              mb: 1.5,
+              pb: 0.75,
+              borderBottom: '0.5px solid',
+              borderColor: 'divider',
+            }}
           >
-            {label}
+            {month}
           </Typography>
-          <Typography sx={{ fontSize: 26, fontWeight: 500, lineHeight: 1 }}>{value}</Typography>
+          {items.map((item, i) => (
+            <Entry key={i} {...item} />
+          ))}
         </Box>
       ))}
     </Box>
-    {entries.map(({ month, items }) => (
-      <Box key={month}>
-        <Typography
-          sx={{
-            fontSize: 14,
-            fontWeight: 500,
-            letterSpacing: '0.08em',
-            textTransform: 'uppercase',
-            color: 'black',
-            mt: 3,
-            mb: 1.5,
-            pb: 0.75,
-            borderBottom: '0.5px solid',
-            borderColor: 'divider',
-          }}
-        >
-          {month}
-        </Typography>
-        {items.map((item, i) => (
-          <Entry key={i} {...item} />
-        ))}
-      </Box>
-    ))}
-  </Box>
-);
+  );
+};
 
 export default {
   slug: 'embracing-winter',
@@ -378,5 +425,5 @@ export default {
   date: '2026-05-13',
   description: 'Finally learning how to lean into winter. A digital diary of my season of snow.',
   tags: ['outside'],
-  content,
+  content: <EmbracingWinter />,
 };
