@@ -38,7 +38,7 @@ const entries: MonthGroup[] = [
         activity: ['IceClimbing'],
         title: 'Crawford Notch & Huntington Ravine',
         description:
-          "First time ice climbing - immediately got the barfies. We didn't do Pinnacle but we took the tools to the base and got to experience the beauty of Mount Washington! A lot of laughs eating ramen in the motel and watching Paddington 2 with Nicho and Am. Will have to return!",
+          "First time ice climbing - immediately got the barfies. We didn't do Pinnacle but we took the tools to the base and got to experience the beauty of Mount Washington! A lot of laughs eating ramen in the motel and watching Paddington 2 with Nick and Am. Will have to return!",
         photos: [
           '/photos/embracingWinter/crawford.jpeg',
           '/photos/embracingWinter/pinnacle_am.png',
@@ -77,7 +77,7 @@ const entries: MonthGroup[] = [
         activity: ['Camping', 'Hiking'],
         title: 'Mauricie Winter Camping and NYE Hotpot',
         description:
-          "Who needs clubbing and staying up til midnight when you can have hotpot with your friends over a campfire, and sleep under piles and piles of down with hot water bottles, toe warmers, and wool base layers. Moonlit snow meant we didn't need headlamps in the dark, and there's nothing like climbing out of a tent in -20C to go pee. Celebrated Nicho's birthday, and enjoyed a gorgeous New Year's Day Walk with Am, Hamed, Hao, Marcus, and Carly",
+          "Who needs clubbing and staying up til midnight when you can have hotpot with your friends over a campfire, and sleep under piles and piles of down with hot water bottles, toe warmers, and wool base layers. Moonlit snow meant we didn't need headlamps in the dark, and there's nothing like climbing out of a tent in -20C to go pee. Celebrated Nick's birthday, and enjoyed a gorgeous New Year's Day Walk with Am, Hamed, Hao, Marcus, and Carly",
         photos: [
           '/photos/embracingWinter/mauricie.jpeg',
           '/photos/embracingWinter/hot_pot.jpeg',
@@ -109,7 +109,7 @@ const entries: MonthGroup[] = [
         activity: ['IceClimbing'],
         title: 'Malbaie Triolet Attempt',
         description:
-          'Dreams of doing Triolet dashed by an icy drive into the Hautes Gorges. Crosstrek in the ditch at 6am, but unexpected twists always make for a memorable epic (even if not the sort we were anticipating). Lots of walks and chats with Am, Hamed, Nicho, and Marcus as we waited for the tow truck. Crêpes in Québec to make up for it all. Will have to come back for this one too. ',
+          'Dreams of doing Triolet dashed by an icy drive into the Hautes Gorges. Crosstrek in the ditch at 6am, but unexpected twists always make for a memorable epic (even if not the sort we were anticipating). Lots of walks and chats with Am, Hamed, Nick, and Marcus as we waited for the tow truck. Crêpes in Québec to make up for it all. Will have to come back for this one too. ',
         photos: [
           '/photos/embracingWinter/malbaie.jpeg',
           '/photos/embracingWinter/crosstrek.jpeg',
@@ -150,7 +150,7 @@ const entries: MonthGroup[] = [
         activity: ['IceClimbing'],
         title: 'First Ice Multipitch at Mt Barriere with Hamed',
         description:
-          'Sunny day out with Michael, Jay, Hamed, and Nicho. Nicho forget his harness so soloed Voyage Imaginarie with us. Champ de Choufleur also a lot of fun.',
+          'Sunny day out with Michael, Jay, Hamed, and Nick. Nick forget his harness so soloed Voyage Imaginarie with us. Champ de Choufleur also a lot of fun.',
         photos: [
           '/photos/embracingWinter/voyage_imaginaire.jpeg',
           '/photos/embracingWinter/champ_de_choufleur.jpeg',
