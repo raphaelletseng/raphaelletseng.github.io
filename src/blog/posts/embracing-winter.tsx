@@ -2,7 +2,7 @@ import { Box, Chip, Stack, Typography } from '@mui/material';
 
 const ACTIVITY_COLORS: Record<string, { bg: string; color: string }> = {
   Skiing: { bg: '#DBEAFE', color: '#1D4ED8' },
-  IceClimbing: { bg: '#EDE9FE', color: '#6D28D9' },
+  'Ice Climbing': { bg: '#EDE9FE', color: '#6D28D9' },
   Camping: { bg: '#D1FAE5', color: '#065F46' },
   Hiking: { bg: '#FEF3C7', color: '#B45309' },
 };
@@ -35,7 +35,7 @@ const entries: MonthGroup[] = [
         day: 6,
         endDay: 7,
         month: 'Dec',
-        activity: ['IceClimbing'],
+        activity: ['Ice Climbing'],
         title: 'Crawford Notch & Huntington Ravine',
         description:
           "First time ice climbing - immediately got the barfies. We didn't do Pinnacle but we took the tools to the base and got to experience the beauty of Mount Washington! A lot of laughs eating ramen in the motel and watching Paddington 2 with Nick and Am. Will have to return!",
@@ -48,7 +48,7 @@ const entries: MonthGroup[] = [
       {
         day: 13,
         month: 'Dec',
-        activity: ['IceClimbing'],
+        activity: ['Ice Climbing'],
         title: "Am's birthday at Lac Sylvère",
         description:
           "Some wet, wet ice at Lac Sylvère followed by a romp through the deep, fluffy snow for Am's birthday. With Amandine and Nicholas.",
@@ -58,7 +58,7 @@ const entries: MonthGroup[] = [
         day: 24,
         endDay: 28,
         month: 'Dec',
-        activity: ['IceClimbing', 'Hiking'],
+        activity: ['Ice Climbing', 'Hiking'],
         title: 'Noel at St-Alexis-Des-Monts',
         description:
           "Christmas spent at a rustic chalet near St-Alexis-Des-Monts with Hao, Hamed, Corey, and Am. Days of winter walks, snow angels, and snowball fights. Warming toes by the fire and puzzling over hot chocolate. Managed a gloriously sunny day at Mastigouche, where Hamed's pointers massively helped my technique.",
@@ -93,10 +93,10 @@ const entries: MonthGroup[] = [
       {
         day: 4,
         month: 'Jan',
-        activity: ['IceClimbing'],
+        activity: ['Ice Climbing'],
         title: 'Shawbridge in -25°C',
         description:
-          "Just Marcus yelling 'Higher!' and 'Hips IN!' as I wriggled my way up Devil's Tooth. Freezing on the belay in -25°C weather. With Am, Hamed, and Marcus",
+          "Just Marcus yelling 'Higher!' and 'Hips IN!' as I wriggled my way up Devil's Tooth. Freezing on the belay in -25°C weather. With Am, Hamed, and Marcus.",
         photos: [
           '/photos/embracingWinter/shawbridge.jpeg',
           '/photos/embracingWinter/cold_shawbridge.jpeg',
@@ -106,7 +106,7 @@ const entries: MonthGroup[] = [
         day: 10,
         endDay: 11,
         month: 'Jan',
-        activity: ['IceClimbing'],
+        activity: ['Ice Climbing'],
         title: 'Malbaie Triolet Attempt',
         description:
           'Dreams of doing Triolet dashed by an icy drive into the Hautes Gorges. Crosstrek in the ditch at 6am, but unexpected twists always make for a memorable epic (even if not the sort we were anticipating). Lots of walks and chats with Am, Hamed, Nick, and Marcus as we waited for the tow truck. Crêpes in Québec to make up for it all. Will have to come back for this one too. ',
@@ -147,7 +147,7 @@ const entries: MonthGroup[] = [
       {
         day: 1,
         month: 'Feb',
-        activity: ['IceClimbing'],
+        activity: ['Ice Climbing'],
         title: 'First Ice Multipitch at Mt Barriere with Hamed',
         description:
           'Sunny day out with Michael, Jay, Hamed, and Nick. Nick forget his harness so soloed Voyage Imaginarie with us. Champ de Choufleur also a lot of fun.',
@@ -177,7 +177,7 @@ const entries: MonthGroup[] = [
       {
         day: 28,
         month: 'Feb',
-        activity: ['IceClimbing'],
+        activity: ['Ice Climbing'],
         title: 'Opale with Nicho!',
         description:
           '3 pitches of ice! Absolutely COOKED at the top. First time putting snowshoes on. Opale is beautiful, will have to return for Topaze! Grateful for climbing partners who lead and drive :)',
@@ -210,7 +210,7 @@ const entries: MonthGroup[] = [
         month: 'Mar',
         activity: ['Skiing'],
         title: 'Cross Country Ski at Gai-Luron',
-        description: 'Winter snowglobe wonderland With Trevor and Celeste!',
+        description: 'Winter snowglobe wonderland with Trevor and Celeste!',
         photos: ['/photos/embracingWinter/gailuron.jpeg', '/photos/embracingWinter/gailuron2.jpeg'],
       },
     ],
