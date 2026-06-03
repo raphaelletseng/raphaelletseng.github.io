@@ -151,7 +151,7 @@ const entries: MonthGroup[] = [
         activity: ['Ice Climbing'],
         title: 'First Ice Multipitch at Mt Barriere with Hamed',
         description:
-          'Sunny day out with Michael, Jay, Hamed, and Nick. Nick forget his harness so soloed Voyage Imaginarie with us. Champ de Choufleur also a lot of fun.',
+          'Sunny day out with Michael, Jay, Hamed, and Nick. Nick forget his harness so soloed Voyage Imaginarie with us. I was unsure about my ability to climb Champ de Choufleur but Michael talked me into it and it ended up being a lot of fun.',
         photos: [
           '/photos/embracingWinter/voyage_imaginaire.jpeg',
           '/photos/embracingWinter/champ_de_choufleur.jpeg',
@@ -211,7 +211,8 @@ const entries: MonthGroup[] = [
         month: 'Mar',
         activity: ['Skiing'],
         title: 'Cross Country Ski at Gai-Luron',
-        description: 'Winter snowglobe wonderland with Trevor and Celeste!',
+        description:
+          'Winter snowglobe wonderland with Trevor and Celeste! Cross country skiing outside of the tracks is hard. Ever grateful for a good snack selection, and heated huts, and friends who graciously look the other way when you fall on your face for the fourth time in the hour.',
         photos: ['/photos/embracingWinter/gailuron.jpeg', '/photos/embracingWinter/gailuron2.jpeg'],
       },
     ],
@@ -226,7 +227,7 @@ const entries: MonthGroup[] = [
         activity: ['Camping', 'Hiking'],
         title: 'Gals in Gosford',
         description:
-          '33k and sleeping in a lean-to with Am and Celeste. Spring camping yummieness.',
+          '33k and sleeping in a lean-to with Am and Celeste. Spring camping yummieness. I do not own waterproof hiking shoes, so I walked the whole way with cold toes in soggy socks and wet trail runners. The summit was a windswept world of grey on day one and a gorgeous clear lookout on day two. Girls trips are great because of all the giggles and safety and support.',
         photos: ['/photos/embracingWinter/gosford.jpeg', '/photos/embracingWinter/gosford2.jpeg'],
       },
       {
@@ -235,7 +236,8 @@ const entries: MonthGroup[] = [
         month: 'Apr',
         activity: ['Camping'],
         title: 'Mont Tranchant Sleepover',
-        description: 'Breakfast in St Come and sleeping in snow. Catching the end of winter. ',
+        description:
+          'Breakfast in St Come and sleeping in snow. Catching the end of winter. Being in nature does not always have to require a big suffering epic. It can just mean eating KD mac and cheese in a tent pitched 10m from the car, happy you are breathing cold air and hearing the birds.',
         photos: [
           '/photos/embracingWinter/tranchant.jpeg',
           '/photos/embracingWinter/tranchant2.jpeg',
@@ -367,6 +369,13 @@ const EmbracingWinter = () => {
           </Box>
         ))}
       </Box>
+      <Typography
+        sx={{ fontSize: 14, color: 'text.secondary', paddingBottom: '20px', fontStyle: 'italic' }}
+      >
+        These last few months were an exercise in humility - this was a good reminder that you will
+        be BAD the first time you try something. But trying new things is cool! And luckily, I have
+        good friends and mentors to support me.
+      </Typography>
       <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.75, mb: 2.5 }}>
         {allActivities.map((act) => {
           const { bg, color } = ACTIVITY_COLORS[act];
