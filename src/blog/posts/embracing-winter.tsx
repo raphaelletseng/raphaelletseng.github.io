@@ -78,7 +78,7 @@ const entries: MonthGroup[] = [
         activity: ['Camping', 'Hiking'],
         title: 'Mauricie Winter Camping and NYE Hotpot',
         description:
-          "Who needs clubbing and staying up til midnight when you can have hotpot with your friends over a campfire, and sleep under piles and piles of down with hot water bottles, toe warmers, and wool base layers. Moonlit snow meant we didn't need headlamps in the dark, and there's nothing like climbing out of a tent in -20C to go pee. Celebrated Nick's birthday, and enjoyed a gorgeous New Year's Day Walk with Am, Hamed, Hao, Marcus, and Carly",
+          "Who needs clubbing and staying up til midnight when you can have hotpot with your friends over a campfire, and sleep under piles and piles of down with hot water bottles, toe warmers, and wool base layers. First time winter camping! Moonlit snow meant we didn't need headlamps in the dark, and there's nothing like climbing out of a tent in -20C to go pee. Celebrated Nick's birthday, and enjoyed a gorgeous New Year's Day Walk with Am, Hamed, Hao, Marcus, and Carly.",
         photos: [
           '/photos/embracingWinter/mauricie.jpeg',
           '/photos/embracingWinter/hot_pot.jpeg',
@@ -151,7 +151,7 @@ const entries: MonthGroup[] = [
         activity: ['Ice Climbing'],
         title: 'First Ice Multipitch at Mt Barriere with Hamed',
         description:
-          'Sunny day out with Michael, Jay, Hamed, and Nick. Nick forget his harness so soloed Voyage Imaginarie with us. I was unsure about my ability to climb Champ de Choufleur but Michael talked me into it and it ended up being a lot of fun.',
+          'Sunny day out with Michael, Jay, Hamed, and Nick. Nick forgot his harness so soloed Voyage Imaginarie with us. I was unsure about my ability to climb Champ de Choufleur but Michael talked me into it and it ended up being a lot of fun.',
         photos: [
           '/photos/embracingWinter/voyage_imaginaire.jpeg',
           '/photos/embracingWinter/champ_de_choufleur.jpeg',
