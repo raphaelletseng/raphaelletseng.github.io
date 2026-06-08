@@ -92,18 +92,20 @@ const content = (
       ].map(({ src, alt }) => (
         <Box
           key={alt}
-          component="img"
-          src={src}
-          alt={alt}
           sx={{
-            flex: '1 1 0',
-            minWidth: 0,
-            width: { xs: 'calc(50% - 7px)', md: '150px' },
-            height: { xs: '120px', md: '150px' },
-            objectFit: 'cover',
+            width: { xs: 'calc(50% - 4px)', md: '200px' },
             borderRadius: '5px',
+            overflow: 'hidden',
+            flexShrink: 0,
           }}
-        />
+        >
+          <Box
+            component="img"
+            src={src}
+            alt={alt}
+            sx={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+        </Box>
       ))}
     </Box>
 
@@ -114,7 +116,7 @@ const content = (
         on my face. I spent many a day lounging on a picnic blanket, reading, snacking, chatting,
         snoozing, journalling, stretching, pondering. I am ever grateful for open spaces to convene
         in with friends and public spots to sit and rest. Also, for the dog parks, the chirping
-        birds, the sports facilities, the bright Spring green, and getting to witness everyone else
+        birds, the sports facilities, the bright spring green, and getting to witness everyone else
         in the neighbourhood enjoying the parks as much as me.
       </Typography>
     </Box>
@@ -164,7 +166,7 @@ const content = (
   </Box>
 );
 export default {
-  slug: 'url',
+  slug: '6-things-from-may',
   title: '🌿 6 Things From May',
   date: '2026-06-07',
   description: 'Things I loved, did, felt, experienced in the month of May.',

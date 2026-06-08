@@ -9,7 +9,7 @@ import theMalayanTigerOnTheBrinkOfExtinction from './posts/the-malayan-tiger-on-
 import placesToFindWarmDrinksInMontreal from './posts/27-places-to-find-warm-drinks-in-montreal';
 import lessonsFromASummerOutside from './posts/lessons-from-a-summer-outside';
 import embracingWinter from './posts/embracing-winter';
-import thingsForMay from './posts/things-for-may';
+import sixThingsFromMay from './posts/6-things-from-may';
 
 const blogPosts: Blog[] = [
   sentimentAnalysis,
@@ -22,7 +22,7 @@ const blogPosts: Blog[] = [
   placesToFindWarmDrinksInMontreal,
   lessonsFromASummerOutside,
   embracingWinter,
-  thingsForMay,
+  sixThingsFromMay,
 ];
 
 export default blogPosts;
