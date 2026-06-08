@@ -15,6 +15,7 @@ import house4 from './house4.jpeg';
 import flowers from './flowers.png';
 import amster from './amster.png';
 import summerOutside from './v4_web.png';
+import maygif from './maygif.gif';
 import type { Illustration } from '../../types';
 
 export const illustrationIndex: Illustration[] = [
@@ -39,4 +40,5 @@ export const illustrationIndex: Illustration[] = [
   { src: img10, alt: 'Handle with Care Postcard', tags: ['postcard', 'digital'] },
   { src: flowers, alt: 'Digital Flower Bouquet Asset', tags: ['digital'] },
   { src: amster, alt: 'Amsterdam houses', tags: ['houses', 'ink', 'travel'] },
+  { src: maygif, alt: 'May Recap', tags: ['colourpencil'] },
 ];
