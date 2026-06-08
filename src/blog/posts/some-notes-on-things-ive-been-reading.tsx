@@ -97,7 +97,7 @@ const bookData: Book[] = [
     month: 'January 2026',
     content: `The first couple essays are really great, I think it lulls a little in the middle, and then picks back up again. Gifted to me by maman because she saw it and thought I might enjoy it. I need to read more Chinese literature, and left wing liberal literature at that too.
 - "What speech is forever teaching us is that we are born unequal. That some should be high and some low is an eternal truth, though you may choose to disregard it."
-- "ever since then, I have been unable to shake the feeling of being a piece of domestic ware or product. It is a tragic feeling. In this Eastern society I inhabit, there is nothing that can soothe my woe - this feeling of sadness does not derive from the literal facts of my existence, but from the unfortunate reality of domestic product - with which I feel affinity - itself. The thing that tells you you are a piece of domestic product is this: no matter what people decide to do with you, and no matter how they evaluate you, they don't need to offer an explanation of ask for your consent. "`,
+- "ever since then, I have been unable to shake the feeling of being a piece of domestic ware or product. It is a tragic feeling. In this Eastern society I inhabit, there is nothing that can soothe my woe - this feeling of sadness does not derive from the literal facts of my existence, but from the unfortunate reality of domestic product - with which I feel affinity - itself. The thing that tells you you are a piece of domestic product is this: no matter what people decide to do with you, and no matter how they evaluate you, they don't need to offer an explanation of ask for your consent."`,
   },
 ];
 
