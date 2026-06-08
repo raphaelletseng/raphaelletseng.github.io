@@ -1,4 +1,10 @@
-const content = <p> Here goes content </p>;
+import { Box, Typography } from '@mui/material';
+
+const content = (
+  <Box>
+    <Typography>Here goes content </Typography>{' '}
+  </Box>
+);
 
 export default {
   slug: 'url',
