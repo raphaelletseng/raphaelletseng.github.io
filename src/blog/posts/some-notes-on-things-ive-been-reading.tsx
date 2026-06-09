@@ -191,7 +191,7 @@ const content = (
     <Typography>
       {' '}
       I am attempting to read more authors from around the world. Here I touch on works from China,
-      Syria, Norway, the United States, France, Rawanda, Nigeria, Singapore, Turkey, Taiwan, and
+      Syria, Norway, the United States, France, Rwanda, Nigeria, Singapore, Turkey, Taiwan, and
       Ecuador. These are work in progress notes and reminders for myself.
       <br />
     </Typography>
