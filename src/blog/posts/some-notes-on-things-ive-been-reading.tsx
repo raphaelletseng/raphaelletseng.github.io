@@ -89,7 +89,7 @@ const bookData: Book[] = [
     title: 'Things Fall Apart',
     author: 'Chinua Achebe',
     month: 'March 2026',
-    content: `Classic literature. Brutal ending. But also a lot of violence and misogyny that makes it at times a difficult too.`,
+    content: `Classic literature. Brutal ending. But also a lot of violence and misogyny that makes it at times difficult too.`,
     image: 'thingsFallApart',
   },
   {
