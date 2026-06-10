@@ -11,6 +11,7 @@ import lessonsFromASummerOutside from './posts/lessons-from-a-summer-outside';
 import embracingWinter from './posts/embracing-winter';
 import sixThingsFromMay from './posts/6-things-from-may';
 import someNotesOnThingsIveBeenReading from './posts/some-notes-on-things-ive-been-reading';
+import gaspesieSummerAdventures from './posts/gaspesie-summer-adventures';
 
 const blogPosts: Blog[] = [
   sentimentAnalysis,
@@ -25,6 +26,7 @@ const blogPosts: Blog[] = [
   embracingWinter,
   sixThingsFromMay,
   someNotesOnThingsIveBeenReading,
+  gaspesieSummerAdventures,
 ];
 
 export default blogPosts;
