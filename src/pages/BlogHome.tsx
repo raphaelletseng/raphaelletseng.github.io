@@ -34,7 +34,7 @@ const BlogHome = () => {
         animate={shouldReduceMotion ? {} : { opacity: 1, x: 0 }}
         transition={{ duration: 0.4, ease: 'easeOut' }}
       >
-        Notes
+        Scribbles
       </MotionTypography>
 
       {years.map((year) => (
