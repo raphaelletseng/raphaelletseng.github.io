@@ -6,6 +6,7 @@ const MotionTypography = motion(Typography);
 
 const MotionImg = styled(motion.img)(({ theme }) => ({
   width: '100%',
+  maxWidth: '250px',
   height: 'auto',
   objectFit: 'contain',
   marginTop: theme.spacing(3),
@@ -44,7 +45,7 @@ const Home = () => {
       <Box
         key={2}
         sx={{
-          width: { xs: '100%', sm: '60%', md: '40%' },
+          width: { xs: '100%', sm: '60%', md: '50%' },
           order: { xs: 1, sm: 2 },
           height: 'auto',
           objectFit: 'cover',

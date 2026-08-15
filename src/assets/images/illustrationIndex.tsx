@@ -16,6 +16,8 @@ import flowers from './flowers.png';
 import amster from './amster.png';
 import summerOutside from './v4_web.png';
 import maygif from './maygif.gif';
+import sleepwell3 from './sleep_well3.png';
+import sard from './sarrdie.png';
 import type { Illustration } from '../../types';
 
 export const illustrationIndex: Illustration[] = [
@@ -31,6 +33,7 @@ export const illustrationIndex: Illustration[] = [
   { src: img7, alt: '6am Run Assets', tags: ['cafe', 'ink', 'activity'] },
   { src: blue4, alt: "Sunday's Souper Poster", tags: ['poster'] },
   { src: img9, alt: 'Dried flowers', tags: ['ink'] },
+  { src: sard, alt: 'tent sardine', tags: ['digital'] },
   { src: house3, alt: 'Yellow Penang Shophouse', tags: ['houses', 'watercolor'] },
   { src: img11, alt: 'PSA Winston Posters', tags: ['poster', 'digital'] },
   { src: house2, alt: 'Blue Penang Shophouse', tags: ['houses', 'watercolor'] },
@@ -41,4 +44,5 @@ export const illustrationIndex: Illustration[] = [
   { src: flowers, alt: 'Digital Flower Bouquet Asset', tags: ['digital'] },
   { src: amster, alt: 'Amsterdam houses', tags: ['houses', 'ink', 'travel'] },
   { src: maygif, alt: 'May Recap', tags: ['colourpencil'] },
+  { src: sleepwell3, alt: 'Sleeping Sardines', tags: ['digital'] },
 ];
