@@ -288,6 +288,6 @@ export default {
   date: '2019-10-23',
   description:
     "In the 1950's, more than 3000 tigers lived and ranged across the jungles of Peninsula Malaysia. As of 2019, less than 150 can be found in the wild.",
-  tags: ['tigers, wildlife, conservation'],
+  tags: ['tigers', 'wildlife', 'conservation'],
   content,
 };

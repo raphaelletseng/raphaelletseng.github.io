@@ -93,6 +93,6 @@ export default {
   title: '🌏 Climate Tech Starter Pack ',
   date: '2021-07-21',
   description: 'A compilation of resources to begin navigating a career in climate! ',
-  tags: ['resources', 'climate-tech', 'careers'],
+  tags: ['resources', 'climate-tech', 'careers', 'cs'],
   content,
 };

@@ -53,9 +53,10 @@ const content = (
 <!-- <link rel="stylesheet" href="styles.css"> -->
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>`}
       </Paper>
-      And then a <code>&lt;div id="map"&gt;&lt;/div&gt;</code> in the <code>&lt;body&gt;.</code>{' '}
-      Within the <code>&lt;script&gt;</code> you will need to add your personal mapbox token (which
-      you can generate for free on their website). You can initialise your map with:
+      And then a <code>&lt;div id=&quot;map&quot;&gt;&lt;/div&gt;</code> in the{' '}
+      <code>&lt;body&gt;.</code> Within the <code>&lt;script&gt;</code> you will need to add your
+      personal mapbox token (which you can generate for free on their website). You can initialise
+      your map with:
       <Paper
         variant="outlined"
         sx={{
@@ -146,6 +147,6 @@ export default {
   title: '☕ 27 Places to find warm drinks in Montreal',
   date: '2025-01-27',
   description: 'Good drinks can be found all over the city.',
-  tags: ['hi'],
+  tags: ['cs'],
   content,
 };

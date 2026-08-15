@@ -28,7 +28,7 @@ const Nav = () => {
               color: 'black',
             }}
           >
-            blog
+            notes
           </Typography>
         </Stack>
       </Toolbar>
