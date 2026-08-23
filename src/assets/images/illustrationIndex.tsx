@@ -18,6 +18,7 @@ import summerOutside from './v4_web.png';
 import maygif from './maygif.gif';
 import sleepwell3 from './sleep_well3.png';
 import sard from './sarrdie.png';
+import peaches from './peaches.png';
 import type { Illustration } from '../../types';
 
 export const illustrationIndex: Illustration[] = [
@@ -45,4 +46,5 @@ export const illustrationIndex: Illustration[] = [
   { src: amster, alt: 'Amsterdam houses', tags: ['houses', 'ink', 'travel'] },
   { src: maygif, alt: 'May Recap', tags: ['colourpencil'] },
   { src: sleepwell3, alt: 'Sleeping Sardines', tags: ['digital'] },
+  { src: peaches, alt: 'August Peaches', tags: ['digital'] },
 ];
