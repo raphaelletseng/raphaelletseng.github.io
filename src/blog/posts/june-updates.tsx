@@ -1,5 +1,5 @@
 import { Box, List, ListItem, Typography, Link } from '@mui/material';
-import june from '../../assets/images/june.png';
+import june from '../../assets/images/june.jpg';
 import june_food from '../../assets/images/june_food.png';
 import june_dehors from '../../assets/images/june_dehors.png';
 import june_skies from '../../assets/images/june_skies.png';

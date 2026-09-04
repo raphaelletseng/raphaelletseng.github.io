@@ -1,24 +1,24 @@
-import img2 from './img2.jpeg';
-import img3 from './img3.png';
-import img10 from './img10.png';
+import img2 from './img2.jpg';
+import leClub from './LeClub.png';
+import img10 from './img10.jpg';
 import gif1 from './el-gif.gif';
-import img4 from './img4.png';
-import blue4 from './blue4.png';
-import img6 from './img6.png';
-import img7 from './img7.png';
-import img9 from './img9.png';
-import img11 from './img11.png';
-import parc from './parc.jpeg';
-import house2 from './house2.jpeg';
-import house3 from './house3.jpeg';
-import house4 from './house4.jpeg';
+import img4 from './img4.jpg';
+import blue4 from './blue4.jpg';
+import img6 from './img6.jpg';
+import img7 from './img7.jpg';
+import img9 from './img9.jpg';
+import img11 from './img11.jpg';
+import parc from './parc.jpg';
+import house2 from './house2.jpg';
+import house3 from './house3.jpg';
+import house4 from './house4.jpg';
 import flowers from './flowers.png';
-import amster from './amster.png';
+import amster from './amster.jpg';
 import summerOutside from './v4_web.png';
 import maygif from './maygif.gif';
-import sleepwell3 from './sleep_well3.png';
-import sard from './sarrdie.png';
-import peaches from './peaches.png';
+import sleepwell3 from './sleep_well3.jpg';
+import sard from './sarrdie.jpg';
+import peaches from './set_peach.jpg';
 import type { Illustration } from '../../types';
 
 export const illustrationIndex: Illustration[] = [
@@ -38,7 +38,7 @@ export const illustrationIndex: Illustration[] = [
   { src: house3, alt: 'Yellow Penang Shophouse', tags: ['houses', 'watercolor'] },
   { src: img11, alt: 'PSA Winston Posters', tags: ['poster', 'digital'] },
   { src: house2, alt: 'Blue Penang Shophouse', tags: ['houses', 'watercolor'] },
-  { src: img3, alt: 'Le Club Cafe Assets', tags: ['cafe', 'ink'] },
+  { src: leClub, alt: 'Le Club Cafe Assets', tags: ['cafe', 'ink'] },
   { src: parc, alt: 'Parc St Louis', tags: ['watercolor', 'travel'] },
   { src: house4, alt: 'White Penang Shophouse', tags: ['houses', 'watercolor'] },
   { src: img10, alt: 'Handle with Care Postcard', tags: ['postcard', 'digital'] },
