@@ -13,6 +13,13 @@ import pleasureOfThinking from '../../assets/images/books/pleasureOfThinking.jpg
 import theBirds from '../../assets/images/books/theBirds.jpg';
 import thingsFallApart from '../../assets/images/books/thingsFallApart.jpg';
 import sugarbread from '../../assets/images/books/sugarbread.jpg';
+import thevegetarian from '../../assets/images/books/thevegetarian.jpg';
+import maliburising from '../../assets/images/books/malibu-rising.jpg';
+import thesummerbook from '../../assets/images/books/the-summer-book.jpg';
+import perfection from '../../assets/images/books/perfection.jpg';
+import piranesi from '../../assets/images/books/piranesi.jpg';
+import mantiger from '../../assets/images/books/man_tiger.jpg';
+import oldman from '../../assets/images/books/100yroldman.jpg';
 
 interface Book {
   title: string;
@@ -33,9 +40,69 @@ const imageMap: Record<string, string> = {
   theBirds,
   thingsFallApart,
   sugarbread,
+  piranesi,
+  thevegetarian,
+  maliburising,
+  oldman,
+  perfection,
+  thesummerbook,
+  mantiger,
 };
 
 const bookData: Book[] = [
+  {
+    title: 'The 100 Year-Old Man Who Climbed Out the Window and Disappeared',
+    author: 'Jonas Jonasson',
+    month: 'October 2026',
+    content:
+      "Whimsical, picked this up out of A&H's discarded books pile, but Marcus vouched for it. Cosy, light read for the fall season.",
+    image: 'oldman',
+  },
+  {
+    title: 'Man Tiger',
+    author: 'Eka Kurniawan',
+    month: 'September 2026',
+    content:
+      'Author influenced by Pramoedya Ananta Toer, interesting to read more contemporary Indonesian Literature. More magical realism. A lot of violence. Great ending.',
+    image: 'mantiger',
+  },
+  {
+    title: 'Piranesi',
+    author: 'Susanna Clarke',
+    month: 'August 2026',
+    content: 'Fun, immersive world. An enjoyable page turner.',
+    image: 'piranesi',
+  },
+  {
+    title: 'Perfection',
+    author: 'Vincenzo Latronico',
+    month: ' August 2026',
+    content:
+      'Recommended by Cheng, existential, felt very targetted. Based on the book Les Choses (To Read).',
+    image: 'perfection',
+  },
+  {
+    title: 'The Summer Book',
+    author: 'Tove Jansson',
+    month: ' July 2026',
+    content:
+      'Read this lying in a hammock in the park, under a summer sun. Felt like the perfect read for the season. Vignettes of summer, by the illustrator behind Moomin Troll.',
+    image: 'thesummerbook',
+  },
+  {
+    title: 'Malibu Rising',
+    author: 'Taylor Jenkins Reid',
+    month: ' June 2026',
+    content: '',
+    image: 'maliburising',
+  },
+  {
+    title: 'The Vegetarian',
+    author: 'Han Kang',
+    month: 'June 2026',
+    content: 'Violent.',
+    image: 'thevegetarian',
+  },
   {
     title: 'We Will Be Jaguars',
     author: 'Nemonte Nenquimo & Mitch Anderson',
@@ -191,8 +258,9 @@ const content = (
     <Typography>
       {' '}
       I am attempting to read more authors from around the world. Here I touch on works from China,
-      Syria, Norway, the United States, France, Rwanda, Nigeria, Singapore, Turkey, Taiwan, and
-      Ecuador. These are work in progress notes and reminders for myself.
+      Syria, Norway, the United States, France, Rwanda, Nigeria, Singapore, Turkey, Taiwan, Ecuador,
+      Korea, Finland, Italy, Indonesia, and Sweden. These are work in progress notes and reminders
+      for myself.
       <br />
     </Typography>
     <Divider sx={{ paddingTop: '10px', marginBottom: '10px' }} />
@@ -205,8 +273,8 @@ const content = (
 export default {
   slug: 'notes-on-books-2026-so-far',
   title: "📚 Some notes on books I've been reading this year",
-  date: '2026-06-8',
-  description: 'Notes on my reading from Jan-May 2026',
+  date: '2026-10-5',
+  description: 'Notes on my reading from Jan-Oct 2026',
   tags: ['reading'],
   content,
 };

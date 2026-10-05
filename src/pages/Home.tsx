@@ -62,11 +62,10 @@ const Home = () => {
             fontSize: {
               xs: '2rem', // small screens
               sm: '3rem',
-              md: '5rem', // medium screens and up
             },
           }}
         >
-          Raphaëlle 曾
+          Raph 曾
         </MotionTypography>
         <MotionTypography
           variant="body1"
@@ -75,13 +74,12 @@ const Home = () => {
           animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.4, ease: 'easeOut' }}
         >
-          Hi, I&apos;m Raph Tseng. I spend my time writing code,{' '}
-          <Link href="/#/illustration/">illustrating</Link>, and working on projects that support
-          social impact and the mitigation of climate change. <br /> I can also be found{' '}
-          <Link href="/#/running/">running around outside</Link> and{' '}
-          <Link href="/#/why-i-climb/">climbing things</Link>.
-          <br /> <br /> I studied mathematics and computer science at McGill University. Since then,
-          I&apos;ve worked in{' '}
+          Hello friend, welcome to my digital space ✴︎಄ <br /> I&apos;m Raph. I spend my time
+          writing code, <Link href="/#/illustration/">making art</Link>, and{' '}
+          <Link href="/#/running/">running around outside</Link>. (I really like{' '}
+          <Link href="/#/why-i-climb/">climbing things</Link>).
+          <br /> <br /> I studied mathematics and computer science at{' '}
+          <Link href="https://www.mcgill.ca/">university</Link>. Since then, I&apos;ve worked in{' '}
           <Link href="https://www.ghgsat.com/en/" target="_blank" rel="noopener">
             methane mitigation
           </Link>

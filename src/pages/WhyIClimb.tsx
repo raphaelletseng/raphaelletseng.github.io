@@ -82,7 +82,7 @@ const WhyIClimb = () => {
           }}
         >
           {' '}
-          Le Bas-St-Laurent, Été 2025
+          Le Bas-St-Laurent
         </Typography>
       </MotionBox>
 
@@ -95,8 +95,8 @@ const WhyIClimb = () => {
 
       {/* Image Grid */}
       {[
-        { src: chek, caption: 'The Outpost à Cheakamus, Été 2023', col: '1 / 4' },
-        { src: kamou_grain, caption: 'As de Pique de Kamouraska, Automne 2024', col: '4 / 7' },
+        { src: chek, caption: 'The Outpost à Cheakamus', col: '1 / 4' },
+        { src: kamou_grain, caption: 'As de Pique de Kamouraska', col: '4 / 7' },
       ].map(({ src, caption, col }, index) => (
         <MotionBox
           key={caption}
@@ -158,7 +158,7 @@ const WhyIClimb = () => {
             color: 'text.secondary',
           }}
         >
-          The Adirondacks, Automne 2024
+          The Adirondacks
         </Typography>
       </MotionBox>
       <Box
@@ -168,10 +168,10 @@ const WhyIClimb = () => {
         }}
       ></Box>
       {[
-        { src: nyamuk, caption: 'Nyamuk Batu Caves, Été 2024', col: '1 / 5' },
+        { src: nyamuk, caption: 'Nyamuk Batu Caves', col: '1 / 5' },
         {
           src: grosbonnet,
-          caption: 'La Toute Beauté, Printemps 2024',
+          caption: 'La Toute Beauté',
           col: '5 / 7',
           marginTop: 10,
         },
