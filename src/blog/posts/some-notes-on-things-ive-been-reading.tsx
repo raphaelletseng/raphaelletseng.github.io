@@ -60,7 +60,7 @@ const bookData: Book[] = [
   },
   {
     title: 'Man Tiger',
-    author: 'Eka Kurniawan',
+    author: 'Eka Kurniawan with Dalih Sembiring (Translator)',
     month: 'September 2026',
     content:
       'Author influenced by Pramoedya Ananta Toer, interesting to read more contemporary Indonesian Literature. More magical realism. A lot of violence. Great ending.',
@@ -75,7 +75,7 @@ const bookData: Book[] = [
   },
   {
     title: 'Perfection',
-    author: 'Vincenzo Latronico',
+    author: 'Vincenzo Latronico with Sophie Hughes (Translator)',
     month: ' August 2026',
     content:
       'Recommended by Cheng, existential, felt very targetted. Based on the book Les Choses (To Read).',
@@ -83,7 +83,7 @@ const bookData: Book[] = [
   },
   {
     title: 'The Summer Book',
-    author: 'Tove Jansson',
+    author: 'Tove Jansson with Thomas Teal (Translator)',
     month: ' July 2026',
     content:
       'Read this lying in a hammock in the park, under a summer sun. Felt like the perfect read for the season. Vignettes of summer, by the illustrator behind Moomin Troll.',
@@ -98,7 +98,7 @@ const bookData: Book[] = [
   },
   {
     title: 'The Vegetarian',
-    author: 'Han Kang',
+    author: 'Han Kang with Deborah Smith (Translator)',
     month: 'June 2026',
     content: 'Violent.',
     image: 'thevegetarian',
@@ -257,12 +257,27 @@ const content = (
   <Box>
     <Typography>
       {' '}
-      I am attempting to read more authors from around the world. Here I touch on works from China,
-      Syria, Norway, the United States, France, Rwanda, Nigeria, Singapore, Turkey, Taiwan, Ecuador,
-      Korea, Finland, Italy, Indonesia, and Sweden. These are work in progress notes and reminders
-      for myself.
+      Books read in 2026 with notes and an updated map displaying how many authors I have read from
+      around the world.
       <br />
     </Typography>
+    <Box
+      component="iframe"
+      src="https://raphaelletseng.github.io/reading_the_world"
+      title="reading the world"
+      sx={{
+        border: 'none',
+        width: '100%',
+        display: 'block',
+        overflow: 'hidden',
+        margin: '5px 0',
+        aspectRatio: {
+          xs: '1 / 1',
+          sm: '1 / 0.8',
+          md: '1000 / 660',
+        },
+      }}
+    />
     <Divider sx={{ paddingTop: '10px', marginBottom: '10px' }} />
     {bookData.map((book) => (
       <CollapsibleSection key={book.title} book={book} />
@@ -272,9 +287,9 @@ const content = (
 
 export default {
   slug: 'notes-on-books-2026-so-far',
-  title: "📚 Some notes on books I've been reading this year",
-  date: '2026-10-5',
-  description: 'Notes on my reading from Jan-Oct 2026',
+  title: '📚 Notes on Books',
+  date: '2026-10-05',
+  description: 'Tracking my reading between Jan-Oct 2026',
   tags: ['reading'],
   content,
 };
