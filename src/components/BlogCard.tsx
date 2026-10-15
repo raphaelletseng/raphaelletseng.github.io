@@ -1,6 +1,7 @@
 import { Card, Chip, Typography, Stack, CardActionArea, CardContent } from '@mui/material';
 import type { Blog } from '../types';
 import { Link } from 'react-router-dom';
+import { LINK_HOVER_COLOR } from '../theme';
 
 interface BlogCardProps {
   post: Blog;
@@ -31,12 +32,32 @@ const getTagColor = (tag: string) => {
 const BlogCard = ({ post }: BlogCardProps) => {
   return (
     <Card sx={{ margin: 1, boxShadow: 'none' }}>
-      <CardActionArea component={Link} to={`/blog/${post.slug}`}>
+      <CardActionArea
+        component={Link}
+        to={`/blog/${post.slug}`}
+        sx={{
+          '&:hover .blog-card-title': {
+            color: LINK_HOVER_COLOR,
+          },
+        }}
+      >
         <CardContent>
-          <Typography variant="h4" sx={{ fontWeight: 400, fontSize: '1.2rem', textAlign: 'left' }}>
+          <Typography
+            className="blog-card-title"
+            variant="h4"
+            sx={{
+              fontWeight: 400,
+              fontSize: '1.2rem',
+              textAlign: 'left',
+              color: 'black',
+              transition: 'color 0.2s ease',
+            }}
+          >
             {post.title}
           </Typography>
-          <Typography sx={{ fontSize: '1rem', textAlign: 'left' }}>{post.description}</Typography>
+          <Typography sx={{ fontSize: '1rem', textAlign: 'left', color: 'black' }}>
+            {post.description}
+          </Typography>
           <Stack
             direction="row"
             spacing={1.5}

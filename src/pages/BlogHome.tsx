@@ -24,7 +24,7 @@ const BlogHome = () => {
   const years = Object.keys(postsByYear).sort((a, b) => +b - +a);
 
   return (
-    <Box sx={{ px: { xs: 2, sm: 3, md: 4 }, py: { xs: 2, sm: 3 } }}>
+    <Box sx={{ px: { xs: 0, sm: 3, md: 4 }, py: { xs: 2, sm: 3 } }}>
       <MotionTypography
         variant="h4"
         textAlign="left"

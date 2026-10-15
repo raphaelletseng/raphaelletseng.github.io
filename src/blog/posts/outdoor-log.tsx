@@ -1,251 +1,265 @@
-import { Box, Typography, Divider } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, ButtonBase, Collapse, Typography } from '@mui/material';
+import rawEntries from './data/outdoor-changelog.json';
 
-const changelog = [
-  {
-    month: 'October 2026',
-    entries: [
-      ['9-11', 'Mont Tremblant Camping and Hikes'],
-      ['3', 'Knowlton Mt Echo Hike'],
-    ],
-  },
-  {
-    month: 'September 2026',
-    entries: [
-      ['18-20', 'Bellie Wedding Camping and Triathlon'],
-      ['11-13', 'Charlevoix & Les Hautes Gorges Camping and Hiking'],
-      ['27', 'Climbing at Tranchant'],
-    ],
-  },
-  {
-    month: 'August 2026',
-    entries: [
-      ['29', 'Val David Climbing'],
-      ['22', 'Day of Sailing'],
-      ['9', 'Val David Run and Swim'],
-      ['1-2', 'Gals Bikepacking in the Laurentides'],
-    ],
-  },
-  {
-    month: 'July 2026',
-    entries: [
-      ['26-28', 'Juan De Fuca Backpacking Trip (50k)'],
-      ['18-20', 'Charlevoix and Tadoussac Camping'],
-      ['12', 'First Time up CH - 42k Bike Ride'],
-    ],
-  },
-  {
-    month: 'June 2026',
-    entries: [['13', 'Longest bike ride yet - 115k to St Anne and Ile Bizard']],
-  },
-  {
-    month: 'May 2026',
-    entries: [
-      ['15-18', 'Camping at Lac Long - Legende Personelle'],
-      ['23', 'Climbing at Val David'],
-    ],
-  },
-  {
-    month: 'April 2026',
-    entries: [
-      ['21-22', 'Bouldering in Fontainebleau'],
-      ['10-11', 'Mont Tranchant Sleepover'],
-      ['3-4', 'Gals in Gosford Lean-to hike (33k)'],
-    ],
-  },
-  {
-    month: 'March 2026',
-    entries: [
-      ['22', 'Gai Luron Cross Country Ski)'],
-      ['15', 'Bromont Night Ski - First Black Diamond'],
-    ],
-  },
-  {
-    month: 'February 2026',
-    entries: [
-      ['28', 'Opale with Nick - 2nd Ice Multi'],
-      ['14', 'Val David Microspike hike with Maman'],
-      ['9', 'Learning to ski at Bruno'],
-      ['1', 'Mont Barriere - 1st Ice Multi w Hamed'],
-    ],
-  },
-  {
-    month: 'January 2026',
-    entries: [
-      ['24-25', 'Cap 360 Winter Camping in -30'],
-      ['17', '1st Time Cross Country Skiing on Mt Royal'],
-      ['10-11', 'Malbaie Triolet Attempt'],
-      ['4', 'Cold day at Shawbridge'],
-    ],
-  },
-  {
-    month: 'December 2025',
-    entries: [
-      ['31-1', 'Mauricie Winter Camping NYE Hotpot'],
-      ['24-28', 'St Alexis and Mastigouche Climbing'],
-      ['13', "Am's Birthday at Lac Sylvere"],
-      ['6-7', 'Crawford Notch and Huntington Ravine'],
-    ],
-  },
-  {
-    month: 'November 2025',
-    entries: [['1', "First Time Dry Tooling at Montagne D'Argent"]],
-  },
-  {
-    month: 'October 2025',
-    entries: [
-      ['25', 'First fall on gear on Sceptre! '],
-      ['18', 'Led Adagio 5.8+ '],
-      ['10-11', 'Pemiwegasset Loop'],
-      ['4', 'Aided Sacrifice Saignant at St Alphonse'],
-    ],
-  },
-  {
-    month: 'September 2025',
-    entries: [
-      ['28', 'Lac Blanc '],
-      ['14', 'Black & White at Weir w Nick'],
-      ['21', 'Montreal Half-Marathon'],
-      ['7', 'Ultranza 30k at Val David'],
-    ],
-  },
-  {
-    month: 'August 2025',
-    entries: [
-      ['29-1', 'Charlevoix Blueberry Traverse'],
-      ['16', '21k+ in Chamonix'],
-      ['15', 'Climbing in Valorcine'],
-      ['14', 'Lac Blanc Hike'],
-      ['7-10', 'First 50k+ week in France'],
-    ],
-  },
-  {
-    month: 'July 2025',
-    entries: [
-      ['19', 'Mont King - First Trad Multi Lead'],
-      ['12', 'Sweaty in Baldy'],
-      ['4-5', 'First Time Backpacking in Gaspesie - Summitted Jacques Cartier'],
-      ['28-6', 'Gaspesie Hiking Camping Trip'],
-      ['29', 'Climbing at 4eme Plage in Rimouski'],
-    ],
-  },
-  {
-    month: 'June 2025',
-    entries: [
-      ['29', 'Climbing at 4eme Plage in Rimouski'],
-      ['8', 'Climbing at Tranchant with Hao'],
-    ],
-  },
-  {
-    month: 'May 2025',
-    entries: [
-      ['25', 'St Alph climbing'],
-      ['4', 'Weir with Friends'],
-    ],
-  },
-  {
-    month: 'October 2024',
-    entries: [
-      ['26', 'Tried a 12a outside (Apesenteur at St Alph)'],
-      ['11-13', 'Rumney Climbing Trip - Tried an 11d twice.'],
-    ],
-  },
-  {
-    month: 'September 2024',
-    entries: [
-      ['28-30', 'Kamouraska - One hanged Moby Dick 11b'],
-      ['14', 'First trad lead - 5.7 at St Alph'],
-    ],
-  },
-  {
-    month: 'August 2024',
-    entries: [['24', 'Sent Phenix at St Alph']],
-  },
-  {
-    month: 'June 2024',
-    entries: [['26', 'Climbed at Batu Caves for the first time']],
-  },
-  {
-    month: 'May 2024',
-    entries: [
-      [
-        '18-20',
-        'Lac Long - Onsighted La Toute Beauté and summitted Gros Bonnet for the first time',
-      ],
-      ['12', 'Onsighted Doux Novembre 11a at St Alph'],
-    ],
-  },
-  {
-    month: 'April 2024',
-    entries: [
-      ['27', 'Trying Que Ton Reigne Vienne at Weir'],
-      ['20', 'Ran 26k for the first time'],
-    ],
-  },
-  {
-    month: 'March 2024',
-    entries: [['16', 'Ran a half marathon for the first time since 2019']],
-  },
-  {
-    month: 'January 2024',
-    entries: [['-', 'Ran over 100km this month']],
-  },
-  {
-    month: 'October 2023',
-    entries: [['20', 'Biking to St Anne and Chambly on Allys bike']],
-  },
-  {
-    month: 'August 2023',
-    entries: [
-      ['27', 'Sent Calypso 10c at St Alph'],
-      [
-        '10-18',
-        'Squamish! Learnt to multipitch, touched the Chief, learnt to crack climb - Centurion with Ben. Longest Camping trip yet.',
-      ],
-    ],
-  },
-  {
-    month: 'October 2022',
-    entries: [
-      ['8', 'Climbed a V4 boulder at Val David'],
-      ['1', 'Birthday climbs at Montage dArgent'],
-    ],
-  },
-  {
-    month: 'September 2022',
-    entries: [['24', 'Day at Val David']],
-  },
-  {
-    month: 'July 2022',
-    entries: [
-      ['17', 'Day at Val David w lake swim'],
-      ['10', 'Mont Rigaud Climbing'],
-    ],
-  },
-  {
-    month: 'September 2021',
-    entries: [['17', 'First Time Climbing Outside in Canada at Tranchant']],
-  },
-];
+interface Entry {
+  start: string;
+  end?: string;
+  title: string;
+  description?: string;
+}
+interface MonthGroup {
+  month: string;
+  entries: Entry[];
+}
+interface YearGroup {
+  year: string;
+  months: MonthGroup[];
+}
 
-const content = (
-  <Box>
-    {changelog.map(({ month, entries }) => (
-      <Box key={month} sx={{ mb: 3 }}>
-        <Typography variant="h6">{month}:</Typography>
-        <Divider sx={{ my: 1 }} />
-        <Box component="ul" sx={{ m: 0, pl: 3 }}>
-          {entries.map(([date, descriptor]) => (
-            <li key={`${month}-${date}`}>
-              <Typography component="span">
-                {date}: {descriptor}
-              </Typography>
-            </li>
-          ))}
+const entries = rawEntries as Entry[];
+
+const monthName = (m: string): string =>
+  new Date(2000, Number(m) - 1, 1).toLocaleDateString('en-US', { month: 'long' });
+
+const dateLabel = ({ start, end }: Entry): string | null => {
+  if (start.length === 7) return null;
+  const day = (d: string) => Number(d.slice(8));
+  if (!end) return `${day(start)}`;
+  if (start.slice(0, 7) === end.slice(0, 7)) return `${day(start)}–${day(end)}`;
+  const endShort = new Date(`${end}T00:00`).toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+  });
+  return `${day(start)} – ${endShort}`;
+};
+
+const years: YearGroup[] = [];
+for (const e of [...entries].sort((a, b) => b.start.localeCompare(a.start))) {
+  const [y, m] = e.start.split('-');
+  let year = years[years.length - 1];
+  if (year?.year !== y) {
+    year = { year: y, months: [] };
+    years.push(year);
+  }
+  let month = year.months[year.months.length - 1];
+  const name = monthName(m);
+  if (month?.month !== name) {
+    month = { month: name, entries: [] };
+    year.months.push(month);
+  }
+  month.entries.push(e);
+}
+
+// --- Timeline geometry (px) ---------------------------------------------
+// The rail is a 40px gutter on the left. The line sits at x = 10, the year
+// chevron is centred on it, and each month dot is centred on it.
+
+const GUTTER = '40px';
+
+const ChangelogView = ({
+  open,
+  toggle,
+}: {
+  open: Record<string, boolean>;
+  toggle: (year: string) => void;
+}) => (
+  <Box
+    sx={{
+      width: { xs: '100%', md: '700px' },
+      maxWidth: '100%',
+      minWidth: 0,
+      flexShrink: 0,
+      display: 'block',
+    }}
+  >
+    {years.map(({ year, months }) => {
+      const isOpen = !!open[year];
+      return (
+        <Box key={year} sx={{ mb: '36px', width: '100%', minWidth: 0 }}>
+          <ButtonBase
+            onClick={() => toggle(year)}
+            aria-expanded={isOpen}
+            disableRipple
+            sx={{
+              position: 'relative',
+              height: 40,
+              pl: GUTTER,
+              width: '100%',
+              justifyContent: 'flex-start',
+            }}
+          >
+            <Box
+              component="svg"
+              aria-hidden
+              viewBox="0 0 20 20"
+              width={16}
+              height={16}
+              fill="none"
+              sx={{
+                position: 'absolute',
+                left: '2.5px',
+                top: '12px',
+                color: isOpen ? 'primary.main' : 'text.secondary',
+                transform: isOpen ? 'rotate(180deg)' : 'none',
+                transition: 'transform 0.15s',
+              }}
+            >
+              <path
+                d="M3.5 7l6.5 6.5L16.5 7"
+                stroke="currentColor"
+                strokeWidth={3.2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </Box>
+            <Typography component="span" variant="h4" sx={{ fontWeight: 500 }}>
+              {year}
+            </Typography>
+          </ButtonBase>
+
+          <Collapse
+            in={isOpen}
+            timeout={0}
+            sx={{
+              width: { xs: '100%', md: '700px' },
+              maxWidth: '100%',
+              '& .MuiCollapse-wrapper': { width: '100%' },
+              '& .MuiCollapse-wrapperInner': { width: '100%' },
+            }}
+          >
+            <Box
+              sx={{
+                position: 'relative',
+                pt: '20px',
+                pl: GUTTER,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '20px',
+                width: '100%',
+                minWidth: 0,
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  left: '10px',
+                  top: '-9px',
+                  bottom: 0,
+                  width: '1px',
+                  background: (t) =>
+                    `linear-gradient(to bottom, ${t.palette.divider} 90%, transparent)`,
+                },
+              }}
+            >
+              {months.map(({ month, entries: items }) => (
+                <Box
+                  component="section"
+                  key={month}
+                  sx={{
+                    position: 'relative',
+                    width: '100%',
+                    minWidth: 0,
+                    '&::before': {
+                      content: '""',
+                      position: 'absolute',
+                      left: '-34px',
+                      top: '10px',
+                      width: '9px',
+                      height: '9px',
+                      borderRadius: '50%',
+                      bgcolor: 'primary.main',
+                      boxShadow: (t) => `0 0 0 6px ${t.palette.background.default}`,
+                    },
+                  }}
+                >
+                  <Typography component="h2" variant="h6" sx={{ fontWeight: 500, mb: '2px' }}>
+                    {month}
+                  </Typography>
+
+                  <Box
+                    component="ul"
+                    sx={{
+                      m: 0,
+                      p: 0,
+                      listStyle: 'none',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '15px',
+                      width: '100%',
+                      minWidth: 0,
+                    }}
+                  >
+                    {items.map((e) => {
+                      const label = dateLabel(e);
+                      return (
+                        <Box
+                          component="li"
+                          key={`${e.start}-${e.title}`}
+                          sx={{
+                            display: 'grid',
+                            gridTemplateColumns: '56px minmax(0, 1fr)',
+                            alignItems: 'baseline',
+                            columnGap: '5px',
+                            width: '100%',
+                            minWidth: 0,
+                          }}
+                        >
+                          <Box sx={{ width: 56, flexShrink: 0 }}>
+                            {label && (
+                              <Typography
+                                component="time"
+                                dateTime={e.start}
+                                sx={{
+                                  display: 'block',
+                                  color: 'text.secondary',
+                                  fontVariantNumeric: 'tabular-nums',
+                                }}
+                              >
+                                {label}:
+                              </Typography>
+                            )}
+                          </Box>
+                          <Box sx={{ minWidth: 0, width: '100%' }}>
+                            <Typography sx={{ fontWeight: 500, wordBreak: 'break-word' }}>
+                              {e.title}
+                            </Typography>
+                            {e.description && (
+                              <Typography
+                                variant="body2"
+                                sx={{
+                                  maxWidth: '52ch',
+                                  color: 'text.secondary',
+                                  wordBreak: 'break-word',
+                                  overflowWrap: 'anywhere',
+                                }}
+                              >
+                                {e.description}
+                              </Typography>
+                            )}
+                          </Box>
+                        </Box>
+                      );
+                    })}
+                  </Box>
+                </Box>
+              ))}
+            </Box>
+          </Collapse>
         </Box>
-      </Box>
-    ))}
+      );
+    })}
   </Box>
 );
+
+function DaysOutside(): React.JSX.Element {
+  const [open, setOpen] = useState<Record<string, boolean>>(() =>
+    years.length ? { [years[0].year]: true } : {},
+  );
+  const toggle = (year: string) => setOpen((o) => ({ ...o, [year]: !o[year] }));
+
+  return <ChangelogView open={open} toggle={toggle} />;
+}
+
+const content = <DaysOutside />;
 
 export default {
   slug: 'outdoor-log',

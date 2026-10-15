@@ -1,4 +1,5 @@
 import { Stack, AppBar, Typography, Toolbar } from '@mui/material';
+import { LINK_HOVER_COLOR } from './theme';
 
 const Nav = () => {
   return (
@@ -16,6 +17,11 @@ const Nav = () => {
             component="a"
             sx={{
               color: 'black',
+              textDecoration: 'none',
+              transition: 'color 0.2s ease',
+              '&:hover': {
+                color: LINK_HOVER_COLOR,
+              },
             }}
           >
             曾
@@ -26,6 +32,11 @@ const Nav = () => {
             component="a"
             sx={{
               color: 'black',
+              textDecoration: 'none',
+              transition: 'color 0.2s ease',
+              '&:hover': {
+                color: LINK_HOVER_COLOR,
+              },
             }}
           >
             notes

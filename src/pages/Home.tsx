@@ -26,7 +26,7 @@ const Home = () => {
     <Box
       display="flex"
       justifyContent="center"
-      alignItems="flex-start"
+      alignItems="center"
       sx={{
         flexDirection: {
           xs: 'column',
