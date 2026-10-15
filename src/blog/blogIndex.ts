@@ -12,8 +12,10 @@ import embracingWinter from './posts/embracing-winter';
 import sixThingsFromMay from './posts/6-things-from-may';
 import someNotesOnThingsIveBeenReading from './posts/some-notes-on-things-ive-been-reading';
 import juneUpdates from './posts/june-updates';
+import outdoorLog from './posts/outdoor-log';
 
 const blogPosts: Blog[] = [
+  outdoorLog,
   sentimentAnalysis,
   biasMitigationMl,
   y2FallSem,
