@@ -291,35 +291,85 @@
     "description": "Nick forgot gear twice."
   },
   {
+    "start": "2024-11-10",
+    "title": "Weir Gloom",
+    "description": "Checking placements with James."
+  },
+  {
+    "start": "2024-11-3",
+    "title": "Hot Choc at Weir"
+  },
+  {
     "start": "2024-10-26",
-    "title": "Tried a 12a outside (Apesenteur at St Alph)"
+    "title": "St Alphonse Autumn Climbing",
+    "description": "Tried Apesanteur 12a and TRed Sacrifice Saignant 11+ cracks."
+  },
+  {
+    "start": "2024-10-20",
+    "title": "Gals at St Alph",
+    "description": "Girl Power. Working on Gravité Lunaire."
+  },
+  {
+    "start": "2024-10-19",
+    "title": "Quadrophenia and the Adirondacks",
+    "description": "First time in a hanging gear belay. Fall day out w Ben and Michael."
   },
   {
     "start": "2024-10-11",
     "end": "2024-10-13",
-    "title": "Rumney Climbing Trip - Tried an 11d twice."
+    "title": "Rumney Climbing Trip",
+    "description": "Worked on the Crusher 11d with Am. Good company."
+  },
+  {
+    "start": "2024-10-6",
+    "title": "Orford Fall Hike",
+    "description": "16k with friends up the ski hill."
   },
   {
     "start": "2024-09-28",
-    "end": "2024-09-30",
+    "end": "2024-09-29",
     "title": "Kamouraska - One hanged Moby Dick 11b"
   },
   {
     "start": "2024-09-14",
-    "title": "First trad lead - 5.7 at St Alph"
+    "title": "First trad lead - 5.7 at St Alph",
+    "description": "Party at the crag with all the friends."
+  },
+  {
+    "start": "2024-09-2",
+    "title": "First time on Cap360",
+    "description": "Great views."
   },
   {
     "start": "2024-08-24",
-    "title": "Sent Phenix at St Alph"
+    "title": "Phenix at St Alph",
+    "description": "Did the thing!"
   },
   {
-    "start": "2024-06-26",
-    "title": "Climbed at Batu Caves for the first time"
+    "start": "2024-08-11",
+    "title": "Another day at St Alph",
+    "description": "With Nick and Grant"
+  },
+  {
+    "start": "2024-07-22",
+    "end": "2024-06-24",
+    "title": "Climbing in Malaysia",
+    "description": "First time climbing at Batu Caves with new friends"
+  },
+  {
+    "start": "2024-08-11",
+    "title": "Another day at St Alph",
+    "description": "With Nick and Grant"
+  },
+  {
+    "start": "2024-05-25",
+    "title": "Serenite with Caroline"
   },
   {
     "start": "2024-05-18",
     "end": "2024-05-20",
-    "title": "Lac Long - Onsighted La Toute Beauté and summitted Gros Bonnet for the first time"
+    "title": "Lac Long Climbing Trip",
+    "description": " Onsighted La Toute Beauté and summitted Gros Bonnet for the first time. Lake swims and yummy meals."
   },
   {
     "start": "2024-05-12",
@@ -330,32 +380,42 @@
     "title": "Trying Que Ton Reigne Vienne at Weir"
   },
   {
+    "start": "2024-04-21",
+    "title": "St Alph in all Weather"
+  },
+  {
     "start": "2024-04-20",
     "title": "Ran 26k for the first time"
+  },
+  {
+    "start": "2024-04-7",
+    "title": "First day of the season at Weir"
   },
   {
     "start": "2024-03-16",
     "title": "Ran a half marathon for the first time since 2019"
   },
   {
-    "start": "2024-01",
+    "start": "2024-01-01",
+    "end": "2024-01-31",
     "title": "Ran over 100km this month"
   },
   {
     "start": "2023-10-20",
-    "title": "Biking to St Anne and Chambly on Allys bike"
+    "title": "Biking to St Anne and Chambly on Ally's bike"
   },
   {
     "start": "2023-08-27",
     "title": "Sent Calypso 10c at St Alph"
   },
   {
-    "start": "2023-08-10",
-    "end": "2023-08-18",
-    "title": "Squamish! Learnt to multipitch, touched the Chief, learnt to crack climb - Centurion with Ben. Longest Camping trip yet."
+    "start": "2023-08-9",
+    "end": "2023-08-19",
+    "title": "Squamish Trip!",
+    "description": "Learnt to multipitch, touched the Chief, learnt to crack climb - Centurion with Ben. Longest Camping trip yet."
   },
   {
-    "start": "2022-10-08",
+    "start": "2022-10-09",
     "title": "Climbed a V4 boulder at Val David"
   },
   {
