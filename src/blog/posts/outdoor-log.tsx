@@ -7,6 +7,7 @@ interface Entry {
   end?: string;
   title: string;
   description?: string;
+  adventure?: boolean;
 }
 
 const monthName = (m: string) =>
@@ -22,7 +23,7 @@ const dateLabel = ({ start, end }: Entry): string => {
         ? `-${day(end)}`
         : `-${new Date(`${end}T00:00`).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`;
   }
-  return `${day(start)}${tail}:`;
+  return `${day(start)}${tail}`;
 };
 
 const years = new Map<string, Map<string, Entry[]>>();
@@ -150,14 +151,25 @@ function DaysOutside(): React.JSX.Element {
                           component="time"
                           dateTime={e.start}
                           sx={{
+                            textAlign: 'center',
                             color: 'text.secondary',
+                            bgcolor: e.adventure ? 'rgba(83, 91, 242, 0.2)' : 'transparent',
+                            borderRadius: 1,
                             fontVariantNumeric: 'tabular-nums',
                           }}
                         >
                           {dateLabel(e)}
                         </Typography>
                         <Box sx={{ overflowWrap: 'anywhere' }}>
-                          <Typography sx={{ fontWeight: 500 }}>{e.title}</Typography>
+                          <Typography
+                            sx={{
+                              fontWeight: 500,
+                              bgcolor: e.adventure ? 'rgba(83, 91, 242, 0.2)' : 'transparent',
+                              borderRadius: 1,
+                            }}
+                          >
+                            {e.title}
+                          </Typography>
                           {e.description && (
                             <Typography
                               variant="body2"

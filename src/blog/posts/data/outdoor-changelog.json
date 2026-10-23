@@ -52,7 +52,8 @@
     "start": "2026-07-26",
     "end": "2026-07-28",
     "title": "Juan De Fuca Backpacking Trip",
-    "description": "Planned my first proper backpacking trip! Over 50km+ with a LOT of rain on the first 2 days. Saw whales in the strait."
+    "description": "Planned my first proper backpacking trip! Over 50km+ with a LOT of rain on the first 2 days. Saw whales in the strait.",
+    "adventure": true
   },
   {
     "start": "2026-07-18",
@@ -112,7 +113,8 @@
   {
     "start": "2026-02-28",
     "title": "Opale with Nick - 2nd Ice Multi",
-    "description": "Gorgeous day out. Cooked by the end. Technique in shambles by Pitch 3. Boot laces came undone. Thank god for hot chocolate."
+    "description": "Gorgeous day out. Cooked by the end. Technique in shambles by Pitch 3. Boot laces came undone. Thank god for hot chocolate.",
+    "adventure": true
   },
   {
     "start": "2026-02-14",
@@ -133,7 +135,8 @@
     "start": "2026-01-24",
     "end": "2026-01-25",
     "title": "Cap 360 Winter Camping in -30",
-    "description": "Doing uncomfortable things in character building. This was cold."
+    "description": "Doing uncomfortable things in character building. This was cold.",
+    "adventure": true
   },
   {
     "start": "2026-01-17",
@@ -172,7 +175,8 @@
     "start": "2025-12-06",
     "end": "2025-12-07",
     "title": "Crawford Notch and Huntington Ravine",
-    "description": "Mount Washington is beautiful. First time ice climbing! First time wearing crampons and navigating snow terrain!"
+    "description": "Mount Washington is beautiful. First time ice climbing! First time wearing crampons and navigating snow terrain!",
+    "adventure": true
   },
   {
     "start": "2025-11-01",
@@ -193,7 +197,8 @@
     "start": "2025-10-10",
     "end": "2025-10-11",
     "title": "Pemiwegasset Loop",
-    "description": "This was hard. Beautiful, but day 1 to Mount Garfield was a sufferfest at the end. Went counter-clockwise."
+    "description": "This was hard. Beautiful, but day 1 to Mount Garfield was a sufferfest at the end. Went counter-clockwise.",
+    "adventure": true
   },
   {
     "start": "2025-10-04",
@@ -218,13 +223,15 @@
   {
     "start": "2025-09-07",
     "title": "Ultranza 30k at Val David",
-    "description": "Furthest I've run yet!"
+    "description": "Furthest I've run yet!",
+    "adventure": true
   },
   {
     "start": "2025-08-29",
     "end": "2025-09-01",
     "title": "Charlevoix Blueberry Traverse",
-    "description": "Camped on Dufour. Swam in 2 lakes. Just the best weekend."
+    "description": "Camped on Dufour. Swam in 2 lakes. Just the best weekend.",
+    "adventure": true
   },
   {
     "start": "2025-08-16",
@@ -261,7 +268,8 @@
     "start": "2025-07-04",
     "end": "2025-07-05",
     "title": "First Time Backpacking in Gaspesie - Summitted Jacques Cartier",
-    "description": "Wet day one! No views. First time seeing a moose too! Yay for alpine territory."
+    "description": "Wet day one! No views. First time seeing a moose too! Yay for alpine territory.",
+    "adventure": true
   },
   {
     "start": "2025-06-29",
@@ -374,7 +382,8 @@
     "start": "2024-05-18",
     "end": "2024-05-20",
     "title": "Lac Long Climbing Trip",
-    "description": " Onsighted La Toute Beauté and summitted Gros Bonnet for the first time. Lake swims and yummy meals."
+    "description": " Onsighted La Toute Beauté and summitted Gros Bonnet for the first time. Lake swims and yummy meals.",
+    "adventure": true
   },
   {
     "start": "2024-05-12",
@@ -417,7 +426,8 @@
     "start": "2023-08-9",
     "end": "2023-08-19",
     "title": "Squamish Trip!",
-    "description": "Learnt to multipitch, touched the Chief, learnt to crack climb - Centurion with Ben. Longest Camping trip yet."
+    "description": "Learnt to multipitch, touched the Chief, learnt to crack climb - Centurion with Ben. Longest Camping trip yet.",
+    "adventure": true
   },
   {
     "start": "2022-10-09",
